@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+extract:
+  processed_dir: "data/processed"   # JSON pre-procesados por Python (PDFs con tablas)
+  cache_dir: "data/cache"           # JSON cacheados por go-fitz
+
+chunk:
+  strategy: "section"               # section | element | sliding
+  max_size: 1000                    # máximo de caracteres por chunk
+  overlap: 80                       # solo aplica con strategy: sliding
+  context_prefix: true              # antepone SectionPath al texto embebible
+
+embed:
+  model: "nomic-embed-text"
+  ollama_url: "http://localhost:11434"
+  batch_size: 8                     # chunks por request a Ollama
+
+store:
+  qdrant_host: "localhost"
+  qdrant_port: 6334                 # puerto gRPC de Qdrant
+  collection_name: "rag_docs"
+  vector_dimension: 768             # nomic-embed-text produce vectores de 768
+  bbolt_path: "data/embeddings.db"
+
+llm:
+  model: "phi3:mini"
+  ollama_url: "http://localhost:11434"
+  options:
+    temperature: 0.1
+    num_predict: 512
+    num_ctx: 4096
+
+search:
+  rrf_k: 60                         # constante RRF, paper original recomienda 60
+  top_k: 5                          # chunks finales que llegan al LLM como contexto
