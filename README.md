@@ -153,6 +153,7 @@ Query del usuario
 rag-go/
 ├── cmd/
 │   └── server/
+|       └── config.yaml           # Configuración del sistema
 │       └── main.go               # Wiring: crea todos los componentes y levanta el servidor
 │
 ├── internal/
@@ -168,6 +169,8 @@ rag-go/
 │       │   ├── search/           # SearchRequest, SearchResult, BM25*, HybridSearchRequest, RRF
 │       │   ├── llm/              # GenerateRequest, GenerateToken, LLMModel, BuildRequest
 │       │   └── query/            # QueryResult, BuildQueryResult, Source
+│       │   └── element.go
+│       │   └── source.go
 │       │
 │       ├── ports/
 │       │   ├── in/
@@ -199,8 +202,14 @@ rag-go/
 │   │   │   │   └── cache_repository.go  # BboltCacheRepository → IEmbedCacheRepository
 │   │   │   └── bm25/
 │   │   │       └── bm25_repository.go   # BM25Repository → IBM25Repository
-│   │   └── extractor/
-│   │       └── fitz_extractor.go  # FitzExtractor + MarkdownExtractor + HTMLExtractor + Dispatcher
+│   │   └── extractor/                   # FitzExtractor + MarkdownExtractor + HTMLExtractor + Dispatcher
+│   │       └── cache.go.go
+|   |       └── dispatcher.go
+|   |       └── helper.go
+|   |       └── html.go
+|   |       └── md.go
+|   |       └── pdf_fitz.go
+|   |       └── postprocess.go
 │   │
 │   └── driver/
 │       └── http/
@@ -214,12 +223,11 @@ rag-go/
 │   └── preprocess.py   # Preprocesamiento Python para PDFs con tablas complejas
 │
 ├── data/
-│   ├── pdfs/           # Documentos a indexar
+│   ├── embeddings.db   # Documentos a indexar
 │   ├── processed/      # JSON pre-procesados por preprocess.py (tablas complejas)
 │   └── cache/          # JSON cacheados por el extractor Go (evita re-extraer)
 │
 ├── docs/               # Documentos de prueba
-├── config.yaml         # Configuración del sistema
 └── go.mod
 ```
 
