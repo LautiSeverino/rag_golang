@@ -6,7 +6,7 @@
 
 ## Descripción
 
-rag-go es un sistema RAG de producción local que permite indexar documentos (PDF, DOCX, HTML, Markdown) y consultarlos en lenguaje natural. Usa embeddings semánticos para búsqueda densa, BM25 para búsqueda esparsa, y fusiona ambos resultados con Reciprocal Rank Fusion (RRF) antes de pasarlos como contexto a un LLM que genera la respuesta final.
+rag_golang es un sistema RAG de producción local que permite indexar documentos (PDF, DOCX, HTML, Markdown) y consultarlos en lenguaje natural. Usa embeddings semánticos para búsqueda densa, BM25 para búsqueda esparsa, y fusiona ambos resultados con Reciprocal Rank Fusion (RRF) antes de pasarlos como contexto a un LLM que genera la respuesta final.
 
 Todo el stack corre localmente —sin dependencias de APIs externas de pago— usando Ollama para embeddings y generación de texto, y Qdrant como base de datos vectorial.
 
