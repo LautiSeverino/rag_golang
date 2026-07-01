@@ -1,4 +1,4 @@
-# rag-go
+# rag_golang
 
 > Sistema RAG (Retrieval-Augmented Generation) local construido en Go con arquitectura hexagonal, búsqueda híbrida densa + esparsa con fusión RRF, y soporte para múltiples formatos de documento.
 
