@@ -153,16 +153,15 @@ Query del usuario
 rag-go/
 ├── cmd/
 │   └── server/
-|       └── config.yaml           # Configuración del sistema
 │       └── main.go               # Wiring: crea todos los componentes y levanta el servidor
 │
 ├── internal/
 │   ├── configs/
 │   │   └── config.go             # Structs de configuración (Config, ServerConfig, etc.)
+|   |   └── config.yaml           # Configuración del sistema
 │   │
 │   └── core/
 │       ├── domain/               # Tipos del dominio y lógica pura
-│       │   ├── document.go       # Document, Element, ElementType, DocType
 │       │   ├── chunk/            # Chunk, ChunkConfig, ChunkStrategy, Chunker
 │       │   ├── embed/            # Vector, EmbedModel, CacheEntry
 │       │   ├── index/            # IndexRequest, IndexResult
@@ -171,6 +170,7 @@ rag-go/
 │       │   └── query/            # QueryResult, BuildQueryResult, Source
 │       │   └── element.go
 │       │   └── source.go
+│       │   └── document.go       # Document, Element, ElementType, DocType
 │       │
 │       ├── ports/
 │       │   ├── in/
@@ -214,8 +214,8 @@ rag-go/
 │   └── driver/
 │       └── http/
 │           ├── handler/
-│           │   ├── index_handler.go  # POST /api/v1/index
-│           │   └── query_handler.go  # POST /api/v1/query · GET /api/v1/query/stream
+│           │   ├── index.go  # POST /api/v1/index
+│           │   └── query.go  # POST /api/v1/query · GET /api/v1/query/stream
 │           └── middlewares/
 │               └── middlewares.go    # Logging + Recover (panic → 500)
 │
@@ -229,6 +229,10 @@ rag-go/
 │
 ├── docs/               # Documentos de prueba
 └── go.mod
+└── go.sum
+└── README.md
+└── .env
+└── test.http
 ```
 
 ---
