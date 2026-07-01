@@ -32,7 +32,7 @@ La arquitectura es hexagonal (ports and adapters): el dominio no conoce la infra
 | Capa | Tecnología |
 |---|---|
 | Lenguaje | Go 1.22+ |
-| LLM + Embeddings | Ollama (`qwen2.5:3b-instruct`, `nomic-embed-text`) |
+| LLM + Embeddings | Ollama (`phi3:mini - qwen2.5:3b - etc.`, `nomic-embed-text`) |
 | Base de datos vectorial | Qdrant (gRPC) |
 | Caché de embeddings | bbolt (BoltDB embedded) |
 | Búsqueda esparsa | BM25 in-memory (implementación propia) |
