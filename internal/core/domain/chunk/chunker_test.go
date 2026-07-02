@@ -49,12 +49,11 @@ func TestChunkSectionCombinesElements(t *testing.T) {
 }
 
 func TestChunkSectionLongSectionSubchunks(t *testing.T) {
-	// Sección que excede MaxSize=100 (usamos MaxSize pequeño para el test)
 	elements := make([]domain.Element, 20)
 	for i := range elements {
 		elements[i] = domain.Element{
 			Type:        domain.ElemParagraph,
-			Text:        "Párrafo de contenido suficientemente largo para el test número " + strconv.Itoa(i),
+			Text:        "Párrafo " + strconv.Itoa(i), // ~10 chars, no 65
 			Page:        1,
 			SectionPath: []string{"Sección larga"},
 		}
@@ -68,23 +67,24 @@ func TestChunkSectionLongSectionSubchunks(t *testing.T) {
 
 	cfg := ChunkConfig{
 		Strategy:      ChunkSection,
-		MaxSize:       100, // pequeño para forzar el else
+		MaxSize:       100,
 		ContextPrefix: true,
 	}
 
 	chunks, err := NewChunker().Chunk(doc, cfg)
 	require.NoError(t, err)
 
-	// Con 20 elementos de ~70 chars y MaxSize=100, debe haber varios sub-chunks
-	// pero MENOS que 20 (ningún sub-chunk debe ser de 1 solo elemento si hay espacio)
+	// prefix = "Sección larga\n\n" = 15 chars
+	// elemento = "Párrafo X\n" ≈ 11 chars
+	// caben ~7-8 elementos por chunk → 20 elementos → ~3 chunks
 	assert.Greater(t, len(chunks), 1, "debe haber más de 1 sub-chunk")
 	assert.Less(t, len(chunks), 20, "no debe haber un chunk por elemento")
 
 	for _, c := range chunks {
-		assert.NotEmpty(t, c.RawText, "ningún sub-chunk debe estar vacío")
-		assert.Contains(t, c.Text, "Sección larga", "todos deben llevar el prefix")
-		assert.LessOrEqual(t, runeLen(c.Text), 200, // MaxSize + prefix margin
-			"ningún sub-chunk debe exceder groseramente MaxSize")
+		assert.NotEmpty(t, c.RawText)
+		assert.Contains(t, c.Text, "Sección larga")
+		// El chunk más grande no debe exceder MaxSize + overhead de prefix
+		assert.LessOrEqual(t, runeLen(c.Text), int(cfg.MaxSize)+20)
 	}
 }
 
