@@ -63,9 +63,6 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 			page := els[0].Page
 			sectionPath := els[0].SectionPath
 
-			// Construir el texto raw combinando TODOS los elementos.
-			// Incluimos los headings: su texto es el título de sección, que
-			// aporta señal léxica directa en BM25 y en el embedding.
 			rawParts := make([]string, 0, len(els))
 			for _, e := range els {
 				if strings.TrimSpace(e.Text) != "" {
@@ -81,7 +78,6 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 			combined := prefix + rawCombined
 
 			if runeLen(combined) <= int(cfg.MaxSize) {
-				// Sección entra en un solo chunk.
 				elemType := domain.ElemParagraph
 				if len(els) == 1 {
 					elemType = els[0].Type
@@ -94,21 +90,42 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 				chunks = append(chunks, ch)
 				idx++
 			} else {
-				// Sección demasiado larga: un chunk por elemento con prefix.
-				// Las tablas siempre llevan prefix independientemente del flag.
-				for _, e := range els {
-					text := e.Text
-					if e.Type == domain.ElemTable || cfg.ContextPrefix {
-						text = prefix + e.Text
+				// Sub-chunking: agrupar elementos hasta MaxSize, no 1 por 1
+				// Sección demasiado larga: agrupar elementos en sub-chunks de hasta MaxSize.
+				// Mejor que 1 elemento por chunk porque preserva coherencia semántica local.
+				var bufRaw []string
+				bufPage := els[0].Page
+				bufSize := runeLen(prefix) // el prefix ocupa espacio en cada sub-chunk
+
+				flush := func() {
+					if len(bufRaw) == 0 {
+						return
 					}
+					rawText := strings.Join(bufRaw, "\n")
+					text := prefix + rawText
 					ch := makeChunk(
 						doc.ID, doc.Metadata.Source,
-						text, e.Text,
-						e.Type, e.SectionPath, e.Page, idx,
+						text, rawText,
+						domain.ElemParagraph, sectionPath, bufPage, idx,
 					)
 					chunks = append(chunks, ch)
 					idx++
+					bufRaw = bufRaw[:0]
+					bufSize = runeLen(prefix)
 				}
+
+				for _, e := range els {
+					eLen := runeLen(e.Text) + 1 // +1 por el "\n" separador
+					if bufSize+eLen > int(cfg.MaxSize) && len(bufRaw) > 0 {
+						flush()
+					}
+					if len(bufRaw) == 0 {
+						bufPage = e.Page // la página del primer elemento de este sub-chunk
+					}
+					bufRaw = append(bufRaw, e.Text)
+					bufSize += eLen
+				}
+				flush() // vaciar lo que quedó en el buffer
 			}
 		}
 	case ChunkSliding:
