@@ -106,7 +106,6 @@ func classifyByRatio(ratio float64, bold bool, text string) (domain.ElementType,
 // attachSectionPath recorre los elementos en orden y asigna el SectionPath
 // acumulado hasta ese punto. Los headings actualizan la pila de sección.
 func attachSectionPath(elements []domain.Element) []domain.Element {
-	// stack[i] guarda el título del heading de nivel i+1
 	stack := make([]string, 6)
 	depth := 0
 
@@ -118,13 +117,13 @@ func attachSectionPath(elements []domain.Element) []domain.Element {
 			continue
 		}
 
-		lvl := el.Level
-		if lvl < 1 {
-			lvl = 1
+		// No actualizar el stack con números de página.
+		if isPageNumberHeading(el) {
+			elements[i].SectionPath = nonEmpty(stack[:depth])
+			continue
 		}
-		if lvl > 6 {
-			lvl = 6
-		}
+
+		lvl := min(max(el.Level, 1), 6)
 
 		// Actualizar la pila: limpiar niveles más profundos
 		stack[lvl-1] = el.Text
@@ -137,6 +136,21 @@ func attachSectionPath(elements []domain.Element) []domain.Element {
 	}
 
 	return elements
+}
+
+// isPageNumberHeading detecta headings que son solo dígitos (números de página).
+// go-fitz los clasifica como headings por su posición y tamaño relativo.
+func isPageNumberHeading(el domain.Element) bool {
+	if el.Type != domain.ElemHeading {
+		return false
+	}
+	text := strings.TrimSpace(el.Text)
+	for _, r := range text {
+		if r < '0' || r > '9' {
+			return false
+		}
+	}
+	return len(text) > 0 && len(text) <= 3 // "2", "10", "120" → página
 }
 
 // filterPageHeaders descarta bloques que aparecen repetidos en posición fija
@@ -208,4 +222,46 @@ func bodyFontSize(blocks []rawBlock) float64 {
 		return 11 // fallback razonable
 	}
 	return bodySize
+}
+
+// mergeSplitParagraphs fusiona líneas de párrafo que go-fitz parte
+// por salto de línea dentro de la misma página y sección visual.
+// Heurística: si el fragmento anterior es ElemParagraph, está en la
+// misma página, y NO termina en puntuación de cierre de oración,
+// es una continuación de la misma oración.
+func mergeSplitParagraphs(elements []domain.Element) []domain.Element {
+	if len(elements) == 0 {
+		return elements
+	}
+
+	endsClause := func(s string) bool {
+		s = strings.TrimSpace(s)
+		if s == "" {
+			return false
+		}
+		last := rune(s[len(s)-1])
+		// Punto, punto y coma, interrogación, exclamación, dos puntos
+		return strings.ContainsRune(".;?!:", last)
+	}
+
+	merged := make([]domain.Element, 0, len(elements))
+	for _, el := range elements {
+		if el.Type != domain.ElemParagraph ||
+			len(merged) == 0 ||
+			merged[len(merged)-1].Type != domain.ElemParagraph ||
+			merged[len(merged)-1].Page != el.Page {
+			merged = append(merged, el)
+			continue
+		}
+
+		prev := &merged[len(merged)-1]
+		if !endsClause(prev.Text) {
+			// Fusionar: el fragmento anterior no cierra oración.
+			// Usar espacio como separador (era salto de línea del PDF).
+			prev.Text = strings.TrimSpace(prev.Text) + " " + strings.TrimSpace(el.Text)
+		} else {
+			merged = append(merged, el)
+		}
+	}
+	return merged
 }

@@ -57,7 +57,7 @@ func (r *BM25Repository) Index(_ context.Context, chunks []chunk.Chunk) error {
 
 	for i, ch := range chunks {
 		idx := startIdx + i
-		terms := tokenize(ch.RawText)
+		terms := tokenize(ch.Text)
 		r.docLens = append(r.docLens, len(terms))
 
 		// Contar frecuencia de cada término en el chunk
@@ -158,7 +158,7 @@ func (r *BM25Repository) DeleteByDocID(_ context.Context, docID uuid.UUID) error
 	r.docLens = r.docLens[:0]
 
 	for i, ch := range r.chunks {
-		terms := tokenize(ch.RawText)
+		terms := tokenize(ch.Text)
 		r.docLens = append(r.docLens, len(terms))
 		tf := make(map[string]int)
 		for _, t := range terms {

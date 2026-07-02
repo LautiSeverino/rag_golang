@@ -29,8 +29,8 @@ llm:
   options:
     temperature: 0.1
     num_predict: 512
-    num_ctx: 4096
+    num_ctx: 8192
 
 search:
   rrf_k: 60                         # constante RRF, paper original recomienda 60
-  top_k: 5                          # chunks finales que llegan al LLM como contexto
+  top_k: 10                          # chunks finales que llegan al LLM como contexto

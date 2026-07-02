@@ -44,7 +44,6 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 		}
 
 	case ChunkSection:
-		// Agrupar por SectionPath
 		groups := make(map[string][]domain.Element)
 		order := make([]string, 0)
 		for _, el := range doc.Elements {
@@ -57,52 +56,61 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 
 		for _, key := range order {
 			els := groups[key]
-			// combinar textos
-			parts := make([]string, 0, len(els))
+			if len(els) == 0 {
+				continue
+			}
+
+			page := els[0].Page
+			sectionPath := els[0].SectionPath
+
+			// Construir el texto raw combinando TODOS los elementos.
+			// Incluimos los headings: su texto es el título de sección, que
+			// aporta señal léxica directa en BM25 y en el embedding.
+			rawParts := make([]string, 0, len(els))
 			for _, e := range els {
-				text := e.Text
-				prefix := ""
-				if len(e.SectionPath) > 0 {
-					prefix = strings.Join(e.SectionPath, " > ") + "\n\n"
+				if strings.TrimSpace(e.Text) != "" {
+					rawParts = append(rawParts, e.Text)
 				}
-				if e.Type == domain.ElemTable {
-					// las tablas siempre llevan el context prefix,
-					// independientemente del flag cfg.ContextPrefix
-					text = prefix + e.Text
-				} else if cfg.ContextPrefix {
-					text = prefix + e.Text
-				}
-				ch := makeChunk(doc.ID, doc.Metadata.Source, text, e.Text, e.Type, e.SectionPath, e.Page, idx)
-				chunks = append(chunks, ch)
-				idx++
 			}
-			rawCombined := strings.Join(parts, "\n\n")
-			combined := rawCombined
-			if cfg.ContextPrefix && len(els) > 0 && len(els[0].SectionPath) > 0 {
-				combined = strings.Join(els[0].SectionPath, " > ") + "\n\n" + rawCombined
+			rawCombined := strings.Join(rawParts, "\n")
+
+			prefix := ""
+			if cfg.ContextPrefix && len(sectionPath) > 0 {
+				prefix = strings.Join(sectionPath, " > ") + "\n\n"
 			}
+			combined := prefix + rawCombined
 
 			if runeLen(combined) <= int(cfg.MaxSize) {
-				var page int
-				var sectionPath []string
-				var elemType domain.ElementType
-
-				if len(els) > 0 {
-					page = els[0].Page
-					sectionPath = els[0].SectionPath
-					// Si es un solo elemento, usar su tipo real; si no, un tipo genérico.
-					if len(els) == 1 {
-						elemType = els[0].Type
-					} else {
-						elemType = domain.ElemParagraph // o domain.ElemMixed si existe
-					}
+				// Sección entra en un solo chunk.
+				elemType := domain.ElemParagraph
+				if len(els) == 1 {
+					elemType = els[0].Type
 				}
-				ch := makeChunk(doc.ID, doc.Metadata.Source, combined, rawCombined, elemType, sectionPath, page, idx)
+				ch := makeChunk(
+					doc.ID, doc.Metadata.Source,
+					combined, rawCombined,
+					elemType, sectionPath, page, idx,
+				)
 				chunks = append(chunks, ch)
 				idx++
+			} else {
+				// Sección demasiado larga: un chunk por elemento con prefix.
+				// Las tablas siempre llevan prefix independientemente del flag.
+				for _, e := range els {
+					text := e.Text
+					if e.Type == domain.ElemTable || cfg.ContextPrefix {
+						text = prefix + e.Text
+					}
+					ch := makeChunk(
+						doc.ID, doc.Metadata.Source,
+						text, e.Text,
+						e.Type, e.SectionPath, e.Page, idx,
+					)
+					chunks = append(chunks, ch)
+					idx++
+				}
 			}
 		}
-
 	case ChunkSliding:
 		// Construir texto plano y mantener mapeo de offsets a elementos
 		texts := make([]string, 0, len(doc.Elements))

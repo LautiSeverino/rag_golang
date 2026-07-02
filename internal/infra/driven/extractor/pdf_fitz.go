@@ -86,6 +86,7 @@ func (e *FitzExtractor) extractWithFitz(path string) (*domain.Document, error) {
 	}
 
 	elements := classifyBlocks(allBlocks)
+	elements = mergeSplitParagraphs(elements)
 	elements = attachSectionPath(elements)
 	elements = filterPageHeaders(elements)
 
