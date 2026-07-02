@@ -35,8 +35,8 @@ func NewCacheRepository(path string) (*BboltCacheRepository, error) {
 }
 
 // Get recupera un vector del caché por hash.
-// Devuelve (vector, true) si existe, (nil, false) si no.
-func (r *BboltCacheRepository) Get(hash string) (embed.Vector, bool) {
+// Devuelve (vector, true) si existe y el modelo coincide, (nil, false) si no.
+func (r *BboltCacheRepository) Get(hash string, model embed.EmbedModel) (embed.Vector, bool) {
 	var (
 		entry embed.CacheEntry
 		found bool
@@ -55,6 +55,10 @@ func (r *BboltCacheRepository) Get(hash string) (embed.Vector, bool) {
 
 		if err := json.Unmarshal(data, &entry); err != nil {
 			return err
+		}
+
+		if entry.Model != model {
+			return nil
 		}
 
 		found = true

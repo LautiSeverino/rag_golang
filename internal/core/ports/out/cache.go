@@ -7,7 +7,7 @@ import "rag_golang/internal/core/domain/embed"
 // La clave es el sha256 del texto (Chunk.Hash).
 // Es un Repository porque persiste vectores calculados para evitar re-computarlos.
 type IEmbedCacheRepository interface {
-	Get(hash string) (embed.Vector, bool)
+	Get(hash string, model embed.EmbedModel) (embed.Vector, bool)
 	Set(hash string, vec embed.Vector, model embed.EmbedModel) error
 	Close() error
 }

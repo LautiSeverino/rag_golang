@@ -47,15 +47,19 @@ type StoreConfig struct {
 
 // LLMConfig configura el LLM (Ollama).
 type LLMConfig struct {
-	Model     llm.LLMModel   `yaml:"model"`
-	OllamaURL string         `yaml:"ollama_url"`
-	Options   llm.LLMOptions `yaml:"options"`
+	Model          llm.LLMModel   `yaml:"model"`
+	OllamaURL      string         `yaml:"ollama_url"`
+	Options        llm.LLMOptions `yaml:"options"`
+	MaxChunkLength int            `yaml:"max_chunk_length"`
 }
 
 // SearchConfig parametriza la búsqueda híbrida en QueryService.
 type SearchConfig struct {
-	RRFK int `yaml:"rrf_k"` // constante RRF fusion, default 60
-	TopK int `yaml:"top_k"` // resultados finales que va al contexto del LLM
+	RRFK        int     `yaml:"rrf_k"`        // constante RRF fusion, default 60
+	TopK        int     `yaml:"top_k"`        // resultados finales que va al contexto del LLM
+	CandidatesK int     `yaml:"candidates_k"` // candidatos pre-RRF por store
+	BM25K1      float64 `yaml:"bm25_k1"`      // parámetro saturación TF
+	BM25B       float64 `yaml:"bm25_b"`       // parámetro normalización longitud
 }
 
 // ServerConfig

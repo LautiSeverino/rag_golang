@@ -1,6 +1,7 @@
 package extractor
 
 import (
+	"crypto/sha256"
 	"encoding/json"
 	"fmt"
 	"os"
@@ -73,18 +74,13 @@ func generateID(path string) uuid.UUID {
 	seed := path + "|" + fileChecksum(path)
 	return uuid.NewSHA1(uuid.NameSpaceURL, []byte(seed))
 }
+
 func fileChecksum(path string) string {
 	data, err := os.ReadFile(path)
 	if err != nil {
+		// Fallback: si no se puede leer, no cachear
 		return ""
 	}
-	// sha256 simple para invalidación de caché
-	// Import crypto/sha256 en producción; aquí usamos len+path como placeholder
-	// para no agregar imports que ya existen en el proyecto.
-	_ = data
-	info, _ := os.Stat(path)
-	if info == nil {
-		return path
-	}
-	return fmt.Sprintf("%s-%d-%d", filepath.Base(path), info.Size(), info.ModTime().Unix())
+	sum := sha256.Sum256(data)
+	return fmt.Sprintf("%x", sum)
 }

@@ -117,21 +117,24 @@ func attachSectionPath(elements []domain.Element) []domain.Element {
 			continue
 		}
 
-		// No actualizar el stack con números de página.
 		if isPageNumberHeading(el) {
 			elements[i].SectionPath = nonEmpty(stack[:depth])
 			continue
 		}
 
-		lvl := min(max(el.Level, 1), 6)
+		// headings estructurales (ÍNDICE, CONTENTS) no modifican el stack.
+		// Se les asigna el SectionPath actual pero no se convierten en ancestros.
+		if isStructuralHeading(el) {
+			elements[i].SectionPath = nonEmpty(stack[:depth])
+			continue
+		}
 
-		// Actualizar la pila: limpiar niveles más profundos
+		lvl := min(max(el.Level, 1), 6)
 		stack[lvl-1] = el.Text
 		for j := lvl; j < 6; j++ {
 			stack[j] = ""
 		}
 		depth = lvl
-
 		elements[i].SectionPath = nonEmpty(stack[:depth])
 	}
 
@@ -264,4 +267,46 @@ func mergeSplitParagraphs(elements []domain.Element) []domain.Element {
 		}
 	}
 	return merged
+}
+
+// tocLineRe detecta líneas típicas de tabla de contenidos: texto seguido de puntos y número de página
+var tocLineRe = regexp.MustCompile(`\.{3,}|\.\s{0,2}\.\s{0,2}\.`)
+
+// structuralHeadings son headings que no representan contenido sino
+// estructura del documento. No deben convertirse en nodos raíz del SectionPath.
+var structuralHeadings = map[string]bool{
+	"ÍNDICE":            true,
+	"CONTENTS":          true,
+	"TABLE OF CONTENTS": true,
+	"ÍNDICE GENERAL":    true,
+	"INDICE":            true,
+	"CONTENIDO":         true,
+}
+
+// filterTOCElements elimina elementos que son entradas de tabla de contenidos.
+// Una entrada TOC típica contiene una serie de puntos suspensivos seguidos de un número.
+func filterTOCElements(elements []domain.Element) []domain.Element {
+	result := make([]domain.Element, 0, len(elements))
+	for _, el := range elements {
+		// Headings estructurales (ÍNDICE) se preservan como headings
+		// pero se marcarán para que attachSectionPath no los use como raíz.
+		// Los list_item o paragraph que contengan el patrón TOC se descartan.
+		if el.Type == domain.ElemListItem || el.Type == domain.ElemParagraph {
+			if tocLineRe.MatchString(el.Text) {
+				continue // es una entrada de TOC, descartar
+			}
+		}
+		result = append(result, el)
+	}
+	return result
+}
+
+// isStructuralHeading retorna true si el heading es estructural (TOC, índice)
+// y no debe usarse como nodo raíz en el SectionPath.
+func isStructuralHeading(el domain.Element) bool {
+	if el.Type != domain.ElemHeading {
+		return false
+	}
+	normalized := strings.ToUpper(strings.TrimSpace(el.Text))
+	return structuralHeadings[normalized]
 }

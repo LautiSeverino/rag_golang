@@ -35,86 +35,64 @@ func NewQueryService(
 	}
 }
 
-func (s *QueryService) Query(ctx context.Context, userQuery string) (*query.QueryResult, error) {
-	// 1. Embed la query
+type retrievalResult struct {
+	fused []search.SearchResult
+}
+
+func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retrievalResult, error) {
 	vecs, err := s.embedder.Embed(ctx, []string{userQuery})
 	if err != nil {
-		return nil, fmt.Errorf("query service: embed: %w", err)
+		return nil, fmt.Errorf("embed: %w", err)
 	}
-
 	if len(vecs) == 0 {
-		return nil, fmt.Errorf("query service: no vectors returned")
+		return nil, fmt.Errorf("no vectors returned")
 	}
 
-	// 2. Búsqueda densa (Qdrant)
+	// Usar candidates_k del config en lugar del 20 hardcodeado
+	candidatesK := s.cfg.Search.CandidatesK
+
 	denseResults, err := s.vectorRepo.Search(ctx, search.SearchRequest{
-		Vector: vecs[0], TopK: 20,
+		Vector: vecs[0],
+		TopK:   candidatesK,
 	})
 	if err != nil {
-		return nil, fmt.Errorf("query service: vector repo, search: %w", err)
+		return nil, fmt.Errorf("vector search: %w", err)
 	}
 
-	// 3. Búsqueda esparsa (BM25)
 	sparseResults, err := s.bm25Repo.Search(ctx, search.BM25SearchRequest{
-		Query: userQuery, TopK: 20,
+		Query: userQuery,
+		TopK:  candidatesK,
 	})
 	if err != nil {
-		return nil, fmt.Errorf("query service: bm25 repo, search: %w", err)
+		return nil, fmt.Errorf("bm25 search: %w", err)
 	}
 
-	// 4. RRF fusion
 	fused := search.Rrf(denseResults, sparseResults, s.cfg.Search.RRFK, s.cfg.Search.TopK)
+	return &retrievalResult{fused: fused}, nil
+}
 
-	// 5. Generar respuesta (el LLM devuelve un channel de tokens)
-	// un channel es un canal de comunicación en Go.
-	// En este caso el LLM va enviando tokens uno por uno,
-	// y el servicio los consume para armar la respuesta final.
-	tokensChan, err := s.llm.Generate(ctx, llm.BuildRequest(userQuery, fused, s.cfg.LLM.Model, s.cfg.LLM.Options))
+func (s *QueryService) Query(ctx context.Context, userQuery string) (*query.QueryResult, error) {
+	res, err := s.retrieve(ctx, userQuery)
+	if err != nil {
+		return nil, fmt.Errorf("query service: retrieve: %w", err)
+	}
+	tokensChan, err := s.llm.Generate(ctx, llm.BuildRequest(userQuery, res.fused, s.cfg.LLM.Model, s.cfg.LLM.Options, s.cfg.LLM.MaxChunkLength))
 	if err != nil {
 		return nil, fmt.Errorf("query service: llm generate: %w", err)
 	}
-
-	// 6. Acumular y devolver
-	return query.BuildQueryResult(userQuery, tokensChan, fused), nil
+	return query.BuildQueryResult(userQuery, tokensChan, res.fused), nil
 }
 
 func (s *QueryService) QueryStream(ctx context.Context, userQuery string) (<-chan llm.GenerateToken, error) {
-	// 1. Embed la query
-	vecs, err := s.embedder.Embed(ctx, []string{userQuery})
+	res, err := s.retrieve(ctx, userQuery)
 	if err != nil {
-		return nil, fmt.Errorf("query service: embed: %w", err)
+		return nil, fmt.Errorf("query service: retrieve: %w", err)
 	}
-	if len(vecs) == 0 {
-		return nil, fmt.Errorf("query service: no vectors returned")
-	}
-
-	// 2. Búsqueda densa (Qdrant)
-	denseResults, err := s.vectorRepo.Search(ctx, search.SearchRequest{
-		Vector: vecs[0], TopK: 20,
-	})
-	if err != nil {
-		return nil, fmt.Errorf("query service: vector repo search: %w", err)
-	}
-
-	// 3. Búsqueda esparsa (BM25)
-	sparseResults, err := s.bm25Repo.Search(ctx, search.BM25SearchRequest{
-		Query: userQuery, TopK: 20,
-	})
-	if err != nil {
-		return nil, fmt.Errorf("query service: bm25 repo search: %w", err)
-	}
-
-	// 4. RRF fusion
-	fused := search.Rrf(denseResults, sparseResults, s.cfg.Search.RRFK, s.cfg.Search.TopK)
-
-	// 5. Construir el request con Stream=true y devolver el canal sin drenarlo
-	req := llm.BuildRequest(userQuery, fused, s.cfg.LLM.Model, s.cfg.LLM.Options)
+	req := llm.BuildRequest(userQuery, res.fused, s.cfg.LLM.Model, s.cfg.LLM.Options, s.cfg.LLM.MaxChunkLength)
 	req.Stream = true
-
 	tokenCh, err := s.llm.Generate(ctx, req)
 	if err != nil {
 		return nil, fmt.Errorf("query service: llm generate: %w", err)
 	}
-
 	return tokenCh, nil
 }

@@ -26,11 +26,15 @@ store:
 llm:
   model: "phi3:mini"
   ollama_url: "http://localhost:11434"
+  max_chunk_length: 1000
   options:
     temperature: 0.1
     num_predict: 512
     num_ctx: 4096
 
 search:
-  rrf_k: 60                         # constante RRF, paper original recomienda 60
-  top_k: 5                          # chunks finales que llegan al LLM como contexto
+  rrf_k: 60
+  top_k: 8           
+  candidates_k: 40   # cuántos candidatos por store antes de RRF (subir de 20 a 40)
+  bm25_k1: 1.2
+  bm25_b: 0.75

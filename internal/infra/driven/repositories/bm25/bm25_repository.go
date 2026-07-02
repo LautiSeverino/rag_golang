@@ -14,11 +14,6 @@ import (
 	"github.com/google/uuid"
 )
 
-const (
-	defaultK1 = 1.2  // controla la saturación de TF
-	defaultB  = 0.75 // controla la normalización por longitud de documento
-)
-
 // invertedEntry es una entrada en el índice invertido para un término.
 type invertedEntry struct {
 	chunkIdx int     // índice en r.chunks
@@ -38,11 +33,17 @@ type BM25Repository struct {
 	b         float64
 }
 
-func NewRepository() *BM25Repository {
+func NewRepository(k1, b float64) *BM25Repository {
+	if k1 == 0 {
+		k1 = 1.2
+	}
+	if b == 0 {
+		b = 0.75
+	}
 	return &BM25Repository{
 		index: make(map[string][]invertedEntry),
-		k1:    defaultK1,
-		b:     defaultB,
+		k1:    k1,
+		b:     b,
 	}
 }
 

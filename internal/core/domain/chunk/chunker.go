@@ -159,13 +159,8 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 		}
 
 	default:
-		// usar default config:
-		// Strategy:      ChunkSection,
-		// MaxSize:       SizeMedium,
-		// Overlap:       DefaultOverlap,
-		// ContextPrefix: true,
-		config := DefaultConfig()
-		return c.Chunk(doc, config)
+		// error explícito para que el operador sepa que hay un problema de config
+		return nil, fmt.Errorf("chunker: estrategia desconocida %q. Valores válidos: section, element, sliding", cfg.Strategy)
 	}
 
 	return chunks, nil

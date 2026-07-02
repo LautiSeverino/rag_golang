@@ -56,7 +56,7 @@ func main() {
 	}
 	defer cacheRepo.Close()
 
-	bm25Repo := bm25repo.NewRepository()
+	bm25Repo := bm25repo.NewRepository(cfg.Search.BM25K1, cfg.Search.BM25B)
 
 	extractorDispatcher := extractor.NewExtractorDispatcher(cfg.Extract)
 
@@ -73,6 +73,7 @@ func main() {
 		cacheRepo,
 		bm25Repo,
 		cfg.Chunk,
+		cfg.Embed,
 		cfg.Store.CollectionName,
 	)
 
@@ -127,6 +128,8 @@ func loadConfig(path string) (configs.Config, error) {
 	return cfg, nil
 }
 
+// cmd/server/main.go
+
 func setDefaults(cfg *configs.Config) {
 	if cfg.Server.Port == 0 {
 		cfg.Server.Port = 8080
@@ -135,13 +138,25 @@ func setDefaults(cfg *configs.Config) {
 		cfg.Search.RRFK = 60
 	}
 	if cfg.Search.TopK == 0 {
-		cfg.Search.TopK = 5
+		cfg.Search.TopK = 8
+	}
+	// NUEVO: default para candidates_k
+	if cfg.Search.CandidatesK == 0 {
+		cfg.Search.CandidatesK = 40
+	}
+	// NUEVO: parámetros BM25
+	if cfg.Search.BM25K1 == 0 {
+		cfg.Search.BM25K1 = 1.2
+	}
+	if cfg.Search.BM25B == 0 {
+		cfg.Search.BM25B = 0.75
+	}
+	// NUEVO: límite de chunk en prompt
+	if cfg.LLM.MaxChunkLength == 0 {
+		cfg.LLM.MaxChunkLength = 1000
 	}
 	if cfg.Chunk.MaxSize == 0 {
 		cfg.Chunk.MaxSize = 1000
-	}
-	if cfg.Store.VectorDimension == 0 {
-		cfg.Store.VectorDimension = 768
 	}
 	if cfg.Extract.ProcessedDir == "" {
 		cfg.Extract.ProcessedDir = "data/processed"
