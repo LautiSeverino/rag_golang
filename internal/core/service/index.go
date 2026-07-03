@@ -2,7 +2,9 @@ package service
 
 import (
 	"context"
+	"crypto/sha256"
 	"fmt"
+	"log"
 	"rag_golang/internal/configs"
 	"rag_golang/internal/core/domain/chunk"
 	"rag_golang/internal/core/domain/index"
@@ -21,6 +23,7 @@ type IndexService struct {
 	collection string
 	chunkCfg   chunk.ChunkConfig
 	embedCfg   configs.EmbedConfig
+	bm25Path   string
 }
 
 func NewIndexService(
@@ -32,6 +35,7 @@ func NewIndexService(
 	chunkCfg chunk.ChunkConfig,
 	embedCfg configs.EmbedConfig,
 	collection string,
+	bm25Path string,
 ) *IndexService {
 	return &IndexService{
 		extractor:  extractor,
@@ -43,6 +47,7 @@ func NewIndexService(
 		collection: collection,
 		chunkCfg:   chunkCfg,
 		embedCfg:   embedCfg,
+		bm25Path:   bm25Path,
 	}
 }
 
@@ -73,8 +78,9 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 
 	// 1. Separar chunks con y sin caché
 	type pendingChunk struct {
-		chunk chunk.Chunk
-		idx   int
+		chunk    chunk.Chunk
+		idx      int
+		cacheKey string
 	}
 
 	reqs := make([]index.IndexRequest, len(chunks))
@@ -82,11 +88,12 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 	cacheHits := 0
 
 	for i, ch := range chunks {
-		if vec, ok := s.cacheRepo.Get(ch.Hash, s.embedder.ModelName()); ok {
+		cacheKey := embedCacheKey(s.embedCfg.DocumentPrefix, ch.Hash)
+		if vec, ok := s.cacheRepo.Get(cacheKey, s.embedder.ModelName()); ok {
 			reqs[i] = index.IndexRequest{Chunk: ch, Vector: vec, CollectionName: s.collection}
 			cacheHits++
 		} else {
-			pending = append(pending, pendingChunk{chunk: ch, idx: i})
+			pending = append(pending, pendingChunk{chunk: ch, idx: i, cacheKey: cacheKey})
 		}
 	}
 
@@ -101,7 +108,7 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 
 		texts := make([]string, len(batch))
 		for j, p := range batch {
-			texts[j] = p.chunk.Text
+			texts[j] = s.embedCfg.DocumentPrefix + p.chunk.Text
 		}
 
 		vecs, err := s.embedder.Embed(ctx, texts)
@@ -110,7 +117,7 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 		}
 
 		for j, p := range batch {
-			if err := s.cacheRepo.Set(p.chunk.Hash, vecs[j], s.embedder.ModelName()); err != nil {
+			if err := s.cacheRepo.Set(p.cacheKey, vecs[j], s.embedder.ModelName()); err != nil {
 				return nil, fmt.Errorf("cache set: %w", err)
 			}
 			reqs[p.idx] = index.IndexRequest{Chunk: p.chunk, Vector: vecs[j], CollectionName: s.collection}
@@ -124,10 +131,26 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 		return nil, err
 	}
 
+	if s.bm25Path != "" {
+		if err := s.bm25Repo.SaveToDisk(s.bm25Path); err != nil {
+			log.Printf("warning: no se pudo persistir BM25: %v", err)
+		}
+	}
+
 	return &index.IndexResult{
 		DocID:      doc.ID,
 		Source:     sourcePath,
 		ChunkCount: len(chunks),
 		CacheHits:  cacheHits,
 	}, nil
+}
+
+// Y para la clave de cache, incluir el prefijo en el hash:
+func embedCacheKey(prefix, chunkHash string) string {
+	if prefix == "" {
+		return chunkHash
+	}
+	combined := prefix + ":" + chunkHash
+	sum := sha256.Sum256([]byte(combined))
+	return fmt.Sprintf("%x", sum)
 }

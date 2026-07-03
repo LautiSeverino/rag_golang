@@ -3,11 +3,13 @@ package service
 import (
 	"context"
 	"fmt"
+	"log"
 	"rag_golang/internal/configs"
 	"rag_golang/internal/core/domain/llm"
 	"rag_golang/internal/core/domain/query"
 	"rag_golang/internal/core/domain/search"
 	"rag_golang/internal/core/ports/out"
+	"strings"
 )
 
 type QueryService struct {
@@ -40,7 +42,10 @@ type retrievalResult struct {
 }
 
 func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retrievalResult, error) {
-	vecs, err := s.embedder.Embed(ctx, []string{userQuery})
+	// Aplicar prefijo de query para nomic-embed-text
+	queryToEmbed := s.cfg.Embed.QueryPrefix + userQuery
+
+	vecs, err := s.embedder.Embed(ctx, []string{queryToEmbed})
 	if err != nil {
 		return nil, fmt.Errorf("embed: %w", err)
 	}
@@ -63,11 +68,52 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 		Query: userQuery,
 		TopK:  candidatesK,
 	})
+
+	// RRF con pool más grande para tener margen antes de deduplicar
+	rrfPoolSize := s.cfg.Search.TopK * 4 // candidatos extra para sobrevivir a la dedup
+	if rrfPoolSize < s.cfg.Search.TopK {
+		rrfPoolSize = s.cfg.Search.TopK
+	}
+
+	// ─── LOGS DE DIAGNÓSTICO ──────────────────────────────────────────
+	log.Printf("[RETRIEVE] query=%q", userQuery)
+	log.Printf("[DENSE] top-%d resultados:", len(denseResults))
+	for i, r := range denseResults {
+		sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
+		log.Printf("  [%d] score=%.4f  section=%q  page=%d",
+			i+1, r.Score, sectionKey, r.Chunk.Page)
+	}
+	log.Printf("[BM25] top-%d resultados:", len(sparseResults))
+	for i, r := range sparseResults {
+		sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
+		log.Printf("  [%d] score=%.4f  section=%q  page=%d",
+			i+1, r.Score, sectionKey, r.Chunk.Page)
+	}
+	// ──────────────────────────────────────────────────────────────────
 	if err != nil {
 		return nil, fmt.Errorf("bm25 search: %w", err)
 	}
 
 	fused := search.Rrf(denseResults, sparseResults, s.cfg.Search.RRFK, s.cfg.Search.TopK)
+
+	// Deduplicar: no más de MaxChunksPerSection por sección
+	if s.cfg.Search.MaxChunksPerSection > 0 {
+		fused = limitChunksPerSection(fused, s.cfg.Search.MaxChunksPerSection)
+	}
+
+	// Recortar al top_k final
+	if len(fused) > s.cfg.Search.TopK {
+		fused = fused[:s.cfg.Search.TopK]
+	}
+
+	// ─── LOG DE RRF ───────────────────────────────────────────────────
+	log.Printf("[RRF] top-%d fusionados:", len(fused))
+	for i, r := range fused {
+		sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
+		log.Printf("  [%d] rrf_score=%.6f  section=%q  page=%d",
+			i+1, r.Score, sectionKey, r.Chunk.Page)
+	}
+	// ──────────────────────────────────────────────────────────────────
 	return &retrievalResult{fused: fused}, nil
 }
 
@@ -95,4 +141,18 @@ func (s *QueryService) QueryStream(ctx context.Context, userQuery string) (<-cha
 		return nil, fmt.Errorf("query service: llm generate: %w", err)
 	}
 	return tokenCh, nil
+}
+
+func limitChunksPerSection(results []search.SearchResult, maxPerSection int) []search.SearchResult {
+	sectionCounts := make(map[string]int, len(results))
+	deduped := make([]search.SearchResult, 0, len(results))
+
+	for _, r := range results {
+		key := strings.Join(r.Chunk.SectionPath, "|")
+		if sectionCounts[key] < maxPerSection {
+			deduped = append(deduped, r)
+			sectionCounts[key]++
+		}
+	}
+	return deduped
 }

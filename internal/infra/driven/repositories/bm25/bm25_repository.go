@@ -2,7 +2,11 @@ package bm25
 
 import (
 	"context"
+	"encoding/gob"
+	"fmt"
 	"math"
+	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 	"sync"
@@ -173,6 +177,61 @@ func (r *BM25Repository) DeleteByDocID(_ context.Context, docID uuid.UUID) error
 		}
 	}
 	r.avgDocLen = computeAvgDocLen(r.docLens)
+	return nil
+}
+
+type persistedState struct {
+	Chunks    []chunk.Chunk
+	Index     map[string][]invertedEntry
+	DocLens   []int
+	AvgDocLen float64
+}
+
+func (r *BM25Repository) SaveToDisk(path string) error {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+
+	if err := os.MkdirAll(filepath.Dir(path), 0755); err != nil {
+		return err
+	}
+
+	f, err := os.Create(path)
+	if err != nil {
+		return fmt.Errorf("bm25: create file %q: %w", path, err)
+	}
+	defer f.Close()
+
+	state := persistedState{
+		Chunks:    r.chunks,
+		Index:     r.index,
+		DocLens:   r.docLens,
+		AvgDocLen: r.avgDocLen,
+	}
+	return gob.NewEncoder(f).Encode(state)
+}
+
+func (r *BM25Repository) LoadFromDisk(path string) error {
+	r.mu.Lock()
+	defer r.mu.Unlock()
+
+	f, err := os.Open(path)
+	if err != nil {
+		if os.IsNotExist(err) {
+			return nil // primera vez, no hay nada que cargar
+		}
+		return fmt.Errorf("bm25: open file %q: %w", path, err)
+	}
+	defer f.Close()
+
+	var state persistedState
+	if err := gob.NewDecoder(f).Decode(&state); err != nil {
+		return fmt.Errorf("bm25: decode: %w", err)
+	}
+
+	r.chunks = state.Chunks
+	r.index = state.Index
+	r.docLens = state.DocLens
+	r.avgDocLen = state.AvgDocLen
 	return nil
 }
 

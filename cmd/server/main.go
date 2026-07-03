@@ -57,6 +57,13 @@ func main() {
 	defer cacheRepo.Close()
 
 	bm25Repo := bm25repo.NewRepository(cfg.Search.BM25K1, cfg.Search.BM25B)
+	if cfg.Store.BM25Path != "" {
+		if err := bm25Repo.LoadFromDisk(cfg.Store.BM25Path); err != nil {
+			log.Printf("warning: no se pudo cargar BM25 desde disco: %v", err)
+		} else {
+			log.Printf("BM25 cargado desde %s", cfg.Store.BM25Path)
+		}
+	}
 
 	extractorDispatcher := extractor.NewExtractorDispatcher(cfg.Extract)
 
@@ -75,6 +82,7 @@ func main() {
 		cfg.Chunk,
 		cfg.Embed,
 		cfg.Store.CollectionName,
+		cfg.Store.BM25Path,
 	)
 
 	querySvc := service.NewQueryService(
@@ -175,5 +183,14 @@ func setDefaults(cfg *configs.Config) {
 	}
 	if cfg.LLM.Options.NumCtx == 0 {
 		cfg.LLM.Options.NumCtx = llm.CtxSmall
+	}
+	if cfg.Embed.QueryPrefix == "" && cfg.Embed.Model == "nomic-embed-text" {
+		cfg.Embed.QueryPrefix = "search_query: "
+	}
+	if cfg.Embed.DocumentPrefix == "" && cfg.Embed.Model == "nomic-embed-text" {
+		cfg.Embed.DocumentPrefix = "search_document: "
+	}
+	if cfg.Search.MaxChunksPerSection == 0 {
+		cfg.Search.MaxChunksPerSection = 2
 	}
 }

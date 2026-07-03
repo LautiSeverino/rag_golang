@@ -15,4 +15,6 @@ type IBM25Repository interface {
 	Index(ctx context.Context, chunks []chunk.Chunk) error
 	Search(ctx context.Context, req search.BM25SearchRequest) ([]search.BM25Result, error)
 	DeleteByDocID(ctx context.Context, docID uuid.UUID) error
+	LoadFromDisk(path string) error
+	SaveToDisk(path string) error
 }

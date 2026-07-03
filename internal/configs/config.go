@@ -31,9 +31,11 @@ type ExtractConfig struct {
 
 // EmbedConfig configura el Embedder (Ollama).
 type EmbedConfig struct {
-	Model     embed.EmbedModel `yaml:"model"`
-	OllamaURL string           `yaml:"ollama_url"`
-	BatchSize int              `yaml:"batch_size"` // chunks por request a Ollama
+	Model          embed.EmbedModel `yaml:"model"`
+	OllamaURL      string           `yaml:"ollama_url"`
+	BatchSize      int              `yaml:"batch_size"` // chunks por request a Ollama
+	QueryPrefix    string           `yaml:"query_prefix"`
+	DocumentPrefix string           `yaml:"document_prefix"`
 }
 
 // StoreConfig configura el VectorStore (Qdrant) y el EmbedCache (bbolt).
@@ -43,6 +45,7 @@ type StoreConfig struct {
 	CollectionName  string `yaml:"collection_name"`
 	VectorDimension int    `yaml:"vector_dimension"` // 768 para nomic-embed-text
 	BboltPath       string `yaml:"bbolt_path"`
+	BM25Path        string `yaml:"bm25_path"` // path del índice BM25
 }
 
 // LLMConfig configura el LLM (Ollama).
@@ -55,11 +58,13 @@ type LLMConfig struct {
 
 // SearchConfig parametriza la búsqueda híbrida en QueryService.
 type SearchConfig struct {
-	RRFK        int     `yaml:"rrf_k"`        // constante RRF fusion, default 60
-	TopK        int     `yaml:"top_k"`        // resultados finales que va al contexto del LLM
-	CandidatesK int     `yaml:"candidates_k"` // candidatos pre-RRF por store
-	BM25K1      float64 `yaml:"bm25_k1"`      // parámetro saturación TF
-	BM25B       float64 `yaml:"bm25_b"`       // parámetro normalización longitud
+	RRFK                int     `yaml:"rrf_k"`                  // constante RRF fusion, default 60
+	TopK                int     `yaml:"top_k"`                  // resultados finales que va al contexto del LLM
+	CandidatesK         int     `yaml:"candidates_k"`           // candidatos pre-RRF por store
+	BM25K1              float64 `yaml:"bm25_k1"`                // parámetro saturación TF
+	BM25B               float64 `yaml:"bm25_b"`                 // parámetro normalización longitud
+	MaxChunksPerSection int     `yaml:"max_chunks_per_section"` // máximo de chunks por sección en el contexto final
+
 }
 
 // ServerConfig

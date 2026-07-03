@@ -15,8 +15,11 @@ embed:
   model: "nomic-embed-text"
   ollama_url: "http://localhost:11434"
   batch_size: 8                     # chunks por request a Ollama
+  query_prefix: "search_query: "       
+  document_prefix: "search_document: " 
 
 store:
+  bm25_path: "data/bm25.gob"          # path del índice BM25
   qdrant_host: "localhost"
   qdrant_port: 6334                 # puerto gRPC de Qdrant
   collection_name: "rag_docs"
@@ -38,3 +41,4 @@ search:
   candidates_k: 40   # cuántos candidatos por store antes de RRF (subir de 20 a 40)
   bm25_k1: 1.2
   bm25_b: 0.75
+  max_chunks_per_section: 2  # máximo 2 chunks por sección en el contexto final
