@@ -27,7 +27,7 @@ store:
   bbolt_path: "data/embeddings.db"
 
 llm:
-  model: "phi3:mini"
+  model: "qwen2.5:3b"
   ollama_url: "http://localhost:11434"
   max_chunk_length: 1000
   options:

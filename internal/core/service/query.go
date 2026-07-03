@@ -94,7 +94,7 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 		return nil, fmt.Errorf("bm25 search: %w", err)
 	}
 
-	fused := search.Rrf(denseResults, sparseResults, s.cfg.Search.RRFK, s.cfg.Search.TopK)
+	fused := search.Rrf(denseResults, sparseResults, s.cfg.Search.RRFK, rrfPoolSize)
 
 	// Deduplicar: no más de MaxChunksPerSection por sección
 	if s.cfg.Search.MaxChunksPerSection > 0 {
