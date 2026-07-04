@@ -12,7 +12,7 @@ chunk:
   context_prefix: true              # antepone SectionPath al texto embebible
 
 embed:
-  model: "nomic-embed-text"
+  model: "mxbai-embed-large:latest"
   ollama_url: "http://localhost:11434"
   batch_size: 8                     # chunks por request a Ollama
   query_prefix: "search_query: "       
@@ -23,22 +23,22 @@ store:
   qdrant_host: "localhost"
   qdrant_port: 6334                 # puerto gRPC de Qdrant
   collection_name: "rag_docs"
-  vector_dimension: 768             # nomic-embed-text produce vectores de 768
+  vector_dimension: 1024             # mxbai-embed-large produce vectores de 1024
   bbolt_path: "data/embeddings.db"
 
 llm:
   model: "qwen2.5:3b"
   ollama_url: "http://localhost:11434"
-  max_chunk_length: 1000
+  max_chunk_length: 500
   options:
     temperature: 0.1
-    num_predict: 512
-    num_ctx: 4096
+    num_predict: 300
+    num_ctx: 2048
 
 search:
   rrf_k: 60
-  top_k: 8           
+  top_k: 5           
   candidates_k: 40   # cuántos candidatos por store antes de RRF (subir de 20 a 40)
   bm25_k1: 1.2
   bm25_b: 0.75
-  max_chunks_per_section: 2  # máximo 2 chunks por sección en el contexto final
+  max_chunks_per_section: 3  # máximo 2 chunks por sección en el contexto final

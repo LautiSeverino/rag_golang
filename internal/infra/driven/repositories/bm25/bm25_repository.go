@@ -20,8 +20,8 @@ import (
 
 // invertedEntry es una entrada en el índice invertido para un término.
 type invertedEntry struct {
-	chunkIdx int     // índice en r.chunks
-	tf       float64 // frecuencia del término en el chunk
+	ChunkIdx int     // índice en r.chunks
+	TF       float64 // frecuencia del término en el chunk
 }
 
 // BM25Repository implementa out.IBM25Repository con un índice invertido en memoria.
@@ -73,8 +73,8 @@ func (r *BM25Repository) Index(_ context.Context, chunks []chunk.Chunk) error {
 
 		for term, count := range tf {
 			r.index[term] = append(r.index[term], invertedEntry{
-				chunkIdx: idx,
-				tf:       float64(count),
+				ChunkIdx: idx,
+				TF:       float64(count),
 			})
 		}
 	}
@@ -112,12 +112,12 @@ func (r *BM25Repository) Search(_ context.Context, req search.BM25SearchRequest)
 		idf := math.Log((N-df+0.5)/(df+0.5) + 1)
 
 		for _, e := range entries {
-			docLen := float64(r.docLens[e.chunkIdx])
+			docLen := float64(r.docLens[e.ChunkIdx])
 			// TF normalizado con saturación
-			tfNorm := (e.tf * (r.k1 + 1)) /
-				(e.tf + r.k1*(1-r.b+r.b*(docLen/r.avgDocLen)))
+			tfNorm := (e.TF * (r.k1 + 1)) /
+				(e.TF + r.k1*(1-r.b+r.b*(docLen/r.avgDocLen)))
 
-			scores[e.chunkIdx] += idf * tfNorm
+			scores[e.ChunkIdx] += idf * tfNorm
 		}
 	}
 
@@ -171,8 +171,8 @@ func (r *BM25Repository) DeleteByDocID(_ context.Context, docID uuid.UUID) error
 		}
 		for term, count := range tf {
 			r.index[term] = append(r.index[term], invertedEntry{
-				chunkIdx: i,
-				tf:       float64(count),
+				ChunkIdx: i,
+				TF:       float64(count),
 			})
 		}
 	}

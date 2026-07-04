@@ -63,6 +63,7 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 	if err != nil {
 		return nil, fmt.Errorf("vector search: %w", err)
 	}
+	denseResults = deduplicateDensePool(denseResults, 3) // máximo 3 chunks por sección en el pool denso
 
 	sparseResults, err := s.bm25Repo.Search(ctx, search.BM25SearchRequest{
 		Query: userQuery,
@@ -152,6 +153,20 @@ func limitChunksPerSection(results []search.SearchResult, maxPerSection int) []s
 		if sectionCounts[key] < maxPerSection {
 			deduped = append(deduped, r)
 			sectionCounts[key]++
+		}
+	}
+	return deduped
+}
+
+// En query.go, función nueva:
+func deduplicateDensePool(results []search.SearchResult, maxPerSection int) []search.SearchResult {
+	counts := make(map[string]int)
+	deduped := make([]search.SearchResult, 0, len(results))
+	for _, r := range results {
+		key := strings.Join(r.Chunk.SectionPath, "|")
+		if counts[key] < maxPerSection {
+			deduped = append(deduped, r)
+			counts[key]++
 		}
 	}
 	return deduped

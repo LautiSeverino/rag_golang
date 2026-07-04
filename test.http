@@ -14,3 +14,71 @@ Content-Type: application/json
 {
     "query": "¿cuales son los elementos de juego?"
 }
+
+### bbbb
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Cuántos dados puede usar el atacante?"
+}
+
+### cccc
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Se pueden hacer alianzas ofensivas?"
+}
+
+
+### dddd
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Qué continentes hay en el mapa del TEG?" 
+}
+
+
+
+### eeee
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Cómo se incorporan ejércitos al inicio y durante el juego?"
+}
+
+### ffff
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Cómo es el reparto de paises?"
+}
+
+### ffff
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Cómo es el reparto de objetivos?"
+}
+
+
+### ffff
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "¿Cómo es el reparto de paises y objetivos?"
+}
+
