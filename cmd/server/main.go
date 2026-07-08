@@ -72,6 +72,25 @@ func main() {
 		log.Fatalf("qdrant ensure collection: %v", err)
 	}
 
+	// ─── Infra: driver adapters ───────────────────────────────────────────────
+
+	if err := os.MkdirAll("logs", 0755); err != nil {
+		log.Fatalf("crear carpeta logs: %v", err)
+	}
+
+	logFile, err := os.OpenFile(
+		cfg.Log.FilePath,
+		os.O_CREATE|os.O_WRONLY|os.O_APPEND,
+		0644,
+	)
+	if err != nil {
+		log.Fatalf("abrir log file: %v", err)
+	}
+	defer logFile.Close()
+
+	httpLogger := log.New(logFile, "", log.LstdFlags|log.Lmicroseconds)
+	ragLogger := log.New(logFile, "", log.LstdFlags|log.Lmicroseconds)
+
 	// ─── Core: services ───────────────────────────────────────────────────────
 	indexSvc := service.NewIndexService(
 		extractorDispatcher,
@@ -91,13 +110,19 @@ func main() {
 		bm25Repo,
 		llmClient,
 		cfg,
+		ragLogger,
 	)
 
 	// ─── Driver: HTTP handlers ────────────────────────────────────────────────
 	router := mux.NewRouter()
 
-	router.Use(middlewares.Logging)
-	router.Use(middlewares.Recover)
+	router.Use(middlewares.Logging(
+		httpLogger,
+		cfg.Log.LogRequests,
+		cfg.Log.LogResponses,
+		cfg.Log.MaxBodyBytes,
+	))
+	router.Use(middlewares.Recover(httpLogger))
 
 	handler.NewIndexHandler(indexSvc).RegisterPublicRoutes(router)
 	handler.NewQueryHandler(querySvc).RegisterPublicRoutes(router)

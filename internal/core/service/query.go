@@ -10,6 +10,7 @@ import (
 	"rag_golang/internal/core/domain/search"
 	"rag_golang/internal/core/ports/out"
 	"strings"
+	"time"
 )
 
 type QueryService struct {
@@ -18,6 +19,7 @@ type QueryService struct {
 	bm25Repo   out.IBM25Repository
 	llm        out.ILLMPort
 	cfg        configs.Config
+	logger     *log.Logger
 }
 
 // No existe NewQueryService
@@ -27,6 +29,7 @@ func NewQueryService(
 	bm25Repo out.IBM25Repository,
 	llm out.ILLMPort,
 	cfg configs.Config,
+	logger *log.Logger,
 ) *QueryService {
 	return &QueryService{
 		embedder:   embedder,
@@ -34,6 +37,7 @@ func NewQueryService(
 		bm25Repo:   bm25Repo,
 		llm:        llm,
 		cfg:        cfg,
+		logger:     logger,
 	}
 }
 
@@ -42,7 +46,17 @@ type retrievalResult struct {
 }
 
 func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retrievalResult, error) {
-	// Aplicar prefijo de query para nomic-embed-text
+	startTotal := time.Now()
+
+	if s.logger != nil {
+		s.logger.Printf("================================================================================")
+		s.logger.Printf("RAG RETRIEVE START")
+		s.logger.Printf("QUERY: %s", userQuery)
+		s.logger.Printf("================================================================================")
+	}
+
+	// 1) Embedding
+	t0 := time.Now()
 	queryToEmbed := s.cfg.Embed.QueryPrefix + userQuery
 
 	vecs, err := s.embedder.Embed(ctx, []string{queryToEmbed})
@@ -52,8 +66,12 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 	if len(vecs) == 0 {
 		return nil, fmt.Errorf("no vectors returned")
 	}
+	if s.logger != nil {
+		s.logger.Printf("[EMBEDDING] model=%s duration=%s", s.cfg.Embed.Model, time.Since(t0))
+	}
 
-	// Usar candidates_k del config en lugar del 20 hardcodeado
+	// 2) Dense search
+	t1 := time.Now()
 	candidatesK := s.cfg.Search.CandidatesK
 
 	denseResults, err := s.vectorRepo.Search(ctx, search.SearchRequest{
@@ -63,87 +81,124 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 	if err != nil {
 		return nil, fmt.Errorf("vector search: %w", err)
 	}
-	denseResults = deduplicateDensePool(denseResults, 3) // máximo 3 chunks por sección en el pool denso
+	denseResults = deduplicateDensePool(denseResults, 3)
 
+	if s.logger != nil {
+		s.logger.Printf("[DENSE] top=%d duration=%s", len(denseResults), time.Since(t1))
+		for i, r := range denseResults {
+			sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
+			s.logger.Printf("  [%d] score=%.6f page=%d section=%q", i+1, r.Score, r.Chunk.Page, sectionKey)
+		}
+	}
+
+	// 3) BM25
+	t2 := time.Now()
 	sparseResults, err := s.bm25Repo.Search(ctx, search.BM25SearchRequest{
 		Query: userQuery,
 		TopK:  candidatesK,
 	})
-
-	// RRF con pool más grande para tener margen antes de deduplicar
-	rrfPoolSize := s.cfg.Search.TopK * 4 // candidatos extra para sobrevivir a la dedup
-	if rrfPoolSize < s.cfg.Search.TopK {
-		rrfPoolSize = s.cfg.Search.TopK
-	}
-
-	// ─── LOGS DE DIAGNÓSTICO ──────────────────────────────────────────
-	log.Printf("[RETRIEVE] query=%q", userQuery)
-	log.Printf("[DENSE] top-%d resultados:", len(denseResults))
-	for i, r := range denseResults {
-		sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
-		log.Printf("  [%d] score=%.4f  section=%q  page=%d",
-			i+1, r.Score, sectionKey, r.Chunk.Page)
-	}
-	log.Printf("[BM25] top-%d resultados:", len(sparseResults))
-	for i, r := range sparseResults {
-		sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
-		log.Printf("  [%d] score=%.4f  section=%q  page=%d",
-			i+1, r.Score, sectionKey, r.Chunk.Page)
-	}
-	// ──────────────────────────────────────────────────────────────────
 	if err != nil {
 		return nil, fmt.Errorf("bm25 search: %w", err)
 	}
 
+	if s.logger != nil {
+		s.logger.Printf("[BM25] top=%d duration=%s", len(sparseResults), time.Since(t2))
+		for i, r := range sparseResults {
+			sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
+			s.logger.Printf("  [%d] score=%.6f page=%d section=%q", i+1, r.Score, r.Chunk.Page, sectionKey)
+		}
+	}
+
+	// 4) RRF
+	t3 := time.Now()
+	rrfPoolSize := s.cfg.Search.TopK * 4
+	if rrfPoolSize < s.cfg.Search.TopK {
+		rrfPoolSize = s.cfg.Search.TopK
+	}
+
 	fused := search.Rrf(denseResults, sparseResults, s.cfg.Search.RRFK, rrfPoolSize)
 
-	// Deduplicar: no más de MaxChunksPerSection por sección
 	if s.cfg.Search.MaxChunksPerSection > 0 {
 		fused = limitChunksPerSection(fused, s.cfg.Search.MaxChunksPerSection)
 	}
 
-	// Recortar al top_k final
 	if len(fused) > s.cfg.Search.TopK {
 		fused = fused[:s.cfg.Search.TopK]
 	}
 
-	// ─── LOG DE RRF ───────────────────────────────────────────────────
-	log.Printf("[RRF] top-%d fusionados:", len(fused))
-	for i, r := range fused {
-		sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
-		log.Printf("  [%d] rrf_score=%.6f  section=%q  page=%d",
-			i+1, r.Score, sectionKey, r.Chunk.Page)
+	if s.logger != nil {
+		s.logger.Printf("[RRF] top=%d duration=%s", len(fused), time.Since(t3))
+		for i, r := range fused {
+			sectionKey := strings.Join(r.Chunk.SectionPath, " > ")
+			s.logger.Printf("  [%d] score=%.6f page=%d section=%q", i+1, r.Score, r.Chunk.Page, sectionKey)
+		}
+		s.logger.Printf("TIMINGS total=%s embedding=%s dense=%s bm25=%s rrf=%s",
+			time.Since(startTotal),
+			"see above",
+			"see above",
+			"see above",
+			"see above",
+		)
+		s.logger.Printf("================================================================================")
 	}
-	// ──────────────────────────────────────────────────────────────────
+
 	return &retrievalResult{fused: fused}, nil
 }
 
 func (s *QueryService) Query(ctx context.Context, userQuery string) (*query.QueryResult, error) {
+	start := time.Now()
+
 	res, err := s.retrieve(ctx, userQuery)
 	if err != nil {
 		return nil, fmt.Errorf("query service: retrieve: %w", err)
 	}
-	tokensChan, err := s.llm.Generate(ctx, llm.BuildRequest(userQuery, res.fused, s.cfg.LLM.Model, s.cfg.LLM.Options, s.cfg.LLM.MaxChunkLength))
+
+	req := llm.BuildRequest(userQuery, res.fused, s.cfg.LLM.Model, s.cfg.LLM.Options, s.cfg.LLM.MaxChunkLength)
+
+	if s.logger != nil {
+		s.logger.Printf("[LLM BUILD] chunks=%d model=%s max_chunk_length=%d", len(res.fused), s.cfg.LLM.Model, s.cfg.LLM.MaxChunkLength)
+	}
+
+	tokensChan, err := s.llm.Generate(ctx, req)
 	if err != nil {
 		return nil, fmt.Errorf("query service: llm generate: %w", err)
 	}
-	return query.BuildQueryResult(userQuery, tokensChan, res.fused), nil
+
+	result := query.BuildQueryResult(userQuery, tokensChan, res.fused)
+
+	if s.logger != nil {
+		s.logger.Printf("[QUERY END] duration=%s query=%q", time.Since(start), userQuery)
+	}
+
+	return result, nil
 }
 
 func (s *QueryService) QueryStream(ctx context.Context, userQuery string) (<-chan llm.GenerateToken, error) {
+	start := time.Now()
+
 	res, err := s.retrieve(ctx, userQuery)
 	if err != nil {
 		return nil, fmt.Errorf("query service: retrieve: %w", err)
 	}
+
 	req := llm.BuildRequest(userQuery, res.fused, s.cfg.LLM.Model, s.cfg.LLM.Options, s.cfg.LLM.MaxChunkLength)
 	req.Stream = true
+
+	if s.logger != nil {
+		s.logger.Printf("[STREAM START] query=%q chunks=%d", userQuery, len(res.fused))
+	}
+
 	tokenCh, err := s.llm.Generate(ctx, req)
 	if err != nil {
 		return nil, fmt.Errorf("query service: llm generate: %w", err)
 	}
+
+	if s.logger != nil {
+		s.logger.Printf("[STREAM READY] duration=%s query=%q", time.Since(start), userQuery)
+	}
+
 	return tokenCh, nil
 }
-
 func limitChunksPerSection(results []search.SearchResult, maxPerSection int) []search.SearchResult {
 	sectionCounts := make(map[string]int, len(results))
 	deduped := make([]search.SearchResult, 0, len(results))

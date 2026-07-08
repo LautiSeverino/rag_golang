@@ -15,6 +15,7 @@ type Config struct {
 	Store   StoreConfig       `yaml:"store"`
 	LLM     LLMConfig         `yaml:"llm"`
 	Search  SearchConfig      `yaml:"search"`
+	Log     LogConfig         `yaml:"log"`
 }
 
 // ExtractConfig configura el comportamiento del Extractor.
@@ -69,4 +70,12 @@ type SearchConfig struct {
 // ServerConfig
 type ServerConfig struct {
 	Port int `yaml:"port"`
+}
+
+// LogConfig configura el logging de requests y responses HTTP.
+type LogConfig struct {
+	FilePath     string `yaml:"file_path"`
+	LogRequests  bool   `yaml:"log_requests"`
+	LogResponses bool   `yaml:"log_responses"`
+	MaxBodyBytes int64  `yaml:"max_body_bytes"`
 }

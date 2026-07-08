@@ -42,3 +42,9 @@ search:
   bm25_k1: 1.2
   bm25_b: 0.75
   max_chunks_per_section: 3  # máximo 2 chunks por sección en el contexto final
+
+log:
+  file_path: "logs/http.log"
+  log_requests: true
+  log_responses: true
+  max_body_bytes: 100000

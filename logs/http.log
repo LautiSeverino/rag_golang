@@ -1,0 +1,1378 @@
+2026/07/08 12:10:00.282356 ================================================================================
+2026/07/08 12:10:00.282396 RAG RETRIEVE START
+2026/07/08 12:10:00.282409 QUERY: ¿cuales son los elementos de juego?
+2026/07/08 12:10:00.282414 ================================================================================
+2026/07/08 12:10:00.713411 [EMBEDDING] model=mxbai-embed-large:latest duration=430.993633ms
+2026/07/08 12:10:00.718198 [DENSE] top=22 duration=4.751909ms
+2026/07/08 12:10:00.718223   [1] score=0.801117 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:10:00.718229   [2] score=0.773129 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718231   [3] score=0.768331 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718232   [4] score=0.755857 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718234   [5] score=0.755480 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718236   [6] score=0.739186 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718237   [7] score=0.737731 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718239   [8] score=0.722621 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:10:00.718240   [9] score=0.722460 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718241   [10] score=0.720606 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718243   [11] score=0.712788 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:10:00.718244   [12] score=0.711671 page=10 section="7. PACTOS"
+2026/07/08 12:10:00.718245   [13] score=0.711468 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:10:00.718247   [14] score=0.706118 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:10:00.718248   [15] score=0.687877 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718249   [16] score=0.686561 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718251   [17] score=0.657911 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718252   [18] score=0.655759 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718253   [19] score=0.621268 page=10 section="7. PACTOS"
+2026/07/08 12:10:00.718254   [20] score=0.618668 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:10:00.718256   [21] score=0.610996 page=10 section="7. PACTOS"
+2026/07/08 12:10:00.718257   [22] score=0.606806 page=2 section=""
+2026/07/08 12:10:00.718271 [BM25] top=29 duration=13.143µs
+2026/07/08 12:10:00.718273   [1] score=6.535775 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:10:00.718275   [2] score=5.261696 page=10 section="7. PACTOS"
+2026/07/08 12:10:00.718277   [3] score=3.371028 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718279   [4] score=2.324974 page=10 section="7. PACTOS"
+2026/07/08 12:10:00.718280   [5] score=2.231676 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718282   [6] score=2.164082 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718283   [7] score=1.623833 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:10:00.718285   [8] score=1.607369 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718287   [9] score=1.509483 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718288   [10] score=1.503493 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718290   [11] score=1.500802 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718291   [12] score=1.492979 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718292   [13] score=1.469773 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:10:00.718294   [14] score=1.449089 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718295   [15] score=0.989892 page=10 section="7. PACTOS"
+2026/07/08 12:10:00.718297   [16] score=0.928098 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718299   [17] score=0.694491 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718308   [18] score=0.690621 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:10:00.718310   [19] score=0.689642 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718311   [20] score=0.584990 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718313   [21] score=0.582856 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:10:00.718314   [22] score=0.552548 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718316   [23] score=0.450779 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:10:00.718317   [24] score=0.443184 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718319   [25] score=0.429339 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718320   [26] score=0.103288 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:10:00.718322   [27] score=0.096964 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718323   [28] score=0.093683 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718324   [29] score=0.083724 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:10:00.718344 [RRF] top=5 duration=18.372µs
+2026/07/08 12:10:00.718346   [1] score=0.032787 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:10:00.718348   [2] score=0.032002 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718349   [3] score=0.030579 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718351   [4] score=0.029710 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:10:00.718352   [5] score=0.029670 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:10:00.718354 TIMINGS total=435.99756ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 12:10:00.718355 ================================================================================
+2026/07/08 12:10:00.718387 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 12:10:56.852958 [QUERY END] duration=56.570601373s query="¿cuales son los elementos de juego?"
+2026/07/08 12:10:56.853270 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 56.570812905s
+Client IP : 127.0.0.1:33340
+Timestamp : 2026-07-08 12:10:56.853
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿cuales son los elementos de juego?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿cuales son los elementos de juego?",
+  "answer": "Los elementos de juego incluyen:\n\n- Un planisferio dividido en 50 países agrupados en 6 continentes.\n- Cada ficha representa 1 ejército.\n- Se dispone un total de 600 ejércitos (100 por cada color).\n- Se utilizan 6 dados.\n- Hay tarjetas de países, una para cada país.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes:\nAmérica del Norte América del Sur, Europa, Asia, Africa y Oceanía.\nLas dimensiones y divisiones…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.0305789,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO\nUna vez concluida la primera ronda de hostilidades, se agrega un nuevo elemento al turno de los jugadores: la incorporación de ejércitos. De aquí en adelante, el orden…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 12:14:22.563925 ================================================================================
+2026/07/08 12:14:22.563953 RAG RETRIEVE START
+2026/07/08 12:14:22.563957 QUERY: ¿Cuántos dados puede usar el atacante?
+2026/07/08 12:14:22.563961 ================================================================================
+2026/07/08 12:14:22.713333 [EMBEDDING] model=mxbai-embed-large:latest duration=149.368684ms
+2026/07/08 12:14:22.716336 [DENSE] top=22 duration=2.968423ms
+2026/07/08 12:14:22.716353   [1] score=0.764119 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716360   [2] score=0.739238 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716362   [3] score=0.736078 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716364   [4] score=0.696357 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:14:22.716366   [5] score=0.694755 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:14:22.716368   [6] score=0.681112 page=10 section="7. PACTOS"
+2026/07/08 12:14:22.716370   [7] score=0.680608 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716372   [8] score=0.676674 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716373   [9] score=0.667871 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716375   [10] score=0.667021 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716377   [11] score=0.661219 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:14:22.716379   [12] score=0.661086 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716381   [13] score=0.657387 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716383   [14] score=0.653828 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:14:22.716385   [15] score=0.651762 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:14:22.716387   [16] score=0.627178 page=10 section="7. PACTOS"
+2026/07/08 12:14:22.716389   [17] score=0.624427 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:14:22.716390   [18] score=0.621649 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:14:22.716392   [19] score=0.620450 page=10 section="7. PACTOS"
+2026/07/08 12:14:22.716394   [20] score=0.618161 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:14:22.716396   [21] score=0.606103 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:14:22.716398   [22] score=0.572161 page=2 section=""
+2026/07/08 12:14:22.716420 [BM25] top=28 duration=17.627µs
+2026/07/08 12:14:22.716424   [1] score=7.785569 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716426   [2] score=4.749376 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716428   [3] score=3.253451 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716430   [4] score=3.208827 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716432   [5] score=2.902701 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716434   [6] score=2.501778 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:14:22.716436   [7] score=1.946579 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:14:22.716438   [8] score=1.723668 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716440   [9] score=1.540182 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716442   [10] score=1.516349 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716444   [11] score=1.488564 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716446   [12] score=1.403303 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716448   [13] score=1.344721 page=10 section="7. PACTOS"
+2026/07/08 12:14:22.716457   [14] score=1.109711 page=10 section="7. PACTOS"
+2026/07/08 12:14:22.716459   [15] score=1.097664 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:14:22.716460   [16] score=1.062913 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716462   [17] score=1.036496 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716464   [18] score=0.291113 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716465   [19] score=0.289577 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716467   [20] score=0.288150 page=10 section="7. PACTOS"
+2026/07/08 12:14:22.716468   [21] score=0.287527 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716470   [22] score=0.285490 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:14:22.716472   [23] score=0.278913 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716473   [24] score=0.278633 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:14:22.716475   [25] score=0.266200 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:14:22.716477   [26] score=0.264175 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716478   [27] score=0.245746 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:14:22.716480   [28] score=0.149772 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:14:22.716500 [RRF] top=5 duration=18.596µs
+2026/07/08 12:14:22.716502   [1] score=0.032787 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716504   [2] score=0.032002 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716505   [3] score=0.031754 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:14:22.716506   [4] score=0.029670 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:14:22.716508   [5] score=0.028992 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:14:22.716510 TIMINGS total=152.584951ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 12:14:22.716511 ================================================================================
+2026/07/08 12:14:22.716557 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 12:15:20.726933 [QUERY END] duration=58.163007619s query="¿Cuántos dados puede usar el atacante?"
+2026/07/08 12:15:20.727081 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 12:15:20.727
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 58.16317541s
+Client IP : 127.0.0.1:59332
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cuántos dados puede usar el atacante?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cuántos dados puede usar el atacante?",
+  "answer": "El atacante solo usa un dado para decidir hacia dónde atacar, según los detalles en Chunk #1. No se menciona cuántos dados puede usar durante el proceso de ataque.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 5,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "en el país.\nDos países son limítrofes si tiene una frontera en común, o si están unidos por\npuentes sobre el agua (como Chile - Australia).\nUn país puede atacar a otro (perteneciente a otro…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 6,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "1 - El tercer dado de “Verde” no se toma en cuenta.\nEn consecuencia, cada jugador retira uno de sus ejércitos.\nFinalizado este ataque, pueden suceder dos cosas:\nSi no queda ningún ejército…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.02967033,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028991597,
+      "excerpt": "Nótese que cuando tiene 5 tarjetas, hay inevitablemente 3 que están en alguna de las dos situaciones necesarias para el canje.\nMientras se tengan 5 o menos tarjetas, no hay obligación de efectuar…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 12:36:46.040759 ================================================================================
+2026/07/08 12:36:46.040794 RAG RETRIEVE START
+2026/07/08 12:36:46.040799 QUERY: ¿Se pueden hacer alianzas ofensivas?
+2026/07/08 12:36:46.040804 ================================================================================
+2026/07/08 12:36:46.509336 [EMBEDDING] model=mxbai-embed-large:latest duration=468.52912ms
+2026/07/08 12:36:46.511289 [DENSE] top=22 duration=1.929396ms
+2026/07/08 12:36:46.511311   [1] score=0.695939 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511321   [2] score=0.686589 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:36:46.511326   [3] score=0.677550 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511330   [4] score=0.672438 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:36:46.511334   [5] score=0.671502 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511338   [6] score=0.667296 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511341   [7] score=0.662863 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511345   [8] score=0.661558 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511348   [9] score=0.649617 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:36:46.511352   [10] score=0.649488 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511356   [11] score=0.648616 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511359   [12] score=0.646684 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:36:46.511362   [13] score=0.644883 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511366   [14] score=0.644877 page=10 section="7. PACTOS"
+2026/07/08 12:36:46.511369   [15] score=0.641591 page=10 section="7. PACTOS"
+2026/07/08 12:36:46.511372   [16] score=0.640476 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:36:46.511376   [17] score=0.630669 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:36:46.511379   [18] score=0.627290 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:36:46.511383   [19] score=0.626395 page=10 section="7. PACTOS"
+2026/07/08 12:36:46.511386   [20] score=0.613872 page=2 section=""
+2026/07/08 12:36:46.511389   [21] score=0.604016 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:36:46.511393   [22] score=0.579012 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:36:46.511418 [BM25] top=21 duration=21.316µs
+2026/07/08 12:36:46.511424   [1] score=3.620828 page=10 section="7. PACTOS"
+2026/07/08 12:36:46.511428   [2] score=3.449428 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511433   [3] score=2.694749 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511437   [4] score=2.459776 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:36:46.511441   [5] score=0.799885 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511445   [6] score=0.760169 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511451   [7] score=0.733966 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511463   [8] score=0.710752 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511466   [9] score=0.663834 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511469   [10] score=0.617141 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511471   [11] score=0.616105 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:36:46.511474   [12] score=0.571348 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:36:46.511476   [13] score=0.553263 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511478   [14] score=0.537060 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:36:46.511481   [15] score=0.398781 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511483   [16] score=0.393649 page=10 section="7. PACTOS"
+2026/07/08 12:36:46.511486   [17] score=0.389886 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511488   [18] score=0.388647 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511491   [19] score=0.380194 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511494   [20] score=0.368736 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511497   [21] score=0.356905 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:36:46.511526 [RRF] top=5 duration=26.34µs
+2026/07/08 12:36:46.511531   [1] score=0.031054 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511535   [2] score=0.029907 page=10 section="7. PACTOS"
+2026/07/08 12:36:46.511537   [3] score=0.029670 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511540   [4] score=0.029083 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:36:46.511543   [5] score=0.028992 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:36:46.511545 TIMINGS total=470.790959ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 12:36:46.511548 ================================================================================
+2026/07/08 12:36:46.511622 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 12:37:50.376305 [QUERY END] duration=1m4.335550353s query="¿Se pueden hacer alianzas ofensivas?"
+2026/07/08 12:37:50.376433 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 1m4.335710298s
+Client IP : 127.0.0.1:47160
+Timestamp : 2026-07-08 12:37:50.376
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Se pueden hacer alianzas ofensivas?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Se pueden hacer alianzas ofensivas?",
+  "answer": "No son válidas las alianzas o pactos agresivos-defensivos. No está permitido, por ejemplo, un pacto por el cual \"Verde\" y \"Rojo\" se comprometen a atacar sólo a \"Negro\" y no a los demás jugadores.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031054404,
+      "excerpt": "Nótese que cuando tiene 5 tarjetas, hay inevitablemente 3 que están en alguna de las dos situaciones necesarias para el canje.\nMientras se tengan 5 o menos tarjetas, no hay obligación de efectuar…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029906955,
+      "excerpt": "No son válidas las alianzas o pactos agresivos-defensivos. No está permitido, por ejemplo, un pacto por el cual “Verde” y “Rojo” se comprometen a atacar sólo a “Negro” y no a los…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.02967033,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 4,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029083245,
+      "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028991597,
+      "excerpt": "continentes en su totalidad, tiene el derecho de incorporar, además de los ejércitos que le corresponden por países, un número adicional de ejércitos por continente, según la tabla…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 12:38:00.878293 ================================================================================
+2026/07/08 12:38:00.878332 RAG RETRIEVE START
+2026/07/08 12:38:00.878338 QUERY: ¿Qué continentes hay en el mapa del TEG?
+2026/07/08 12:38:00.878342 ================================================================================
+2026/07/08 12:38:01.073903 [EMBEDDING] model=mxbai-embed-large:latest duration=195.557733ms
+2026/07/08 12:38:01.075715 [DENSE] top=22 duration=1.784626ms
+2026/07/08 12:38:01.075733   [1] score=0.783396 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:38:01.075741   [2] score=0.753431 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:38:01.075745   [3] score=0.751069 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:38:01.075748   [4] score=0.724703 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075751   [5] score=0.706362 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075755   [6] score=0.703416 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075758   [7] score=0.690974 page=10 section="7. PACTOS"
+2026/07/08 12:38:01.075761   [8] score=0.686781 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075764   [9] score=0.680372 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075767   [10] score=0.669063 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075770   [11] score=0.658406 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075773   [12] score=0.658154 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:38:01.075776   [13] score=0.647743 page=10 section="7. PACTOS"
+2026/07/08 12:38:01.075779   [14] score=0.646301 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:38:01.075782   [15] score=0.637443 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075785   [16] score=0.629197 page=10 section="7. PACTOS"
+2026/07/08 12:38:01.075789   [17] score=0.614393 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075792   [18] score=0.602388 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:38:01.075795   [19] score=0.600420 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:38:01.075798   [20] score=0.592626 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:38:01.075802   [21] score=0.568720 page=2 section=""
+2026/07/08 12:38:01.075805   [22] score=0.552430 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:38:01.075831 [BM25] top=29 duration=22.731µs
+2026/07/08 12:38:01.075835   [1] score=5.744921 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:38:01.075839   [2] score=4.985213 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075843   [3] score=4.722251 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:38:01.075856   [4] score=3.936500 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:38:01.075859   [5] score=3.543059 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075862   [6] score=3.523083 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:38:01.075864   [7] score=3.511442 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075867   [8] score=3.215759 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075870   [9] score=2.785591 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075872   [10] score=2.405637 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075875   [11] score=2.399583 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075878   [12] score=2.229441 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:38:01.075881   [13] score=1.909317 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075883   [14] score=1.647540 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:38:01.075886   [15] score=1.481874 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075889   [16] score=1.478960 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075891   [17] score=1.468395 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075894   [18] score=1.268759 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:38:01.075896   [19] score=1.240176 page=10 section="7. PACTOS"
+2026/07/08 12:38:01.075899   [20] score=0.811513 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:38:01.075902   [21] score=0.802339 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075905   [22] score=0.738402 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075907   [23] score=0.679739 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:38:01.075910   [24] score=0.679515 page=10 section="7. PACTOS"
+2026/07/08 12:38:01.075912   [25] score=0.642124 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075915   [26] score=0.498876 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075917   [27] score=0.489306 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075920   [28] score=0.477089 page=10 section="7. PACTOS"
+2026/07/08 12:38:01.075923   [29] score=0.415083 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:38:01.075949 [RRF] top=5 duration=23.405µs
+2026/07/08 12:38:01.075953   [1] score=0.032002 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:38:01.075957   [2] score=0.031025 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:38:01.075959   [3] score=0.030214 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:38:01.075962   [4] score=0.029907 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:38:01.075965   [5] score=0.029877 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:38:01.075968 TIMINGS total=197.674754ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 12:38:01.075975 ================================================================================
+2026/07/08 12:38:01.076027 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 12:39:05.422267 [QUERY END] duration=1m4.543974337s query="¿Qué continentes hay en el mapa del TEG?"
+2026/07/08 12:39:05.422397 ================================================================================
+HTTP REQUEST
+================================================================================
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m4.54413486s
+Client IP : 127.0.0.1:40954
+Timestamp : 2026-07-08 12:39:05.422
+Method    : POST
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Qué continentes hay en el mapa del TEG?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Qué continentes hay en el mapa del TEG?",
+  "answer": "El mapa del TEG incluye los continentes América del Norte, América del Sur, Europa, Asia y Oceanía.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 12,
+      "section_path": [
+        "9. LISTA DE OBJETIVOS SECRETOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "Ocupar Oceanía, América del Norte y 2 países de Europa.\nOcupar América del Sur, África y 4 países de Asia.\nOcupar Oceanía, África y 5 países de América del Norte.\nDestruir el ejército…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031024532,
+      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes:\nAmérica del Norte América del Sur, Europa, Asia, Africa y Oceanía.\nLas dimensiones y divisiones…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030213539,
+      "excerpt": "OBJETIVOS SECRETOS\nExisten dos tipos de objetivos secretos:\nOBJETIVOS DE OCUPACIÓN: el jugador que tiene un objetivo de este tipo, lo\ncumple en el momento en que ocupa todos los países requeridos…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029877368,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO\nUna vez concluida la primera ronda de hostilidades, se agrega un nuevo elemento al turno de los jugadores: la incorporación de ejércitos. De aquí en adelante, el orden…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 12:45:24.619485 ================================================================================
+2026/07/08 12:45:24.619522 RAG RETRIEVE START
+2026/07/08 12:45:24.619526 QUERY: ¿Cómo se incorporan ejércitos al inicio y durante el juego?
+2026/07/08 12:45:24.619529 ================================================================================
+2026/07/08 12:45:25.123533 [EMBEDDING] model=mxbai-embed-large:latest duration=504.000724ms
+2026/07/08 12:45:25.126510 [DENSE] top=22 duration=2.943803ms
+2026/07/08 12:45:25.126535   [1] score=0.818446 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126543   [2] score=0.811685 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126548   [3] score=0.797954 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126552   [4] score=0.776432 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126556   [5] score=0.770905 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:45:25.126560   [6] score=0.770498 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126564   [7] score=0.764822 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126568   [8] score=0.755706 page=10 section="7. PACTOS"
+2026/07/08 12:45:25.126572   [9] score=0.742380 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126577   [10] score=0.739878 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:45:25.126581   [11] score=0.735825 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:45:25.126585   [12] score=0.734957 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:45:25.126588   [13] score=0.731538 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126592   [14] score=0.727441 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126596   [15] score=0.723080 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126600   [16] score=0.712836 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126604   [17] score=0.712679 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126608   [18] score=0.705650 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:45:25.126612   [19] score=0.660441 page=10 section="7. PACTOS"
+2026/07/08 12:45:25.126627   [20] score=0.660215 page=10 section="7. PACTOS"
+2026/07/08 12:45:25.126631   [21] score=0.645452 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:45:25.126634   [22] score=0.582520 page=2 section=""
+2026/07/08 12:45:25.126655 [BM25] top=28 duration=19.186µs
+2026/07/08 12:45:25.126660   [1] score=4.625739 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126664   [2] score=4.568237 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126668   [3] score=3.984923 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126671   [4] score=3.877624 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126674   [5] score=3.444901 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126677   [6] score=3.003825 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126680   [7] score=2.969156 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126683   [8] score=2.934005 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126686   [9] score=2.822786 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126689   [10] score=2.754456 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 12:45:25.126692   [11] score=2.566220 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:45:25.126695   [12] score=2.517350 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126698   [13] score=2.458790 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126701   [14] score=2.097019 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 12:45:25.126704   [15] score=1.918459 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126707   [16] score=1.821522 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126710   [17] score=1.814952 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126713   [18] score=1.668839 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126716   [19] score=1.595364 page=10 section="7. PACTOS"
+2026/07/08 12:45:25.126719   [20] score=1.510053 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126722   [21] score=1.463583 page=2 section="1. IDEA GENERAL"
+2026/07/08 12:45:25.126725   [22] score=1.450624 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126728   [23] score=1.306994 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126732   [24] score=1.278253 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 12:45:25.126735   [25] score=1.027402 page=10 section="7. PACTOS"
+2026/07/08 12:45:25.126738   [26] score=0.963193 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 12:45:25.126740   [27] score=0.859497 page=10 section="7. PACTOS"
+2026/07/08 12:45:25.126743   [28] score=0.264175 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 12:45:25.126769 [RRF] top=5 duration=22.942µs
+2026/07/08 12:45:25.126773   [1] score=0.032018 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126776   [2] score=0.031514 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126778   [3] score=0.030798 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 12:45:25.126780   [4] score=0.030579 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126783   [5] score=0.030550 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 12:45:25.126785 TIMINGS total=507.300598ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 12:45:25.126788 ================================================================================
+2026/07/08 12:45:25.126843 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 12:46:41.598300 [QUERY END] duration=1m16.97881511s query="¿Cómo se incorporan ejércitos al inicio y durante el juego?"
+2026/07/08 12:46:41.598459 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 12:46:41.598
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m16.979005046s
+Client IP : 127.0.0.1:60904
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cómo se incorporan ejércitos al inicio y durante el juego?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cómo se incorporan ejércitos al inicio y durante el juego?",
+  "answer": "Al comenzar su turno, el jugador incorpora ejércitos por tres motivos:\n\n1. Por países ocupados. El jogador comienza seu turno contando o número de países que ocupa en ese momento e incorpora ao mapa...\n\nDurante el juego, si un jugador tiene tarjetas que le permiten realizar un canje, puede optar por no llevarlo a cabo en la etapa inicial de su turno: incorpora los ejércitos que le corresponden por países o continentes, inicia sus ataques y reagrupa si lo desea.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03201844,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO\nUna vez concluida la primera ronda de hostilidades, se agrega un nuevo elemento al turno de los jugadores: la incorporación de ejércitos. De aquí en adelante, el orden…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031513646,
+      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030550372,
+      "excerpt": "Para tener derecho a recibir una tarjeta de países al finalizar su turno, el jugador tiene la obligación de haber conquistado en ese turno:\nAl menos un país, mientras haya efectuado menos de 3…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:24:36.576921 ================================================================================
+================================================================================
+2026/07/08 17:24:06 BM25 cargado desde data/bm25.gob
+2026/07/08 17:24:06 servidor RAG escuchando en :8080
+warning: lcms: not an ICC profile, invalid signature.
+format error: cmsOpenProfileFromMem failed
+warning: ignoring broken ICC profile
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:43600
+Timestamp : 2026-07-08 17:24:36.576
+Method    : POST
+Path      : /api/v1/index
+Status    : 200
+Duration  : 27.96799192s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/monopoly.pdf"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "955dca89-18f4-55c2-a671-314cbd038906",
+  "source": "docs/monopoly.pdf",
+  "chunk_count": 24,
+  "cache_hits": 0,
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:31:43.412811 ================================================================================
+2026/07/08 17:31:43.412835 RAG RETRIEVE START
+2026/07/08 17:31:43.412837 QUERY: What is the objective of Monopoly?
+2026/07/08 17:31:43.412839 ================================================================================
+2026/07/08 17:31:43.826458 [EMBEDDING] model=mxbai-embed-large:latest duration=413.616706ms
+2026/07/08 17:31:43.883511 [DENSE] top=5 duration=57.009585ms
+2026/07/08 17:31:43.883541   [1] score=0.686187 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883558   [2] score=0.657669 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:31:43.883562   [3] score=0.653462 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:31:43.883565   [4] score=0.629884 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883568   [5] score=0.621821 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883587 [BM25] top=24 duration=17.483µs
+2026/07/08 17:31:43.883596   [1] score=3.179782 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883599   [2] score=1.753841 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883602   [3] score=1.641966 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883605   [4] score=1.551841 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883607   [5] score=1.530130 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883610   [6] score=1.449530 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883613   [7] score=1.280050 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883616   [8] score=1.245486 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:31:43.883619   [9] score=1.174757 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883622   [10] score=1.132636 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883625   [11] score=1.101048 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883627   [12] score=1.093131 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883630   [13] score=0.917510 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883632   [14] score=0.897065 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883635   [15] score=0.890490 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883637   [16] score=0.883750 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883640   [17] score=0.866590 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883642   [18] score=0.865688 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883645   [19] score=0.860988 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883648   [20] score=0.854103 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883650   [21] score=0.653510 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883653   [22] score=0.606987 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883655   [23] score=0.377912 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883660   [24] score=0.037553 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:31:43.883693 [RRF] top=5 duration=30.476µs
+2026/07/08 17:31:43.883697   [1] score=0.032266 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883700   [2] score=0.031250 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883703   [3] score=0.030835 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:31:43.883706   [4] score=0.030769 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:31:43.883708   [5] score=0.027778 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:31:43.883711 TIMINGS total=470.899666ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 17:31:43.883716 ================================================================================
+2026/07/08 17:31:43.883756 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 17:32:23.154458 [QUERY END] duration=39.741646802s query="What is the objective of Monopoly?"
+2026/07/08 17:32:23.154683 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 17:32:23.154
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 39.741883851s
+Client IP : 127.0.0.1:47440
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "What is the objective of Monopoly?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "What is the objective of Monopoly?",
+  "answer": "The objective of Monopoly is to become the wealthiest player by buying, renting or selling Properties profitably, with the eventual goal being to increase one's wealth to a level where they are the ultimate winner.",
+  "sources": [
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03226646,
+      "excerpt": "RULES\nTHE GAME IN BRIEF MONOPOLY is the game of buying, renting or selling Properties so profitably that players increase their wealth – the wealthiest becoming the eventual winner.\nStarting from…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03125,
+      "excerpt": "This does not affect your statutory rights.\nHappy games playing!\n© 1996 Tonka Corporation.   All rights reserved.  MONOPOLY is a registered Trade Mark.\nDistributed in the United Kingdom under…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "14535GB0796"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030834913,
+      "excerpt": "14535GB0796\nMonopoly GB Instructions  5/10/00  10:24 am  Page 8"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 3,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03076923,
+      "excerpt": "Owning Property Owning Property entitles you to collect rent from any \"tenants\" who land on that space.  It is an advantage to own all the Sites within a colour-group — in other words to own a…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME"
+      ],
+      "element_type": "heading",
+      "score": 0.02777778,
+      "excerpt": "THE PROPERTY TRADING BOARD GAME"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:32:35.286765 ================================================================================
+2026/07/08 17:32:35.286802 RAG RETRIEVE START
+2026/07/08 17:32:35.286809 QUERY: What equipment is included in the game?
+2026/07/08 17:32:35.286814 ================================================================================
+2026/07/08 17:32:35.426139 [EMBEDDING] model=mxbai-embed-large:latest duration=139.32062ms
+2026/07/08 17:32:35.428092 [DENSE] top=5 duration=1.928321ms
+2026/07/08 17:32:35.428126   [1] score=0.617868 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:32:35.428138   [2] score=0.572900 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:32:35.428145   [3] score=0.542233 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428152   [4] score=0.536962 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428158   [5] score=0.535440 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428197 [BM25] top=24 duration=33.283µs
+2026/07/08 17:32:35.428208   [1] score=3.517664 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428215   [2] score=3.128802 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428221   [3] score=0.906744 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428244   [4] score=0.874473 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428250   [5] score=0.825618 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428254   [6] score=0.806184 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428259   [7] score=0.740625 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428264   [8] score=0.731956 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428268   [9] score=0.731266 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428273   [10] score=0.724921 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428277   [11] score=0.688517 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428281   [12] score=0.676096 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428285   [13] score=0.651270 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428290   [14] score=0.608958 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428294   [15] score=0.587470 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428299   [16] score=0.531049 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428303   [17] score=0.507577 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428307   [18] score=0.308478 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428325   [19] score=0.290046 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428331   [20] score=0.210172 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428335   [21] score=0.192746 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428340   [22] score=0.190168 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428344   [23] score=0.075107 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:32:35.428348   [24] score=0.063164 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:32:35.428399 [RRF] top=5 duration=46.709µs
+2026/07/08 17:32:35.428405   [1] score=0.032018 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428410   [2] score=0.030536 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428414   [3] score=0.030159 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:32:35.428418   [4] score=0.028442 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:32:35.428421   [5] score=0.028034 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:32:35.428425 TIMINGS total=141.659683ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 17:32:35.428429 ================================================================================
+2026/07/08 17:32:35.428488 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 17:33:19.064478 [QUERY END] duration=43.777712088s query="What equipment is included in the game?"
+2026/07/08 17:33:19.064639 ================================================================================
+HTTP REQUEST
+================================================================================
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 43.777898855s
+Client IP : 127.0.0.1:57648
+Timestamp : 2026-07-08 17:33:19.064
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "What equipment is included in the game?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "What equipment is included in the game?",
+  "answer": "The game includes a gameboard, 10 playing tokens (including 2 spares), 28 Title Deed cards, 16 Chance cards, 16 Community Chest cards, and 1 pack of MONOPOLY money. Additionally, there are 32 Houses and 12 Hotels.",
+  "sources": [
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03201844,
+      "excerpt": "EQUIPMENT 1 gameboard 10 playing tokens (including 2 spares) 28 Title Deed cards 16 Chance cards 16 Community Chest cards 1 pack of MONOPOLY money 32 Houses 12 Hotels 2 dice SET UP\nArrange the…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 3,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03053613,
+      "excerpt": "Buying Property If you land on an unowned Property (that is, on a Property for which no other player holds the Title Deed), you have the first choice to buy it.  There are three types of Property -…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME"
+      ],
+      "element_type": "heading",
+      "score": 0.028441634,
+      "excerpt": "THE PROPERTY TRADING BOARD GAME"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "14535GB0796"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028033793,
+      "excerpt": "14535GB0796\nMonopoly GB Instructions  5/10/00  10:24 am  Page 8"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:35:04.877879 ================================================================================
+2026/07/08 17:35:04.877915 RAG RETRIEVE START
+2026/07/08 17:35:04.877921 QUERY: What happens if a player rolls a double?
+2026/07/08 17:35:04.877926 ================================================================================
+2026/07/08 17:35:05.021782 [EMBEDDING] model=mxbai-embed-large:latest duration=143.851476ms
+2026/07/08 17:35:05.023578 [DENSE] top=5 duration=1.763613ms
+2026/07/08 17:35:05.023603   [1] score=0.592446 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023612   [2] score=0.587810 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023618   [3] score=0.583639 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023622   [4] score=0.564071 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:35:05.023627   [5] score=0.496282 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:35:05.023657 [BM25] top=20 duration=25.236µs
+2026/07/08 17:35:05.023664   [1] score=5.306181 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023669   [2] score=2.871418 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023674   [3] score=2.797533 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023678   [4] score=2.438674 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023683   [5] score=2.070766 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023688   [6] score=1.866503 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023692   [7] score=1.158211 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023696   [8] score=1.105229 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023701   [9] score=1.044825 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023705   [10] score=0.977258 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023709   [11] score=0.962307 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023713   [12] score=0.937077 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023717   [13] score=0.907272 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023721   [14] score=0.877048 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023737   [15] score=0.811877 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023742   [16] score=0.779800 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023745   [17] score=0.757904 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023748   [18] score=0.749504 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023751   [19] score=0.465849 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023754   [20] score=0.443531 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023787 [RRF] top=5 duration=29.088µs
+2026/07/08 17:35:05.023794   [1] score=0.032522 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023798   [2] score=0.031498 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023802   [3] score=0.030018 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:05.023805   [4] score=0.015625 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:35:05.023808   [5] score=0.015385 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:35:05.023811 TIMINGS total=145.932398ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 17:35:05.023814 ================================================================================
+2026/07/08 17:35:05.023895 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 17:35:42.886124 [QUERY END] duration=38.008245385s query="What happens if a player rolls a double?"
+2026/07/08 17:35:42.886268 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 17:35:42.886
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 38.008407764s
+Client IP : 127.0.0.1:45378
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "What happens if a player rolls a double?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "What happens if a player rolls a double?",
+  "answer": "If you roll a double, move your token and act on the space you have landed on as usual. Roll the dice again and have another turn. If you roll a double for a third time in succession, you must immediately go straight to Jail.",
+  "sources": [
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 2,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032522473,
+      "excerpt": "Two x £500 Two x £10 Four x £100 One x £5 One x £50 Five x £1 One x £20 In addition to holding the money, the Banker also keeps the Title Deed cards, Houses and Hotels until they are bought by…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 7,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03001792,
+      "excerpt": "Deed cards.  The player to the left of the Banker then cuts the deck and the Banker deals, one at a time, two Title Deeds to each player (including himself if he both plays and acts as Banker). …"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME"
+      ],
+      "element_type": "heading",
+      "score": 0.015625,
+      "excerpt": "THE PROPERTY TRADING BOARD GAME"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "14535GB0796"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015384615,
+      "excerpt": "14535GB0796\nMonopoly GB Instructions  5/10/00  10:24 am  Page 8"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:35:48.172351 ================================================================================
+2026/07/08 17:35:48.172385 RAG RETRIEVE START
+2026/07/08 17:35:48.172391 QUERY: How do rent rules work for Utilities and Stations?
+2026/07/08 17:35:48.172395 ================================================================================
+2026/07/08 17:35:48.316929 [EMBEDDING] model=mxbai-embed-large:latest duration=144.529389ms
+2026/07/08 17:35:48.318600 [DENSE] top=5 duration=1.64569ms
+2026/07/08 17:35:48.318634   [1] score=0.715813 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318642   [2] score=0.649159 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318646   [3] score=0.614033 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318650   [4] score=0.575062 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:35:48.318653   [5] score=0.524871 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:35:48.318678 [BM25] top=22 duration=22.205µs
+2026/07/08 17:35:48.318683   [1] score=5.421898 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318687   [2] score=4.294769 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318691   [3] score=4.253584 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318694   [4] score=3.923572 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318697   [5] score=3.029101 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318701   [6] score=2.797425 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318704   [7] score=2.761935 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318707   [8] score=2.758609 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318710   [9] score=2.643931 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318713   [10] score=2.343412 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318716   [11] score=1.903980 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318719   [12] score=1.792652 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318722   [13] score=1.741316 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318725   [14] score=1.730750 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318729   [15] score=1.606957 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318732   [16] score=1.547691 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318735   [17] score=1.378643 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318749   [18] score=1.285011 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318753   [19] score=0.972071 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318756   [20] score=0.781598 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318760   [21] score=0.643354 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318764   [22] score=0.632917 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318792 [RRF] top=5 duration=24.004µs
+2026/07/08 17:35:48.318797   [1] score=0.032787 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318802   [2] score=0.030622 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318806   [3] score=0.030159 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:35:48.318810   [4] score=0.015625 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:35:48.318814   [5] score=0.015385 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:35:48.318818 TIMINGS total=146.466484ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 17:35:48.318831 ================================================================================
+2026/07/08 17:35:48.318881 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 17:36:36.606252 [QUERY END] duration=48.433900081s query="How do rent rules work for Utilities and Stations?"
+2026/07/08 17:36:36.606391 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 48.43408465s
+Client IP : 127.0.0.1:34184
+Timestamp : 2026-07-08 17:36:36.606
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "How do rent rules work for Utilities and Stations?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "How do rent rules work for Utilities and Stations?",
+  "answer": "Para las Utilidades, si un jugador llega allí y la propiedad ya está poseída por otro jugador, debe pagar al dueño el precio que se muestra en el título de propiedad. Este costo puede variar según cuántos pisos tenga esa propiedad.\n\nPara las Estaciones, si una estación ya está poseída cuando llegas, debes pagar el monto que aparece en el título de propiedad. Este pago también puede variar dependiendo del número de otras estaciones que tiene ese jugador.",
+  "sources": [
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 3,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "Landing on Utilities Landing on one of these allows you to buy the Utility if it is not already owned.  As with the other Property spaces, pay the Bank the price stated on that space.  If the Utility…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME"
+      ],
+      "element_type": "heading",
+      "score": 0.015625,
+      "excerpt": "THE PROPERTY TRADING BOARD GAME"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "14535GB0796"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015384615,
+      "excerpt": "14535GB0796\nMonopoly GB Instructions  5/10/00  10:24 am  Page 8"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:36:42.872835 ================================================================================
+2026/07/08 17:36:42.872882 RAG RETRIEVE START
+2026/07/08 17:36:42.872896 QUERY: Explain the rules for building Houses and Hotels, including when they can be bought and any building limits.
+2026/07/08 17:36:42.872898 ================================================================================
+2026/07/08 17:36:43.078006 [EMBEDDING] model=mxbai-embed-large:latest duration=205.104969ms
+2026/07/08 17:36:43.080012 [DENSE] top=5 duration=1.976996ms
+2026/07/08 17:36:43.080050   [1] score=0.790167 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080063   [2] score=0.750108 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080070   [3] score=0.713946 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080074   [4] score=0.652208 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:36:43.080079   [5] score=0.592351 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:36:43.080116 [BM25] top=24 duration=32.767µs
+2026/07/08 17:36:43.080125   [1] score=13.309512 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080131   [2] score=10.658896 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080136   [3] score=8.844288 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080141   [4] score=7.760924 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080159   [5] score=7.510065 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080164   [6] score=6.677172 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080167   [7] score=6.674942 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080171   [8] score=6.218237 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080175   [9] score=5.986501 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080179   [10] score=5.907238 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080182   [11] score=5.376371 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080186   [12] score=5.374592 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080189   [13] score=5.192842 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080193   [14] score=4.709928 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080196   [15] score=3.377312 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080200   [16] score=3.053309 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080203   [17] score=2.971711 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080207   [18] score=2.552689 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080211   [19] score=2.372763 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080214   [20] score=2.099037 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080218   [21] score=1.451069 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080222   [22] score=0.815243 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080225   [23] score=0.037553 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:36:43.080229   [24] score=0.031582 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:36:43.080257 [RRF] top=5 duration=25.049µs
+2026/07/08 17:36:43.080263   [1] score=0.032787 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080267   [2] score=0.031498 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080271   [3] score=0.030018 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:36:43.080274   [4] score=0.027673 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:36:43.080278   [5] score=0.027289 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:36:43.080281 TIMINGS total=207.445931ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 17:36:43.080286 ================================================================================
+2026/07/08 17:36:43.080335 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 17:37:46.318475 [QUERY END] duration=1m3.445638461s query="Explain the rules for building Houses and Hotels, including when they can be bought and any building limits."
+2026/07/08 17:37:46.318662 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 1m3.445840281s
+Client IP : 127.0.0.1:53778
+Timestamp : 2026-07-08 17:37:46.318
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Explain the rules for building Houses and Hotels, including when they can be bought and any building limits."
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Explain the rules for building Houses and Hotels, including when they can be bought and any building limits.",
+  "answer": "To build Houses and Hotels in Monopoly, you must first own all Sites of a color-group to buy Houses. You can purchase Houses on your turn or between other players' turns but must build evenly: one House per Site before building another.\n\nFor buying Hotels, you need four Houses on each Site of a complete color-group. Only one Hotel may be erected on any one Site. The Bank will pay half the cash price of the Hotel plus half the price of the four Houses that were given to the Bank for the purchase of the Hotel. All Hotels on one color-group can be sold at once.\n\nThere are no specific building limits mentioned for Houses, but you cannot build a second House on any Site until you have built one House on every Site of that group, and so on up to a maximum of four Houses per Site. Selling Houses must be done evenly as well: selling a House reduces the number by one, allowing you to buy another later.\n\nRegarding Hotels, if there are no Houses left in the Bank, you must wait for other players to return theirs before buying any. When selling Hotels, you cannot replace them with Houses if there are Houses available. Mortgaged Property cannot be sold to the Bank, but can be sold to other players only.",
+  "sources": [
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 5,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "Hotels You must have four Houses on each Site of a complete colour-group before you can buy a Hotel. Hotels are bought in the same way as Houses and cost four Houses, which are returned to the Bank,…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 6,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031498015,
+      "excerpt": "For Hotels, the Bank will pay half the cash price of the Hotel plus half the price of the four Houses which were given to the Bank for the purchase of the Hotel.  All Hotels on one colour-group may…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME"
+      ],
+      "element_type": "heading",
+      "score": 0.027673192,
+      "excerpt": "THE PROPERTY TRADING BOARD GAME"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "14535GB0796"
+      ],
+      "element_type": "paragraph",
+      "score": 0.027289378,
+      "excerpt": "14535GB0796\nMonopoly GB Instructions  5/10/00  10:24 am  Page 8"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 17:37:55.106516 ================================================================================
+2026/07/08 17:37:55.106553 RAG RETRIEVE START
+2026/07/08 17:37:55.106558 QUERY: Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided.
+2026/07/08 17:37:55.106563 ================================================================================
+2026/07/08 17:37:55.357764 [EMBEDDING] model=mxbai-embed-large:latest duration=251.194831ms
+2026/07/08 17:37:55.359814 [DENSE] top=5 duration=1.994349ms
+2026/07/08 17:37:55.359834   [1] score=0.747556 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359840   [2] score=0.723084 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359842   [3] score=0.694981 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359843   [4] score=0.688717 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:37:55.359845   [5] score=0.659240 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:37:55.359868 [BM25] top=24 duration=21.048µs
+2026/07/08 17:37:55.359871   [1] score=10.430285 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359873   [2] score=7.143076 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359884   [3] score=6.934659 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359885   [4] score=6.448739 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359887   [5] score=5.694870 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359889   [6] score=3.946356 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359890   [7] score=3.519524 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359892   [8] score=3.279294 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359894   [9] score=2.971188 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359895   [10] score=2.780224 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359897   [11] score=2.637565 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359898   [12] score=2.558993 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359901   [13] score=2.241811 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359903   [14] score=1.352926 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359905   [15] score=1.251339 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359907   [16] score=1.163345 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359908   [17] score=1.080031 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359910   [18] score=0.915228 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359911   [19] score=0.910230 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359913   [20] score=0.821011 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359915   [21] score=0.782732 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359916   [22] score=0.650688 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359917   [23] score=0.187767 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:37:55.359919   [24] score=0.157909 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:37:55.359940 [RRF] top=5 duration=19.299µs
+2026/07/08 17:37:55.359942   [1] score=0.032787 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359944   [2] score=0.031754 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359945   [3] score=0.030579 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
+2026/07/08 17:37:55.359946   [4] score=0.027673 page=1 section="THE PROPERTY TRADING BOARD GAME"
+2026/07/08 17:37:55.359948   [5] score=0.027289 page=8 section="THE PROPERTY TRADING BOARD GAME > 14535GB0796"
+2026/07/08 17:37:55.359949 TIMINGS total=253.433746ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 17:37:55.359951 ================================================================================
+2026/07/08 17:37:55.359974 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=500
+2026/07/08 17:38:32.382361 [QUERY END] duration=37.27584543s query="Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided."
+2026/07/08 17:38:32.382495 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 37.276017646s
+Client IP : 127.0.0.1:54946
+Timestamp : 2026-07-08 17:38:32.382
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided."
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided.",
+  "answer": "Lo siento, no encuentro esa información en los documentos.",
+  "sources": [
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 7,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "Deed cards.  The player to the left of the Banker then cuts the deck and the Banker deals, one at a time, two Title Deeds to each player (including himself if he both plays and acts as Banker). …"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "RULES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.0305789,
+      "excerpt": "EQUIPMENT 1 gameboard 10 playing tokens (including 2 spares) 28 Title Deed cards 16 Chance cards 16 Community Chest cards 1 pack of MONOPOLY money 32 Houses 12 Hotels 2 dice SET UP\nArrange the…"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 1,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME"
+      ],
+      "element_type": "heading",
+      "score": 0.027673192,
+      "excerpt": "THE PROPERTY TRADING BOARD GAME"
+    },
+    {
+      "file": "docs/monopoly.pdf",
+      "page": 8,
+      "section_path": [
+        "THE PROPERTY TRADING BOARD GAME",
+        "14535GB0796"
+      ],
+      "element_type": "paragraph",
+      "score": 0.027289378,
+      "excerpt": "14535GB0796\nMonopoly GB Instructions  5/10/00  10:24 am  Page 8"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
