@@ -1376,3 +1376,885 @@ Path      : /api/v1/query
 }
 
 ================================================================================
+2026/07/08 18:44:33.405550 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 18:44:33.405
+Method    : POST
+Path      : /api/v1/index
+Status    : 200
+Duration  : 54.480687491s
+Client IP : 127.0.0.1:34420
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/teg.pdf"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "49b80309-18b9-5aa9-8fdb-5ed5a2ce17f6",
+  "source": "docs/teg.pdf",
+  "chunk_count": 30,
+  "cache_hits": 0,
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 18:44:51.744874 ================================================================================
+2026/07/08 18:44:51.744914 RAG RETRIEVE START
+2026/07/08 18:44:51.744921 QUERY: ¿cuales son los elementos de juego?
+2026/07/08 18:44:51.744926 ================================================================================
+2026/07/08 18:44:51.894075 [EMBEDDING] model=mxbai-embed-large:latest duration=149.145273ms
+2026/07/08 18:44:51.896180 [DENSE] top=26 duration=2.070739ms
+2026/07/08 18:44:51.896196   [1] score=0.801117 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 18:44:51.896201   [2] score=0.773129 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896203   [3] score=0.768331 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896205   [4] score=0.755857 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896206   [5] score=0.755480 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896208   [6] score=0.739186 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896210   [7] score=0.737731 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896211   [8] score=0.726451 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896213   [9] score=0.722621 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:44:51.896215   [10] score=0.722460 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896216   [11] score=0.720606 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896218   [12] score=0.712788 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 18:44:51.896226   [13] score=0.711671 page=10 section="7. PACTOS"
+2026/07/08 18:44:51.896228   [14] score=0.711468 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:44:51.896229   [15] score=0.706118 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:44:51.896230   [16] score=0.687877 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896232   [17] score=0.686561 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896233   [18] score=0.657911 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896234   [19] score=0.655759 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896235   [20] score=0.654800 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896237   [21] score=0.649627 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896238   [22] score=0.649299 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896240   [23] score=0.621268 page=10 section="7. PACTOS"
+2026/07/08 18:44:51.896241   [24] score=0.618668 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:44:51.896242   [25] score=0.610996 page=10 section="7. PACTOS"
+2026/07/08 18:44:51.896243   [26] score=0.606806 page=2 section=""
+2026/07/08 18:44:51.896256 [BM25] top=29 duration=11.263µs
+2026/07/08 18:44:51.896257   [1] score=6.535775 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 18:44:51.896259   [2] score=5.261696 page=10 section="7. PACTOS"
+2026/07/08 18:44:51.896261   [3] score=3.371028 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896262   [4] score=2.324974 page=10 section="7. PACTOS"
+2026/07/08 18:44:51.896263   [5] score=2.231676 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896265   [6] score=2.164082 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896266   [7] score=1.623833 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:44:51.896267   [8] score=1.607369 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896269   [9] score=1.509483 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896270   [10] score=1.503493 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896272   [11] score=1.500802 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896273   [12] score=1.492979 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896275   [13] score=1.469773 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 18:44:51.896276   [14] score=1.449089 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896278   [15] score=0.989892 page=10 section="7. PACTOS"
+2026/07/08 18:44:51.896279   [16] score=0.928098 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896280   [17] score=0.694491 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896282   [18] score=0.690621 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:44:51.896283   [19] score=0.689642 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896284   [20] score=0.584990 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896286   [21] score=0.582856 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:44:51.896287   [22] score=0.552548 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896289   [23] score=0.450779 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:44:51.896290   [24] score=0.443184 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896291   [25] score=0.429339 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896293   [26] score=0.103288 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:44:51.896294   [27] score=0.096964 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896295   [28] score=0.093683 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896297   [29] score=0.083724 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:44:51.896329 [RRF] top=5 duration=27.936µs
+2026/07/08 18:44:51.896331   [1] score=0.032787 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 18:44:51.896333   [2] score=0.032002 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896334   [3] score=0.030579 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896336   [4] score=0.029710 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:44:51.896338   [5] score=0.029670 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:44:51.896339 TIMINGS total=151.465717ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 18:44:51.896341 ================================================================================
+2026/07/08 18:44:51.896380 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=1200
+2026/07/08 18:46:30.279530 [QUERY END] duration=1m38.534656015s query="¿cuales son los elementos de juego?"
+2026/07/08 18:46:30.279741 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 18:46:30.279
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m38.534916727s
+Client IP : 127.0.0.1:32892
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿cuales son los elementos de juego?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿cuales son los elementos de juego?",
+  "answer": "Los elementos de juego incluyen:\n\n1. Un planisferio dividido en 50 países agrupados en 6 continentes.\n2. Fichas que representan ejércitos.\n3. Se dispone un total de 6 colores, con cada uno de ellos disponiendo de 100 ejércitos.\n4. Se utilizan 6 dados para la mecánica del juego.\n5. Tarjetas de países correspondientes a cada una de las 50 tarjetas que hay en el mazo.\n6. Se incluyen 15 tarjetas de objetivos secretos.\n\nAdemás, se menciona un Reglamento y un Índice.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes:\nAmérica del Norte América del Sur, Europa, Asia, Africa y Oceanía.\nLas dimensiones y divisiones…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.0305789,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO\nUna vez concluida la primera ronda de hostilidades, se agrega un nuevo elemento al turno de los jugadores: la incorporación de ejércitos. De aquí en adelante, el orden…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 18:47:44.053454 ================================================================================
+2026/07/08 18:47:44.053498 RAG RETRIEVE START
+2026/07/08 18:47:44.053505 QUERY: ¿Cuántos dados puede usar el atacante?
+2026/07/08 18:47:44.053510 ================================================================================
+2026/07/08 18:47:44.219710 [EMBEDDING] model=mxbai-embed-large:latest duration=166.196024ms
+2026/07/08 18:47:44.221622 [DENSE] top=26 duration=1.877989ms
+2026/07/08 18:47:44.221642   [1] score=0.764119 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221651   [2] score=0.739238 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221671   [3] score=0.736078 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221673   [4] score=0.717392 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221676   [5] score=0.713444 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221678   [6] score=0.696357 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:47:44.221680   [7] score=0.694755 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:47:44.221683   [8] score=0.681112 page=10 section="7. PACTOS"
+2026/07/08 18:47:44.221685   [9] score=0.680608 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221687   [10] score=0.676674 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221689   [11] score=0.667871 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221692   [12] score=0.667021 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221694   [13] score=0.661219 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:47:44.221697   [14] score=0.661086 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221699   [15] score=0.659109 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221702   [16] score=0.657387 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221704   [17] score=0.653828 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 18:47:44.221707   [18] score=0.651762 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 18:47:44.221710   [19] score=0.627178 page=10 section="7. PACTOS"
+2026/07/08 18:47:44.221712   [20] score=0.624427 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:47:44.221714   [21] score=0.622637 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221717   [22] score=0.621649 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:47:44.221719   [23] score=0.620450 page=10 section="7. PACTOS"
+2026/07/08 18:47:44.221721   [24] score=0.618161 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:47:44.221724   [25] score=0.606103 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:47:44.221726   [26] score=0.572161 page=2 section=""
+2026/07/08 18:47:44.221745 [BM25] top=28 duration=16.546µs
+2026/07/08 18:47:44.221754   [1] score=7.785569 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221758   [2] score=4.749376 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221760   [3] score=3.253451 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221763   [4] score=3.208827 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221766   [5] score=2.902701 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221768   [6] score=2.501778 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:47:44.221771   [7] score=1.946579 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 18:47:44.221773   [8] score=1.723668 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221776   [9] score=1.540182 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221778   [10] score=1.516349 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221781   [11] score=1.488564 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221783   [12] score=1.403303 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221786   [13] score=1.344721 page=10 section="7. PACTOS"
+2026/07/08 18:47:44.221788   [14] score=1.109711 page=10 section="7. PACTOS"
+2026/07/08 18:47:44.221791   [15] score=1.097664 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:47:44.221793   [16] score=1.062913 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221796   [17] score=1.036496 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221798   [18] score=0.291113 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221801   [19] score=0.289577 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221809   [20] score=0.288150 page=10 section="7. PACTOS"
+2026/07/08 18:47:44.221811   [21] score=0.287527 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221814   [22] score=0.285490 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 18:47:44.221817   [23] score=0.278913 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221819   [24] score=0.278633 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:47:44.221822   [25] score=0.266200 page=2 section="1. IDEA GENERAL"
+2026/07/08 18:47:44.221824   [26] score=0.264175 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221827   [27] score=0.245746 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 18:47:44.221829   [28] score=0.149772 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 18:47:44.221853 [RRF] top=5 duration=21.733µs
+2026/07/08 18:47:44.221858   [1] score=0.032787 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221861   [2] score=0.032002 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221864   [3] score=0.031754 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 18:47:44.221867   [4] score=0.029274 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 18:47:44.221869   [5] score=0.028571 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 18:47:44.221872 TIMINGS total=168.41799ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 18:47:44.221876 ================================================================================
+2026/07/08 18:47:44.221915 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=1200
+2026/07/08 18:49:29.677881 [QUERY END] duration=1m45.624426903s query="¿Cuántos dados puede usar el atacante?"
+2026/07/08 18:49:29.677981 ================================================================================
+HTTP REQUEST
+================================================================================
+Duration  : 1m45.624554924s
+Client IP : 127.0.0.1:37084
+Timestamp : 2026-07-08 18:49:29.677
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cuántos dados puede usar el atacante?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cuántos dados puede usar el atacante?",
+  "answer": "El atacante toma tantos dados como ejércitos de ataque tenga en el país de origen del ataque, hasta un máximo de 3 dados (aunque tuviera más de 3 ejércitos de ataque no puede utilizar más de tres dados).",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 5,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "en el país.\nDos países son limítrofes si tiene una frontera en común, o si están unidos por\npuentes sobre el agua (como Chile - Australia).\nUn país puede atacar a otro (perteneciente a otro…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 6,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "1 - El tercer dado de “Verde” no se toma en cuenta.\nEn consecuencia, cada jugador retira uno de sus ejércitos.\nFinalizado este ataque, pueden suceder dos cosas:\nSi no queda ningún ejército…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029273504,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028571429,
+      "excerpt": "Nótese que cuando tiene 5 tarjetas, hay inevitablemente 3 que están en alguna de las dos situaciones necesarias para el canje.\nMientras se tengan 5 o menos tarjetas, no hay obligación de efectuar…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 19:01:13.065761 ================================================================================
+2026/07/08 19:01:13.065801 RAG RETRIEVE START
+2026/07/08 19:01:13.065809 QUERY: ¿Cómo es el reparto de paises?
+2026/07/08 19:01:13.065814 ================================================================================
+2026/07/08 19:01:13.534932 [EMBEDDING] model=mxbai-embed-large:latest duration=469.114065ms
+2026/07/08 19:01:13.537708 [DENSE] top=26 duration=2.738595ms
+2026/07/08 19:01:13.537751   [1] score=0.748707 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:01:13.537766   [2] score=0.740406 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537773   [3] score=0.734764 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537779   [4] score=0.724710 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537785   [5] score=0.724549 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537791   [6] score=0.721978 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:01:13.537797   [7] score=0.718090 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.537802   [8] score=0.717661 page=10 section="7. PACTOS"
+2026/07/08 19:01:13.537807   [9] score=0.702011 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537813   [10] score=0.699690 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.537818   [11] score=0.695666 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537824   [12] score=0.695128 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537829   [13] score=0.689354 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537834   [14] score=0.689298 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537840   [15] score=0.685663 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:01:13.537845   [16] score=0.678664 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.537851   [17] score=0.678523 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.537856   [18] score=0.675208 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 19:01:13.537861   [19] score=0.670253 page=10 section="7. PACTOS"
+2026/07/08 19:01:13.537867   [20] score=0.666819 page=10 section="7. PACTOS"
+2026/07/08 19:01:13.537872   [21] score=0.648750 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 19:01:13.537877   [22] score=0.635304 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:01:13.537883   [23] score=0.627571 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:01:13.537888   [24] score=0.600356 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:01:13.537894   [25] score=0.586481 page=2 section=""
+2026/07/08 19:01:13.537898   [26] score=0.580631 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:01:13.537921 [BM25] top=29 duration=19.421µs
+2026/07/08 19:01:13.537927   [1] score=5.821595 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537932   [2] score=3.685455 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537936   [3] score=2.901883 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537940   [4] score=2.874625 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.537944   [5] score=1.145248 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537948   [6] score=1.139493 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.537952   [7] score=1.132283 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:01:13.537956   [8] score=1.130346 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537972   [9] score=1.079537 page=10 section="7. PACTOS"
+2026/07/08 19:01:13.537976   [10] score=1.036244 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:01:13.537979   [11] score=1.019502 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:01:13.537981   [12] score=0.888408 page=10 section="7. PACTOS"
+2026/07/08 19:01:13.537984   [13] score=0.877097 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 19:01:13.537987   [14] score=0.872936 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:01:13.537990   [15] score=0.857412 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.537993   [16] score=0.849579 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537996   [17] score=0.810932 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.537999   [18] score=0.791878 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538002   [19] score=0.678397 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538005   [20] score=0.413205 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538008   [21] score=0.384797 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538011   [22] score=0.363854 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.538013   [23] score=0.354409 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:01:13.538016   [24] score=0.343965 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:01:13.538019   [25] score=0.335342 page=10 section="7. PACTOS"
+2026/07/08 19:01:13.538022   [26] score=0.328565 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538024   [27] score=0.251113 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:01:13.538027   [28] score=0.103288 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:01:13.538030   [29] score=0.097484 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 19:01:13.538058 [RRF] top=5 duration=25.162µs
+2026/07/08 19:01:13.538063   [1] score=0.032522 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.538067   [2] score=0.031258 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538070   [3] score=0.029958 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.538073   [4] score=0.029643 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:01:13.538076   [5] score=0.028612 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:01:13.538078 TIMINGS total=472.317232ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 19:01:13.538082 ================================================================================
+2026/07/08 19:01:13.538121 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=1200
+2026/07/08 19:03:11.513138 [QUERY END] duration=1m58.447376337s query="¿Cómo es el reparto de paises?"
+2026/07/08 19:03:11.513278 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-08 19:03:11.513
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m58.447555937s
+Client IP : 127.0.0.1:56922
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cómo es el reparto de paises?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cómo es el reparto de paises?",
+  "answer": "El reparto de países se realiza de la siguiente manera:\n\n1. Se mezclan las 50 tarjetas de países y se reparten entre los jugadores.\n2. Si juegan 3, 4 o 6 personas, sobrarán dos tarjetas; en este caso, cada jugador arroja un dado, y las dos tarjetas sobrantes se entregan a quienes obtuvieron los dos números más altos.\n3. Cada participante coloca un ejército de su color en cada uno de los países que obtuvo en el reparto de las tarjetas de países. Los 50 países del mapa quedan así ocupados, cada uno por un ejército.\n4. Se juntan las tarjetas de países, se mezcla nuevamente y se deja el mazo a un costado del mapa para su uso posterior.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032522473,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 5,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031257633,
+      "excerpt": "en el país.\nDos países son limítrofes si tiene una frontera en común, o si están unidos por\npuentes sobre el agua (como Chile - Australia).\nUn país puede atacar a otro (perteneciente a otro…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 4,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029957524,
+      "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 7,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028612014,
+      "excerpt": "Se puede trasladar tantos ejércitos como se quiera, con la condición de dejar al menos un ejército en el país del que se retiran. (Recuérdese que siempre debe quedar al menos un ejército de…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/08 19:08:09.777030 ================================================================================
+2026/07/08 19:08:09.777054 RAG RETRIEVE START
+2026/07/08 19:08:09.777057 QUERY: ¿Cómo se incorporan ejércitos al inicio y durante el juego?
+2026/07/08 19:08:09.777059 ================================================================================
+2026/07/08 19:08:10.257511 [EMBEDDING] model=mxbai-embed-large:latest duration=480.449894ms
+2026/07/08 19:08:10.259473 [DENSE] top=26 duration=1.937295ms
+2026/07/08 19:08:10.259493   [1] score=0.818446 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259502   [2] score=0.811685 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259507   [3] score=0.797954 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259512   [4] score=0.776432 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259516   [5] score=0.770905 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 19:08:10.259520   [6] score=0.770498 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259524   [7] score=0.764822 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259528   [8] score=0.758755 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259532   [9] score=0.755706 page=10 section="7. PACTOS"
+2026/07/08 19:08:10.259536   [10] score=0.742380 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259540   [11] score=0.739878 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:08:10.259544   [12] score=0.735825 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 19:08:10.259549   [13] score=0.734957 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:08:10.259552   [14] score=0.731538 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259556   [15] score=0.727441 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259560   [16] score=0.723080 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259564   [17] score=0.712836 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259578   [18] score=0.712679 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259582   [19] score=0.705650 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:08:10.259584   [20] score=0.702064 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259587   [21] score=0.696039 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259590   [22] score=0.692985 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259593   [23] score=0.660441 page=10 section="7. PACTOS"
+2026/07/08 19:08:10.259595   [24] score=0.660215 page=10 section="7. PACTOS"
+2026/07/08 19:08:10.259597   [25] score=0.645452 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:08:10.259600   [26] score=0.582520 page=2 section=""
+2026/07/08 19:08:10.259621 [BM25] top=28 duration=18.861µs
+2026/07/08 19:08:10.259626   [1] score=4.625739 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259630   [2] score=4.568237 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259634   [3] score=3.984923 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259636   [4] score=3.877624 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259639   [5] score=3.444901 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259643   [6] score=3.003825 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259645   [7] score=2.969156 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259648   [8] score=2.934005 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259651   [9] score=2.822786 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259653   [10] score=2.754456 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/08 19:08:10.259655   [11] score=2.566220 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:08:10.259658   [12] score=2.517350 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259660   [13] score=2.458790 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259662   [14] score=2.097019 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/08 19:08:10.259665   [15] score=1.918459 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259667   [16] score=1.821522 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259669   [17] score=1.814952 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259671   [18] score=1.668839 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259674   [19] score=1.595364 page=10 section="7. PACTOS"
+2026/07/08 19:08:10.259676   [20] score=1.510053 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259678   [21] score=1.463583 page=2 section="1. IDEA GENERAL"
+2026/07/08 19:08:10.259680   [22] score=1.450624 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259683   [23] score=1.306994 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259685   [24] score=1.278253 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/08 19:08:10.259687   [25] score=1.027402 page=10 section="7. PACTOS"
+2026/07/08 19:08:10.259689   [26] score=0.963193 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/08 19:08:10.259692   [27] score=0.859497 page=10 section="7. PACTOS"
+2026/07/08 19:08:10.259694   [28] score=0.264175 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/08 19:08:10.259716 [RRF] top=5 duration=19.874µs
+2026/07/08 19:08:10.259720   [1] score=0.032018 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259723   [2] score=0.031514 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259726   [3] score=0.030798 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/08 19:08:10.259728   [4] score=0.030579 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259730   [5] score=0.030550 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/08 19:08:10.259733 TIMINGS total=482.702873ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/08 19:08:10.259741 ================================================================================
+2026/07/08 19:08:10.259775 [LLM BUILD] chunks=5 model=qwen2.5:3b max_chunk_length=1200
+2026/07/08 19:10:42.737675 [QUERY END] duration=2m32.960644358s query="¿Cómo se incorporan ejércitos al inicio y durante el juego?"
+2026/07/08 19:10:42.737844 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 2m32.960832525s
+Client IP : 127.0.0.1:45204
+Timestamp : 2026-07-08 19:10:42.737
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cómo se incorporan ejércitos al inicio y durante el juego?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cómo se incorporan ejércitos al inicio y durante el juego?",
+  "answer": "Al comienzo del juego, cada jugador incorpora ejércitos según los países que ocupen en ese momento. Si ocupa un número impar de países, se redondea al inferior (por ejemplo, 7 países darían lugar a la incorporación de 5 ejércitos). Se incorporan siempre al menos 3 ejércitos si el jugador tiene solo uno o dos países.\n\nDurante el juego, los jugadores pueden incorporar más ejércitos según las siguientes reglas:\n- Por continentes ocupados: Si un jugador ocupa una parte completa de un continente, puede incorporar ejércitos adicionales según la tabla proporcionada en el documento.\n- También se pueden canjear tarjetas de países por ejércitos adicionales.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03201844,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO\nUna vez concluida la primera ronda de hostilidades, se agrega un nuevo elemento al turno de los jugadores: la incorporación de ejércitos. De aquí en adelante, el orden…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031513646,
+      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030550372,
+      "excerpt": "Para tener derecho a recibir una tarjeta de países al finalizar su turno, el jugador tiene la obligación de haber conquistado en ese turno:\nAl menos un país, mientras haya efectuado menos de 3…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/09 10:44:43.073807 ================================================================================
+HTTP REQUEST
+================================================================================
+Method    : POST
+Path      : /api/v1/index
+Status    : 200
+Duration  : 55.719435479s
+Client IP : 127.0.0.1:46668
+Timestamp : 2026-07-09 10:44:43.073
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/teg.pdf"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "49b80309-18b9-5aa9-8fdb-5ed5a2ce17f6",
+  "source": "docs/teg.pdf",
+  "chunk_count": 30,
+  "cache_hits": 0,
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/09 10:48:14.222273 ================================================================================
+2026/07/09 10:48:14.222304 RAG RETRIEVE START
+2026/07/09 10:48:14.222321 QUERY: ¿Cómo es el reparto de paises?
+2026/07/09 10:48:14.222324 ================================================================================
+2026/07/09 10:48:14.356506 [EMBEDDING] model=mxbai-embed-large:latest duration=134.178928ms
+2026/07/09 10:48:14.369229 [DENSE] top=17 duration=12.68425ms
+2026/07/09 10:48:14.369252   [1] score=0.748707 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 10:48:14.369262   [2] score=0.740406 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369266   [3] score=0.734764 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369269   [4] score=0.724710 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369271   [5] score=0.721978 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 10:48:14.369274   [6] score=0.718090 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 10:48:14.369277   [7] score=0.717661 page=10 section="7. PACTOS"
+2026/07/09 10:48:14.369280   [8] score=0.699690 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 10:48:14.369282   [9] score=0.695666 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369285   [10] score=0.685663 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369288   [11] score=0.675208 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/09 10:48:14.369290   [12] score=0.670253 page=10 section="7. PACTOS"
+2026/07/09 10:48:14.369292   [13] score=0.648750 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/09 10:48:14.369294   [14] score=0.635304 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369297   [15] score=0.600356 page=2 section="1. IDEA GENERAL"
+2026/07/09 10:48:14.369299   [16] score=0.586481 page=2 section=""
+2026/07/09 10:48:14.369301   [17] score=0.580631 page=2 section="1. IDEA GENERAL"
+2026/07/09 10:48:14.369319 [BM25] top=29 duration=15.922µs
+2026/07/09 10:48:14.369323   [1] score=5.821595 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369327   [2] score=3.685455 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369330   [3] score=2.901883 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369333   [4] score=2.874625 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369346   [5] score=1.145248 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369349   [6] score=1.139493 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 10:48:14.369352   [7] score=1.132283 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369355   [8] score=1.130346 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369358   [9] score=1.079537 page=10 section="7. PACTOS"
+2026/07/09 10:48:14.369360   [10] score=1.036244 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369363   [11] score=1.019502 page=2 section="1. IDEA GENERAL"
+2026/07/09 10:48:14.369366   [12] score=0.888408 page=10 section="7. PACTOS"
+2026/07/09 10:48:14.369369   [13] score=0.877097 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/09 10:48:14.369372   [14] score=0.872936 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369375   [15] score=0.857412 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 10:48:14.369378   [16] score=0.849579 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369381   [17] score=0.810932 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369384   [18] score=0.791878 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369387   [19] score=0.678397 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369390   [20] score=0.413205 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369393   [21] score=0.384797 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369395   [22] score=0.363854 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 10:48:14.369398   [23] score=0.354409 page=2 section="1. IDEA GENERAL"
+2026/07/09 10:48:14.369409   [24] score=0.343965 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 10:48:14.369412   [25] score=0.335342 page=10 section="7. PACTOS"
+2026/07/09 10:48:14.369415   [26] score=0.328565 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369418   [27] score=0.251113 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 10:48:14.369421   [28] score=0.103288 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 10:48:14.369426   [29] score=0.097484 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/09 10:48:14.369450 [RRF] top=7 duration=22.287µs
+2026/07/09 10:48:14.369454   [1] score=0.032522 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369458   [2] score=0.031258 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369461   [3] score=0.030366 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 10:48:14.369464   [4] score=0.028814 page=10 section="7. PACTOS"
+2026/07/09 10:48:14.369466   [5] score=0.028612 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 10:48:14.369469   [6] score=0.028571 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369472   [7] score=0.028439 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 10:48:14.369474 TIMINGS total=147.201181ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/09 10:48:14.369478 ================================================================================
+2026/07/09 10:48:14.369563 [LLM BUILD] chunks=7 model=qwen2.5:3b max_chunk_length=700
+2026/07/09 10:50:08.183652 [QUERY END] duration=1m53.961378063s query="¿Cómo es el reparto de paises?"
+2026/07/09 10:50:08.183868 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 1m53.961622962s
+Client IP : 127.0.0.1:34166
+Timestamp : 2026-07-09 10:50:08.183
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cómo es el reparto de paises?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cómo es el reparto de paises?",
+  "answer": "El reparto de países se realiza mezclando las 50 tarjetas de países y repartiéndolas entre los jugadores. Si juegan 3, 4 o 6 personas, sobrarán dos tarjetas; en este caso, cada jugador arroja un dado, y las dos tarjetas sobrantes se entregan a quienes obtuvieron los dos números más altos.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032522473,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 5,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031257633,
+      "excerpt": "en el país.\nDos países son limítrofes si tiene una frontera en común, o si están unidos por\npuentes sobre el agua (como Chile - Australia).\nUn país puede atacar a otro (perteneciente a otro…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 4,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03036577,
+      "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028814262,
+      "excerpt": "A partir del tercer canje, el jugador esta obligado a conquistar 2 países por turno para recibir tarjeta. Como al avanzar el juego esto puede volverse difícil, le queda el recurso, si cabe, de…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 7,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028612014,
+      "excerpt": "Se puede trasladar tantos ejércitos como se quiera, con la condición de dejar al menos un ejército en el país del que se retiran. (Recuérdese que siempre debe quedar al menos un ejército de…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028571429,
+      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/09 11:08:27.970537 ================================================================================
+2026/07/09 11:08:27.970572 RAG RETRIEVE START
+2026/07/09 11:08:27.970578 QUERY: Decime la lista de objetivos
+2026/07/09 11:08:27.970582 ================================================================================
+2026/07/09 11:08:28.411214 [EMBEDDING] model=mxbai-embed-large:latest duration=440.629628ms
+2026/07/09 11:08:28.414156 [DENSE] top=17 duration=2.89499ms
+2026/07/09 11:08:28.414195   [1] score=0.726198 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 11:08:28.414205   [2] score=0.695604 page=2 section=""
+2026/07/09 11:08:28.414210   [3] score=0.676541 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414216   [4] score=0.673684 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414220   [5] score=0.663314 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 11:08:28.414224   [6] score=0.649133 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414229   [7] score=0.628772 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/09 11:08:28.414233   [8] score=0.620601 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414237   [9] score=0.615870 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414241   [10] score=0.614013 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 11:08:28.414245   [11] score=0.609947 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 11:08:28.414250   [12] score=0.604686 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414254   [13] score=0.600311 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/09 11:08:28.414258   [14] score=0.582105 page=10 section="7. PACTOS"
+2026/07/09 11:08:28.414262   [15] score=0.581667 page=2 section="1. IDEA GENERAL"
+2026/07/09 11:08:28.414266   [16] score=0.581477 page=10 section="7. PACTOS"
+2026/07/09 11:08:28.414270   [17] score=0.544401 page=2 section="1. IDEA GENERAL"
+2026/07/09 11:08:28.414296 [BM25] top=29 duration=22.006µs
+2026/07/09 11:08:28.414303   [1] score=5.561471 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 11:08:28.414309   [2] score=4.801832 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414314   [3] score=4.039939 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 11:08:28.414319   [4] score=2.553302 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414323   [5] score=2.414264 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414338   [6] score=2.107448 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/09 11:08:28.414342   [7] score=2.019880 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414346   [8] score=0.589019 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414351   [9] score=0.587852 page=2 section="1. IDEA GENERAL"
+2026/07/09 11:08:28.414370   [10] score=0.584653 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414375   [11] score=0.544330 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414378   [12] score=0.538292 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414382   [13] score=0.519266 page=10 section="7. PACTOS"
+2026/07/09 11:08:28.414385   [14] score=0.511140 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 11:08:28.414389   [15] score=0.498277 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 11:08:28.414392   [16] score=0.462055 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/09 11:08:28.414396   [17] score=0.457729 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414400   [18] score=0.455188 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 11:08:28.414403   [19] score=0.454030 page=9 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/09 11:08:28.414406   [20] score=0.442280 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414409   [21] score=0.402808 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414413   [22] score=0.367113 page=2 section="1. IDEA GENERAL"
+2026/07/09 11:08:28.414416   [23] score=0.359329 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414419   [24] score=0.357123 page=10 section="7. PACTOS"
+2026/07/09 11:08:28.414422   [25] score=0.353720 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414425   [26] score=0.347853 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414428   [27] score=0.099841 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414432   [28] score=0.092931 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/09 11:08:28.414435   [29] score=0.090650 page=10 section="7. PACTOS"
+2026/07/09 11:08:28.414479 [RRF] top=7 duration=40.407µs
+2026/07/09 11:08:28.414485   [1] score=0.032787 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 11:08:28.414490   [2] score=0.032002 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414493   [3] score=0.031258 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/09 11:08:28.414497   [4] score=0.031250 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/09 11:08:28.414500   [5] score=0.030077 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/09 11:08:28.414503   [6] score=0.028790 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414506   [7] score=0.028778 page=11 section="8. CONSIDERACIONES GENERALES"
+2026/07/09 11:08:28.414509 TIMINGS total=443.971392ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/09 11:08:28.414514 ================================================================================
+2026/07/09 11:08:28.414590 [LLM BUILD] chunks=7 model=qwen2.5:3b max_chunk_length=700
+2026/07/09 11:10:21.291006 [QUERY END] duration=1m53.320468313s query="Decime la lista de objetivos"
+2026/07/09 11:10:21.291161 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 1m53.320657965s
+Client IP : 127.0.0.1:32872
+Timestamp : 2026-07-09 11:10:21.291
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Decime la lista de objetivos"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Decime la lista de objetivos",
+  "answer": "La lista de objetivos secretos es la siguiente:\n\n1. Ocupar África, 5 países de América del Norte y 4 países de Europa.\n2. Ocupar América del Sur, 7 países de Europa y 3 países limítrofes entre sí en cualquier lugar del mapa.\n3. Ocupar Asia y 2 países de América del Sur.\n4. Ocupar Europa, 4 países de Asia y 2 países de América del Sur.\n5. Ocupar América del Norte, 2 países de Oceanía y 4 de Asia.\n\nEstos objetivos secretos pueden ser ocupados por el jugador que cumple con los requisitos especificados para cada uno.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 12,
+      "section_path": [
+        "9. LISTA DE OBJETIVOS SECRETOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032786883,
+      "excerpt": "9. LISTA DE OBJETIVOS SECRETOS\nOcupar África, 5 países de América del Norte y 4 países de Europa.\nOcupar América del Sur, 7 países de Europa y 3 países limítrofes entre sí en\ncualquier lugar…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 4,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03125,
+      "excerpt": "OBJETIVOS SECRETOS\nExisten dos tipos de objetivos secretos:\nOBJETIVOS DE OCUPACIÓN: el jugador que tiene un objetivo de este tipo, lo\ncumple en el momento en que ocupa todos los países requeridos…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030076887,
+      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes:\nAmérica del Norte América del Sur, Europa, Asia, Africa y Oceanía.\nLas dimensiones y divisiones…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028790388,
+      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================

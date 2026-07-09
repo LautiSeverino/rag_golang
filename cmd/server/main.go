@@ -218,4 +218,7 @@ func setDefaults(cfg *configs.Config) {
 	if cfg.Search.MaxChunksPerSection == 0 {
 		cfg.Search.MaxChunksPerSection = 2
 	}
+	if cfg.Search.MaxDensePerSection == 0 {
+		cfg.Search.MaxDensePerSection = 5
+	}
 }

@@ -65,6 +65,7 @@ type SearchConfig struct {
 	BM25K1              float64 `yaml:"bm25_k1"`                // parámetro saturación TF
 	BM25B               float64 `yaml:"bm25_b"`                 // parámetro normalización longitud
 	MaxChunksPerSection int     `yaml:"max_chunks_per_section"` // máximo de chunks por sección en el contexto final
+	MaxDensePerSection  int     `yaml:"max_dense_per_section"`  // máximo de chunks densos por sección en el contexto final
 }
 
 // ServerConfig

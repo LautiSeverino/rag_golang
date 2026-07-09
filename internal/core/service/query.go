@@ -81,7 +81,7 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 	if err != nil {
 		return nil, fmt.Errorf("vector search: %w", err)
 	}
-	denseResults = deduplicateDensePool(denseResults, 3)
+	denseResults = deduplicateDensePool(denseResults, s.cfg.Search.MaxDensePerSection)
 
 	if s.logger != nil {
 		s.logger.Printf("[DENSE] top=%d duration=%s", len(denseResults), time.Since(t1))

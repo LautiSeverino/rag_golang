@@ -5,6 +5,7 @@ import (
 	"rag_golang/internal/core/domain"
 	"regexp"
 	"strings"
+	"unicode"
 )
 
 // classifyBlocks infiere el ElementType de cada bloque usando el font-size
@@ -49,6 +50,13 @@ func classifyBlocks(blocks []rawBlock) []domain.Element {
 		// actualizan el SectionPath del documento. El font-size es la señal
 		// confiable; el prefijo numérico solo importa para texto de cuerpo.
 		elType, level := classifyByRatio(ratio, b.IsBold, text)
+
+		if elType == domain.ElemHeading && isMetadataHeading(text) {
+			// No tratarlo como heading real
+			elType = domain.ElemParagraph
+			level = 0
+		}
+
 		if elType == domain.ElemHeading {
 			flushList()
 			elements = append(elements, domain.Element{
@@ -101,6 +109,24 @@ func classifyByRatio(ratio float64, bold bool, text string) (domain.ElementType,
 	default:
 		return domain.ElemParagraph, 0
 	}
+}
+
+// isMetadataHeading detecta headings que son probablemente metadatos del documento
+// (códigos de producto, ISBN, etc.) y no deben usarse como nodos raíz del SectionPath.
+func isMetadataHeading(text string) bool {
+	// Rechaza headings que son solo alfanumérico sin espacios (códigos de producto)
+	// Ej: "14535GB0796", "ISBN9780000001", etc.
+	if len(text) > 6 && !strings.Contains(text, " ") {
+		allAlphaNum := true
+		for _, r := range text {
+			if !unicode.IsLetter(r) && !unicode.IsDigit(r) {
+				allAlphaNum = false
+				break
+			}
+		}
+		return allAlphaNum
+	}
+	return false
 }
 
 // attachSectionPath recorre los elementos en orden y asigna el SectionPath
