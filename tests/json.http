@@ -1,0 +1,88 @@
+### Index
+POST http://localhost:8080/api/v1/index
+Content-Type: application/json
+
+{
+    "path": "data/processed/nvidia.json"
+}
+
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "How much GPU memory does the T4 have?"
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What is the PCI Express generation used by the T4?"
+}
+
+
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What is the bus width of the T4?"
+}
+
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "List all hardware specifications of the NVIDIA T4."
+}
+
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Create a markdown table containing every specification and its value of the NVIDIA T4."
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Which video encoder and decoder features are listed?"
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Compare FP32 and FP16 performance."
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What are the operating temperature and storage temperature ranges?"
+}
+
+
+
+

@@ -9,6 +9,7 @@ import (
 	"rag_golang/internal/core/domain/query"
 	"rag_golang/internal/core/domain/search"
 	"rag_golang/internal/core/ports/out"
+	"sort"
 	"strings"
 	"time"
 )
@@ -122,6 +123,8 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 		fused = limitChunksPerSection(fused, s.cfg.Search.MaxChunksPerSection)
 	}
 
+	fused = groupSectionChunksTogether(fused)
+
 	if len(fused) > s.cfg.Search.TopK {
 		fused = fused[:s.cfg.Search.TopK]
 	}
@@ -213,7 +216,6 @@ func limitChunksPerSection(results []search.SearchResult, maxPerSection int) []s
 	return deduped
 }
 
-// En query.go, función nueva:
 func deduplicateDensePool(results []search.SearchResult, maxPerSection int) []search.SearchResult {
 	counts := make(map[string]int)
 	deduped := make([]search.SearchResult, 0, len(results))
@@ -225,4 +227,34 @@ func deduplicateDensePool(results []search.SearchResult, maxPerSection int) []se
 		}
 	}
 	return deduped
+}
+
+func groupSectionChunksTogether(results []search.SearchResult) []search.SearchResult {
+	type sectionGroup struct {
+		chunks []search.SearchResult
+	}
+	seen := make(map[string]*sectionGroup)
+	order := make([]string, 0)
+
+	for _, r := range results {
+		key := strings.Join(r.Chunk.SectionPath, "|")
+		if _, ok := seen[key]; !ok {
+			seen[key] = &sectionGroup{}
+			order = append(order, key)
+		}
+		seen[key].chunks = append(seen[key].chunks, r)
+	}
+
+	// Dentro de cada sección, ordenar por posición en el documento
+	for _, g := range seen {
+		sort.Slice(g.chunks, func(i, j int) bool {
+			return g.chunks[i].Chunk.ChunkIndex < g.chunks[j].Chunk.ChunkIndex
+		})
+	}
+
+	out := make([]search.SearchResult, 0, len(results))
+	for _, key := range order {
+		out = append(out, seen[key].chunks...)
+	}
+	return out
 }

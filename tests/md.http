@@ -1,0 +1,73 @@
+### Index
+POST http://localhost:8080/api/v1/index
+Content-Type: application/json
+
+{
+    "path": "docs/test.md"
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What is this project?"
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What programming language version is required?"
+}
+
+### aaaa
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "How do you install the project?"
+}
+
+### bbbb
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What should you check if no results are returned?"
+}
+
+
+### bbbb
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Summarize the installation, usage, and troubleshooting sections."
+}
+
+### bbbb
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Describe the complete workflow from cloning the repository to performing a search."
+}
+
+
+### cccc
+
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Does the project support Docker?"
+}
+

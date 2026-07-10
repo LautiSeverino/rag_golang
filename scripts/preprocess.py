@@ -96,7 +96,7 @@ def extract(pdf_path: str) -> Document:
     checksum = file_checksum(pdf_path)
 
     return Document(
-        id=str(uuid.uuid4())[:16],
+        id=str(uuid.uuid4()),
         metadata=DocumentMetadata(
             source=pdf_path,
             doc_type="pdf",

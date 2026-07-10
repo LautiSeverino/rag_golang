@@ -4,6 +4,7 @@ import (
 	"crypto/sha256"
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"rag_golang/internal/core/domain"
@@ -18,9 +19,18 @@ func (e *FitzExtractor) loadPreProcessed(sourcePath string) (*domain.Document, b
 	if e.processedDir == "" {
 		return nil, false
 	}
+
 	name := strings.TrimSuffix(filepath.Base(sourcePath), filepath.Ext(sourcePath))
 	jsonPath := filepath.Join(e.processedDir, name+".json")
-	return loadDocFromJSON(jsonPath)
+
+	doc, err := loadDocFromJSON(jsonPath)
+	if err != nil {
+		log.Printf("[Extractor] Failed to load preprocessed JSON %s: %v", jsonPath, err)
+		return nil, false
+	}
+
+	log.Printf("[Extractor] Using preprocessed JSON: %s", jsonPath)
+	return doc, true
 }
 
 func (e *FitzExtractor) loadCache(sourcePath string) (*domain.Document, bool) {
@@ -29,8 +39,8 @@ func (e *FitzExtractor) loadCache(sourcePath string) (*domain.Document, bool) {
 	}
 	name := strings.TrimSuffix(filepath.Base(sourcePath), filepath.Ext(sourcePath))
 	jsonPath := filepath.Join(e.cacheDir, name+".json")
-	doc, ok := loadDocFromJSON(jsonPath)
-	if !ok {
+	doc, err := loadDocFromJSON(jsonPath)
+	if err != nil {
 		return nil, false
 	}
 	// Invalidar caché si el archivo fuente cambió
@@ -56,18 +66,19 @@ func (e *FitzExtractor) saveCache(sourcePath string, doc *domain.Document) error
 	return os.WriteFile(jsonPath, data, 0644)
 }
 
-func loadDocFromJSON(path string) (*domain.Document, bool) {
+func loadDocFromJSON(path string) (*domain.Document, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
-		return nil, false
+		return nil, err
 	}
+
 	var doc domain.Document
 	if err := json.Unmarshal(data, &doc); err != nil {
-		return nil, false
+		return nil, err
 	}
-	return &doc, true
-}
 
+	return &doc, nil
+}
 func generateID(path string) uuid.UUID {
 	// UUID determinístico basado en el path + checksum.
 	// Así el mismo archivo genera siempre el mismo ID.

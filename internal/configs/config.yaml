@@ -2,7 +2,7 @@ server:
   port: 8080
 
 extract:
-  processed_dir: "data/processed"   # JSON pre-procesados por Python (PDFs con tablas)
+  processed_dir: "scripts/data/processed"   # JSON pre-procesados por Python (PDFs con tablas)
   cache_dir: "data/cache"           # JSON cacheados por go-fitz
 
 chunk:
@@ -29,15 +29,15 @@ store:
 llm:
   model: "qwen2.5:3b"
   ollama_url: "http://localhost:11434"
-  max_chunk_length: 700
+  max_chunk_length: 1100
   options:
     temperature: 0.1
-    num_predict: 256
+    num_predict: 512
     num_ctx: 2048
 
 search:
   rrf_k: 60
-  top_k: 7           
+  top_k: 4           
   candidates_k: 40   # cuántos candidatos por store antes de RRF (subir de 20 a 40)
   bm25_k1: 1.2
   bm25_b: 0.75
