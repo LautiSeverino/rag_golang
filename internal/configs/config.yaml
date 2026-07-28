@@ -29,11 +29,11 @@ store:
 llm:
   model: "qwen2.5:3b"
   ollama_url: "http://localhost:11434"
-  max_chunk_length: 900
+  max_chunk_length: 600
   options:
     temperature: 0.1
-    num_predict: 256
-    num_ctx: 4096
+    num_predict: 200
+    num_ctx: 3072
 
 search:
   rrf_k: 60
@@ -41,8 +41,9 @@ search:
   candidates_k: 50   # cuántos candidatos por store antes de RRF (subir de 20 a 40)
   bm25_k1: 1.2
   bm25_b: 0.75
-  max_chunks_per_section: 2  # máximo 2 chunks por sección en el contexto final
-  max_dense_per_section: 2  
+  max_chunks_per_section: 3  # máximo 2 chunks por sección en el contexto final
+  max_dense_per_section: 5  
+  dense_score_threshold: 0.60
 
 
 log:

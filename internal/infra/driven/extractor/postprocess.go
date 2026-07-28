@@ -70,12 +70,33 @@ func classifyBlocks(blocks []rawBlock) []domain.Element {
 
 		// Detectar ítems de lista por prefijo (solo para no-headings)
 		if isListPrefix(text) {
-			if len(listBuffer) == 0 {
-				listPage = b.Page
-				listSection = nil
+			stripped := stripListPrefix(text)
+			firstLine := strings.SplitN(stripped, "\n", 2)[0]
+
+			// Detectar sub-headings disfrazados de listas:
+			// texto en MAYÚSCULAS, corto, sin punto final → heading level 3
+			if isImplicitHeading(firstLine) {
+				flushList()
+				elements = append(elements, domain.Element{
+					Type:  domain.ElemHeading,
+					Level: 3,
+					Text:  firstLine,
+					Page:  b.Page,
+				})
+				// Si hay texto restante después del newline, procesarlo como párrafo separado
+				rest := ""
+				if parts := strings.SplitN(stripped, "\n", 2); len(parts) == 2 {
+					rest = strings.TrimSpace(parts[1])
+				}
+				if rest != "" {
+					elements = append(elements, domain.Element{
+						Type: domain.ElemParagraph,
+						Text: rest,
+						Page: b.Page,
+					})
+				}
+				continue
 			}
-			listBuffer = append(listBuffer, stripListPrefix(text))
-			continue
 		}
 		flushList()
 
@@ -335,4 +356,27 @@ func isStructuralHeading(el domain.Element) bool {
 	}
 	normalized := strings.ToUpper(strings.TrimSpace(el.Text))
 	return structuralHeadings[normalized]
+}
+
+// isImplicitHeading detecta si un texto corto en mayúsculas, sin punto final,
+// es probablemente un heading implícito (nivel 3) aunque tenga el mismo font-size que el cuerpo.
+func isImplicitHeading(text string) bool {
+	text = strings.TrimSpace(text)
+	if len(text) == 0 || len([]rune(text)) > 60 {
+		return false
+	}
+	if strings.HasSuffix(text, ".") {
+		return false
+	}
+	// Mayoría de runes deben ser mayúsculas (para español/inglés)
+	upper, total := 0, 0
+	for _, r := range text {
+		if unicode.IsLetter(r) {
+			total++
+			if unicode.IsUpper(r) {
+				upper++
+			}
+		}
+	}
+	return total > 3 && float64(upper)/float64(total) > 0.7
 }

@@ -76,8 +76,9 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 	candidatesK := s.cfg.Search.CandidatesK
 
 	denseResults, err := s.vectorRepo.Search(ctx, search.SearchRequest{
-		Vector: vecs[0],
-		TopK:   candidatesK,
+		Vector:         vecs[0],
+		TopK:           candidatesK,
+		ScoreThreshold: scoreThresholdPtr(s.cfg.Search.DenseScoreThreshold),
 	})
 	if err != nil {
 		return nil, fmt.Errorf("vector search: %w", err)
@@ -146,6 +147,10 @@ func (s *QueryService) retrieve(ctx context.Context, userQuery string) (*retriev
 	}
 
 	return &retrievalResult{fused: fused}, nil
+}
+
+func scoreThresholdPtr(f float32) *float32 {
+	return &f
 }
 
 func (s *QueryService) Query(ctx context.Context, userQuery string) (*query.QueryResult, error) {

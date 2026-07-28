@@ -66,6 +66,7 @@ type SearchConfig struct {
 	BM25B               float64 `yaml:"bm25_b"`                 // parámetro normalización longitud
 	MaxChunksPerSection int     `yaml:"max_chunks_per_section"` // máximo de chunks por sección en el contexto final
 	MaxDensePerSection  int     `yaml:"max_dense_per_section"`  // máximo de chunks densos por sección en el contexto final
+	DenseScoreThreshold float32 `yaml:"dense_score_threshold"`  // score mínimo para considerar un chunk denso
 }
 
 // ServerConfig

@@ -1,468 +1,89 @@
-2026/07/27 12:36:00.977232 ================================================================================
-2026/07/27 12:36:00.977275 RAG RETRIEVE START
-2026/07/27 12:36:00.977278 QUERY: Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided.
-2026/07/27 12:36:00.977282 ================================================================================
-2026/07/27 12:36:01.200236 [EMBEDDING] model=mxbai-embed-large:latest duration=222.943737ms
-2026/07/27 12:36:01.214106 [DENSE] top=26 duration=13.799635ms
-2026/07/27 12:36:01.214140   [1] score=0.747556 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214147   [2] score=0.723084 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214150   [3] score=0.688717 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:36:01.214153   [4] score=0.630431 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:36:01.214155   [5] score=0.564510 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:36:01.214157   [6] score=0.558654 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:36:01.214159   [7] score=0.551679 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:36:01.214161   [8] score=0.540362 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:01.214163   [9] score=0.531521 page=1 section="Sample Project > Configuration"
-2026/07/27 12:36:01.214166   [10] score=0.530240 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:01.214168   [11] score=0.527028 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:36:01.214179   [12] score=0.511901 page=1 section="Sample Project > Troubleshooting > No results are returned"
-2026/07/27 12:36:01.214185   [13] score=0.508085 page=1 section="Sample Project > Examples"
-2026/07/27 12:36:01.214187   [14] score=0.497212 page=10 section="7. PACTOS"
-2026/07/27 12:36:01.214190   [15] score=0.496236 page=2 section=""
-2026/07/27 12:36:01.214192   [16] score=0.479392 page=1 section="Sample Project > Overview"
-2026/07/27 12:36:01.214194   [17] score=0.477154 page=1 section="Sample Project > Usage"
-2026/07/27 12:36:01.214196   [18] score=0.477051 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:36:01.214199   [19] score=0.473322 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:36:01.214201   [20] score=0.471856 page=1 section="Sample Project > Contributing"
-2026/07/27 12:36:01.214203   [21] score=0.470516 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:36:01.214206   [22] score=0.469780 page=1 section="Sample Project > Features"
-2026/07/27 12:36:01.214208   [23] score=0.464348 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:36:01.214210   [24] score=0.457794 page=1 section="Sample Project > Troubleshooting"
-2026/07/27 12:36:01.214212   [25] score=0.456781 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:36:01.214214   [26] score=0.456047 page=1 section="Sample Project"
-2026/07/27 12:36:01.214234 [BM25] top=23 duration=17.653µs
-2026/07/27 12:36:01.214245   [1] score=10.197594 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214249   [2] score=6.942377 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214251   [3] score=6.717265 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214254   [4] score=6.201535 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214257   [5] score=5.524782 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214261   [6] score=3.789073 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214264   [7] score=3.314930 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214267   [8] score=3.091282 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214270   [9] score=2.808993 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214273   [10] score=2.635586 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214292   [11] score=2.459922 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214295   [12] score=2.385892 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214298   [13] score=2.111217 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214301   [14] score=1.170254 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214303   [15] score=1.081996 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214306   [16] score=1.003879 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214308   [17] score=0.932520 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214311   [18] score=0.761797 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214313   [19] score=0.736136 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214316   [20] score=0.692307 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214318   [21] score=0.658048 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214321   [22] score=0.556269 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214324   [23] score=0.195895 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:36:01.214386 [RRF] top=8 duration=59.568µs
-2026/07/27 12:36:01.214391   [1] score=0.031754 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214394   [2] score=0.032787 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:01.214397   [3] score=0.027921 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:36:01.214400   [4] score=0.014925 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:36:01.214402   [5] score=0.015625 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:36:01.214405   [6] score=0.015385 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:36:01.214408   [7] score=0.015152 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:36:01.214410   [8] score=0.014706 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:01.214413 TIMINGS total=237.180553ms embedding=see above dense=see above bm25=see above rrf=see above
-2026/07/27 12:36:01.214416 ================================================================================
-2026/07/27 12:36:01.214486 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=900
-2026/07/27 12:36:22.533449 [QUERY END] duration=21.556216333s query="Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided."
-2026/07/27 12:36:22.533660 ================================================================================
+2026/07/28 17:15:43.079594 ================================================================================
+2026/07/28 17:15:43.079653 RAG RETRIEVE START
+2026/07/28 17:15:43.079660 QUERY: ¿cuales son los elementos de juego?
+2026/07/28 17:15:43.079666 ================================================================================
+2026/07/28 17:15:43.535403 [EMBEDDING] model=mxbai-embed-large:latest duration=455.732175ms
+2026/07/28 17:15:43.538822 [DENSE] top=0 duration=3.369191ms
+2026/07/28 17:15:43.538874 [BM25] top=44 duration=26.032µs
+2026/07/28 17:15:43.538880   [1] score=5.256602 page=10 section="7. PACTOS"
+2026/07/28 17:15:43.538887   [2] score=4.694927 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/28 17:15:43.538891   [3] score=4.498308 page=2 section="2. ELEMENTOS DE JUEGO > FICHAS"
+2026/07/28 17:15:43.538894   [4] score=4.099328 page=2 section="2. ELEMENTOS DE JUEGO > 6 DADOS"
+2026/07/28 17:15:43.538898   [5] score=4.053491 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/28 17:15:43.538902   [6] score=4.034264 page=2 section="2. ELEMENTOS DE JUEGO > UN REGLAMENTO"
+2026/07/28 17:15:43.538905   [7] score=3.881225 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/28 17:15:43.538909   [8] score=3.850902 page=3 section="2. ELEMENTOS DE JUEGO > DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
+2026/07/28 17:15:43.538913   [9] score=3.503811 page=2 section="2. ELEMENTOS DE JUEGO > TARJETAS DE PAÍSES"
+2026/07/28 17:15:43.538916   [10] score=3.448236 page=2 section="2. ELEMENTOS DE JUEGO > MAPA"
+2026/07/28 17:15:43.538919   [11] score=3.440334 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/28 17:15:43.538922   [12] score=2.552238 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:15:43.538926   [13] score=2.152212 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:15:43.538929   [14] score=2.106646 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:15:43.538932   [15] score=2.035254 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/28 17:15:43.538935   [16] score=1.668205 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:15:43.538938   [17] score=1.594551 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:15:43.538940   [18] score=1.457824 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:15:43.538944   [19] score=1.365374 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/28 17:15:43.538946   [20] score=1.352923 page=11 section="8. CONSIDERACIONES GENERALES > PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/28 17:15:43.538950   [21] score=1.307286 page=8 section="6. CONTINUACIÓN DEL JUEGO > SOLICITAR TARJETA DE PAÍSES"
+2026/07/28 17:15:43.538953   [22] score=1.177358 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORAR EJÉRCITOS"
+2026/07/28 17:15:43.538957   [23] score=1.086629 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:15:43.538960   [24] score=1.008883 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/28 17:15:43.538963   [25] score=0.999269 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:15:43.538966   [26] score=0.986795 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:15:43.538969   [27] score=0.958710 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:15:43.538972   [28] score=0.940721 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:15:43.538975   [29] score=0.881727 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:15:43.538979   [30] score=0.864602 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:15:43.538982   [31] score=0.855828 page=11 section="8. CONSIDERACIONES GENERALES > DESTRUCCIÓN FORTUITA DE UN COLOR"
+2026/07/28 17:15:43.538986   [32] score=0.792859 page=10 section="7. PACTOS > PACTO ENTRE PAÍSES"
+2026/07/28 17:15:43.539000   [33] score=0.784643 page=12 section="9. LISTA DE OBJETIVOS SECRETOS > OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/28 17:15:43.539004   [34] score=0.775663 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVO COMÚN"
+2026/07/28 17:15:43.539008   [35] score=0.770887 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:15:43.539011   [36] score=0.744968 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:15:43.539014   [37] score=0.728112 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:15:43.539017   [38] score=0.634874 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/28 17:15:43.539020   [39] score=0.538100 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:15:43.539023   [40] score=0.158385 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:15:43.539026   [41] score=0.153385 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:15:43.539029   [42] score=0.141453 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:15:43.539032   [43] score=0.141207 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:15:43.539036   [44] score=0.136431 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:15:43.539115 [RRF] top=8 duration=76.418µs
+2026/07/28 17:15:43.539120   [1] score=0.016393 page=10 section="7. PACTOS"
+2026/07/28 17:15:43.539124   [2] score=0.016129 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/28 17:15:43.539127   [3] score=0.015873 page=2 section="2. ELEMENTOS DE JUEGO > FICHAS"
+2026/07/28 17:15:43.539129   [4] score=0.015625 page=2 section="2. ELEMENTOS DE JUEGO > 6 DADOS"
+2026/07/28 17:15:43.539132   [5] score=0.015385 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/28 17:15:43.539135   [6] score=0.015152 page=2 section="2. ELEMENTOS DE JUEGO > UN REGLAMENTO"
+2026/07/28 17:15:43.539138   [7] score=0.014925 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/28 17:15:43.539141   [8] score=0.014706 page=3 section="2. ELEMENTOS DE JUEGO > DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
+2026/07/28 17:15:43.539144 TIMINGS total=459.549787ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:15:43.539147 ================================================================================
+2026/07/28 17:15:43.539180 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:16:43.557011 [QUERY END] duration=1m0.477416718s query="¿cuales son los elementos de juego?"
+2026/07/28 17:16:43.557276 ================================================================================
 HTTP REQUEST
 ================================================================================
-Client IP : 127.0.0.1:53330
-Timestamp : 2026-07-27 12:36:22.533
+Status    : 200
+Duration  : 1m0.477709631s
+Client IP : 127.0.0.1:40316
+Timestamp : 2026-07-28 17:16:43.557
 Method    : POST
 Path      : /api/v1/query
-Status    : 200
-Duration  : 21.556457087s
 
 -------------------------------- REQUEST ---------------------------------------
 
 {
-  "query": "Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided."
+  "query": "¿cuales son los elementos de juego?"
 }
 
 -------------------------------- RESPONSE --------------------------------------
 
 {
-  "query": "Compare the short game rules with the standard game rules, including setup, hotel building requirements, and how the winner is decided.",
-  "answer": "The short game rules differ from the standard game rules primarily in the number of houses required to build a hotel on each property within a color group. In the standard game, four houses are needed for this purpose; however, in the short game, only three houses are necessary.\n\nSetup-wise, during preparation for play, the Banker deals two Title Deeds instead of four to each player (including himself if he both plays and acts as Banker). Players must pay the Bank the printed price of each property acquired with these deeds. \n\nIn terms of winning, the last player left in the game is still declared the winner regardless of whether it's a short or standard game.\n\nThe main difference between the two games lies in the number of houses required for building hotels on properties within a color group. In summary:\n- Standard Game: Four houses are needed to build a hotel.\n- Short Game: Three houses are sufficient.",
+  "query": "¿cuales son los elementos de juego?",
+  "answer": "Los elementos de juego incluyen fichas que representan ejércitos, seis dados y dieciséis tarjetas de objetivos secretos. Además, hay dos formas de encarar el juego: \"Vale todo\" y \"Fair Play\".",
   "sources": [
-    {
-      "file": "docs/monopoly.pdf",
-      "page": 7,
-      "section_path": [
-        "THE PROPERTY TRADING BOARD GAME",
-        "RULES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.032786883,
-      "excerpt": "Deed cards.  The player to the left of the Banker then cuts the deck and the Banker deals, one at a time, two Title Deeds to each player (including himself if he both plays and acts as Banker). …"
-    },
-    {
-      "file": "docs/monopoly.pdf",
-      "page": 1,
-      "section_path": [
-        "THE PROPERTY TRADING BOARD GAME"
-      ],
-      "element_type": "heading",
-      "score": 0.02792121,
-      "excerpt": "THE PROPERTY TRADING BOARD GAME"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 11,
-      "section_path": [
-        "8. CONSIDERACIONES GENERALES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.015625,
-      "excerpt": "El resto de la mecánica del juego es igual a la explicada anteriormente."
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 2,
-      "section_path": [
-        "1. IDEA GENERAL"
-      ],
-      "element_type": "paragraph",
-      "score": 0.015384615,
-      "excerpt": "1. IDEA GENERAL\nEl juego propone un conflicto bélico que tiene lugar sobre un mapa-tablero dividido en 50 países. Para empezar se reparten los 50 países entre los jugadores, quienes ocupan sus…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 2,
-      "section_path": [
-        "2. ELEMENTOS DE JUEGO"
-      ],
-      "element_type": "paragraph",
-      "score": 0.015151516,
-      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes:\nAmérica del Norte América del Sur, Europa, Asia, Africa y Oceanía.\nLas dimensiones y divisiones…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 9,
-      "section_path": [
-        "6. CONTINUACIÓN DEL JUEGO"
-      ],
-      "element_type": "paragraph",
-      "score": 0.014705882,
-      "excerpt": "Nótese que cuando tiene 5 tarjetas, hay inevitablemente 3 que están en alguna de las dos situaciones necesarias para el canje.\nMientras se tengan 5 o menos tarjetas, no hay obligación de efectuar…"
-    }
-  ],
-  "duration_ns": 0
-}
-
-================================================================================
-2026/07/27 12:36:32.942400 ================================================================================
-2026/07/27 12:36:32.942428 RAG RETRIEVE START
-2026/07/27 12:36:32.942431 QUERY: Explain the rules for building Houses and Hotels, including when they can be bought and any building limits.
-2026/07/27 12:36:32.942442 ================================================================================
-2026/07/27 12:36:33.173079 [EMBEDDING] model=mxbai-embed-large:latest duration=230.633647ms
-2026/07/27 12:36:33.178480 [DENSE] top=22 duration=5.362601ms
-2026/07/27 12:36:33.178517   [1] score=0.790167 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178528   [2] score=0.750108 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178532   [3] score=0.652208 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:36:33.178535   [4] score=0.525013 page=2 section=""
-2026/07/27 12:36:33.178538   [5] score=0.524570 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:36:33.178542   [6] score=0.518567 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:36:33.178545   [7] score=0.513824 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:33.178548   [8] score=0.503500 page=1 section="Sample Project > Examples"
-2026/07/27 12:36:33.178552   [9] score=0.500484 page=1 section="Sample Project > Troubleshooting > No results are returned"
-2026/07/27 12:36:33.178566   [10] score=0.500235 page=1 section="Sample Project > Troubleshooting"
-2026/07/27 12:36:33.178570   [11] score=0.500165 page=1 section="Sample Project > Contributing"
-2026/07/27 12:36:33.178573   [12] score=0.499549 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:33.178576   [13] score=0.498297 page=1 section="Sample Project > Usage"
-2026/07/27 12:36:33.178580   [14] score=0.492800 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:36:33.178583   [15] score=0.491871 page=10 section="7. PACTOS"
-2026/07/27 12:36:33.178585   [16] score=0.489708 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:36:33.178588   [17] score=0.485156 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:36:33.178592   [18] score=0.482163 page=10 section="7. PACTOS"
-2026/07/27 12:36:33.178594   [19] score=0.480149 page=1 section="Sample Project > License"
-2026/07/27 12:36:33.178597   [20] score=0.476172 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:36:33.178601   [21] score=0.475759 page=1 section="Sample Project > Configuration"
-2026/07/27 12:36:33.178604   [22] score=0.470508 page=1 section="Sample Project > Features"
-2026/07/27 12:36:33.178629 [BM25] top=23 duration=21.843µs
-2026/07/27 12:36:33.178635   [1] score=12.848268 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178640   [2] score=10.219431 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178643   [3] score=8.502832 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178646   [4] score=7.323164 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178650   [5] score=7.238022 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178653   [6] score=6.373212 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178656   [7] score=6.329284 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178659   [8] score=5.869423 page=6 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178662   [9] score=5.751673 page=2 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178665   [10] score=5.651609 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178668   [11] score=5.097520 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178671   [12] score=5.013691 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178675   [13] score=4.901011 page=1 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178678   [14] score=4.462763 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178681   [15] score=3.101034 page=7 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178684   [16] score=2.896412 page=4 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178688   [17] score=2.765129 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178691   [18] score=2.327424 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178694   [19] score=2.188935 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178697   [20] score=1.908659 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178701   [21] score=1.347194 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178704   [22] score=0.686460 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178707   [23] score=0.039179 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:36:33.178776 [RRF] top=8 duration=65.651µs
-2026/07/27 12:36:33.178782   [1] score=0.030018 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178791   [2] score=0.032787 page=5 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:36:33.178794   [3] score=0.027921 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:36:33.178803   [4] score=0.015625 page=2 section=""
-2026/07/27 12:36:33.178806   [5] score=0.015152 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:36:33.178810   [6] score=0.015385 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:36:33.178813   [7] score=0.014925 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:33.178815   [8] score=0.013889 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:36:33.178818 TIMINGS total=236.41866ms embedding=see above dense=see above bm25=see above rrf=see above
-2026/07/27 12:36:33.178822 ================================================================================
-2026/07/27 12:36:33.178951 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=900
-2026/07/27 12:38:50.195353 [QUERY END] duration=2m17.252953171s query="Explain the rules for building Houses and Hotels, including when they can be bought and any building limits."
-2026/07/27 12:38:50.195518 ================================================================================
-HTTP REQUEST
-================================================================================
-Path      : /api/v1/query
-Status    : 200
-Duration  : 2m17.253148729s
-Client IP : 127.0.0.1:49508
-Timestamp : 2026-07-27 12:38:50.195
-Method    : POST
-
--------------------------------- REQUEST ---------------------------------------
-
-{
-  "query": "Explain the rules for building Houses and Hotels, including when they can be bought and any building limits."
-}
-
--------------------------------- RESPONSE --------------------------------------
-
-{
-  "query": "Explain the rules for building Houses and Hotels, including when they can be bought and any building limits.",
-  "answer": "To build Houses and Hotels, you must first own all Sites of a color-group. You can buy Houses to put on any Site of that group, increasing the rent you may charge. The price is shown on the relevant Title Deed.\n\nHouses: You can buy them during your turn or between other players' turns but you must build evenly - one House per Site before building another. You cannot build a second House until all Sites have at least one House. Selling Houses works similarly, and you may do so as many times as your financial standing allows. However, if any Site of the same color-group is mortgaged, no Houses can be built.\n\nHotels: To buy a Hotel, you must first have four Houses on each Site of a complete color-group. Only one Hotel may be erected per Site. If there are no Houses left in the Bank, players must wait for others to return theirs before buying any. When selling Hotels, if none are available, they cannot be replaced with Houses.\n\nIn summary, you can buy or sell at any time and as many buildings as your financial standing allows, but building limits apply when a Site is mortgaged or no Houses are left in the Bank.",
-  "sources": [
-    {
-      "file": "docs/monopoly.pdf",
-      "page": 5,
-      "section_path": [
-        "THE PROPERTY TRADING BOARD GAME",
-        "RULES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.032786883,
-      "excerpt": "Hotels You must have four Houses on each Site of a complete colour-group before you can buy a Hotel. Hotels are bought in the same way as Houses and cost four Houses, which are returned to the Bank,…"
-    },
-    {
-      "file": "docs/monopoly.pdf",
-      "page": 1,
-      "section_path": [
-        "THE PROPERTY TRADING BOARD GAME"
-      ],
-      "element_type": "heading",
-      "score": 0.02792121,
-      "excerpt": "THE PROPERTY TRADING BOARD GAME"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 2,
-      "element_type": "heading",
-      "score": 0.015625,
-      "excerpt": "2"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 7,
-      "section_path": [
-        "5. INICIACIÓN DE LAS HOSTILIDADES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.015384615,
-      "excerpt": "Si al recibir la tarjeta, el jugador ya ocupó ese país, agrega los dos ejércitos en ese\nmomento.\nSi el país es conquistado en un turno posterior, y aún se conserva la tarjeta, los dos\nejércitos…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 9,
-      "section_path": [
-        "6. CONTINUACIÓN DEL JUEGO"
-      ],
-      "element_type": "paragraph",
-      "score": 0.014925373,
-      "excerpt": "Nótese que cuando tiene 5 tarjetas, hay inevitablemente 3 que están en alguna de las dos situaciones necesarias para el canje.\nMientras se tengan 5 o menos tarjetas, no hay obligación de efectuar…"
-    }
-  ],
-  "duration_ns": 0
-}
-
-================================================================================
-2026/07/27 12:47:18.004905 ================================================================================
-HTTP REQUEST
-================================================================================
-Timestamp : 2026-07-27 12:47:18.004
-Method    : POST
-Path      : /api/v1/index
-Status    : 200
-Duration  : 54.124848882s
-Client IP : 127.0.0.1:38864
-
--------------------------------- REQUEST ---------------------------------------
-
-{
-  "path": "docs/teg.pdf"
-}
-
--------------------------------- RESPONSE --------------------------------------
-
-{
-  "doc_id": "49b80309-18b9-5aa9-8fdb-5ed5a2ce17f6",
-  "source": "docs/teg.pdf",
-  "chunk_count": 30,
-  "cache_hits": 0,
-  "duration_ns": 0
-}
-
-================================================================================
-2026/07/27 12:47:33.979843 ================================================================================
-2026/07/27 12:47:33.979872 RAG RETRIEVE START
-2026/07/27 12:47:33.979876 QUERY: ¿Cuántos dados puede usar el atacante?
-2026/07/27 12:47:33.979879 ================================================================================
-2026/07/27 12:47:34.147799 [EMBEDDING] model=mxbai-embed-large:latest duration=167.917398ms
-2026/07/27 12:47:34.150483 [DENSE] top=31 duration=2.656953ms
-2026/07/27 12:47:34.150511   [1] score=0.764119 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150518   [2] score=0.739238 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150522   [3] score=0.696357 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:47:34.150525   [4] score=0.694755 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:47:34.150528   [5] score=0.681112 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150531   [6] score=0.680608 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150534   [7] score=0.676674 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150538   [8] score=0.667021 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150541   [9] score=0.661219 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:47:34.150544   [10] score=0.661086 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150547   [11] score=0.653828 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:47:34.150550   [12] score=0.651762 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:47:34.150553   [13] score=0.627178 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150555   [14] score=0.624427 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:47:34.150558   [15] score=0.618161 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:47:34.150561   [16] score=0.606103 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:47:34.150564   [17] score=0.572161 page=2 section=""
-2026/07/27 12:47:34.150567   [18] score=0.525212 page=1 section="Sample Project > Troubleshooting > No results are returned"
-2026/07/27 12:47:34.150570   [19] score=0.504231 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:47:34.150574   [20] score=0.501169 page=1 section="Sample Project > Features"
-2026/07/27 12:47:34.150577   [21] score=0.500396 page=1 section="Sample Project > Usage"
-2026/07/27 12:47:34.150580   [22] score=0.490729 page=1 section="Sample Project > Troubleshooting"
-2026/07/27 12:47:34.150583   [23] score=0.479337 page=1 section="Sample Project > Examples"
-2026/07/27 12:47:34.150586   [24] score=0.477325 page=1 section="Sample Project"
-2026/07/27 12:47:34.150589   [25] score=0.465965 page=1 section="Sample Project > Configuration"
-2026/07/27 12:47:34.150601   [26] score=0.465363 page=1 section="Sample Project > Overview"
-2026/07/27 12:47:34.150604   [27] score=0.437988 page=1 section="Sample Project > Contributing"
-2026/07/27 12:47:34.150607   [28] score=0.413213 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:47:34.150610   [29] score=0.412915 page=1 section="Sample Project > License"
-2026/07/27 12:47:34.150612   [30] score=0.406411 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:47:34.150615   [31] score=0.373176 page=1 section="Sample Project > Troubleshooting > The command is not found"
-2026/07/27 12:47:34.150633 [BM25] top=28 duration=15.724µs
-2026/07/27 12:47:34.150637   [1] score=11.365620 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150641   [2] score=7.269109 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150643   [3] score=5.488832 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150646   [4] score=5.353900 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150648   [5] score=4.388884 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150651   [6] score=4.183732 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:47:34.150653   [7] score=3.593085 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150656   [8] score=3.363108 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150658   [9] score=3.349139 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150661   [10] score=3.340689 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150663   [11] score=2.984178 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150665   [12] score=2.720866 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150668   [13] score=2.697861 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:47:34.150670   [14] score=2.626607 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:47:34.150672   [15] score=2.599237 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150675   [16] score=2.573965 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150678   [17] score=2.363353 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150680   [18] score=1.331671 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150683   [19] score=1.324656 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150685   [20] score=1.317988 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150687   [21] score=1.315792 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150690   [22] score=1.306494 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:47:34.150692   [23] score=1.278013 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150695   [24] score=1.276803 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:47:34.150697   [25] score=1.221265 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:47:34.150699   [26] score=1.208052 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150702   [27] score=1.120557 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:47:34.150704   [28] score=0.698891 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:47:34.150740 [RRF] top=8 duration=33.274µs
-2026/07/27 12:47:34.150744   [1] score=0.032787 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150747   [2] score=0.032002 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:47:34.150749   [3] score=0.030090 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150752   [4] score=0.028992 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:47:34.150754   [5] score=0.029418 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150757   [6] score=0.028309 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:47:34.150760   [7] score=0.027783 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150768   [8] score=0.029274 page=10 section="7. PACTOS"
-2026/07/27 12:47:34.150770 TIMINGS total=170.926897ms embedding=see above dense=see above bm25=see above rrf=see above
-2026/07/27 12:47:34.150773 ================================================================================
-2026/07/27 12:47:34.150827 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=900
-2026/07/27 12:50:20.108251 [QUERY END] duration=2m46.128407352s query="¿Cuántos dados puede usar el atacante?"
-2026/07/27 12:50:20.108408 ================================================================================
-HTTP REQUEST
-================================================================================
-Duration  : 2m46.128584587s
-Client IP : 127.0.0.1:55070
-Timestamp : 2026-07-27 12:50:20.108
-Method    : POST
-Path      : /api/v1/query
-Status    : 200
-
--------------------------------- REQUEST ---------------------------------------
-
-{
-  "query": "¿Cuántos dados puede usar el atacante?"
-}
-
--------------------------------- RESPONSE --------------------------------------
-
-{
-  "query": "¿Cuántos dados puede usar el atacante?",
-  "answer": "El atacante puede tomar tantos dados como ejércitos de ataque tenga en el país de origen del ataque, hasta un máximo de 3 dados (aunque tuviera más de 3 ejércitos de ataque no puede utilizar más de tres dados).",
-  "sources": [
-    {
-      "file": "docs/teg.pdf",
-      "page": 5,
-      "section_path": [
-        "5. INICIACIÓN DE LAS HOSTILIDADES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.032786883,
-      "excerpt": "en el país.\nDos países son limítrofes si tiene una frontera en común, o si están unidos por\npuentes sobre el agua (como Chile - Australia).\nUn país puede atacar a otro (perteneciente a otro…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 6,
-      "section_path": [
-        "5. INICIACIÓN DE LAS HOSTILIDADES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.032002047,
-      "excerpt": "“Verde” no está obligado a respetar ningún orden en los sucesivos ataques: puede atacar a “Rojo”, luego a “Azul”, luego volver a atacar a “Rojo”, etc.\nEn particular, se detallan…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 3,
-      "section_path": [
-        "3. REPARTO DE PAÍSES Y OBJETIVOS"
-      ],
-      "element_type": "paragraph",
-      "score": 0.030090498,
-      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 9,
-      "section_path": [
-        "6. CONTINUACIÓN DEL JUEGO"
-      ],
-      "element_type": "paragraph",
-      "score": 0.029418126,
-      "excerpt": "Nótese que cuando tiene 5 tarjetas, hay inevitablemente 3 que están en alguna de las dos situaciones necesarias para el canje.\nMientras se tengan 5 o menos tarjetas, no hay obligación de efectuar…"
-    },
     {
       "file": "docs/teg.pdf",
       "page": 10,
@@ -470,114 +91,298 @@ Status    : 200
         "7. PACTOS"
       ],
       "element_type": "paragraph",
-      "score": 0.029273504,
-      "excerpt": "A partir del tercer canje, el jugador esta obligado a conquistar 2 países por turno para recibir tarjeta. Como al avanzar el juego esto puede volverse difícil, le queda el recurso, si cabe, de…"
+      "score": 0.016393442,
+      "excerpt": "7. PACTOS\nEl reglamento permite la propuesta de pactos entre jugadores, los cuales deben ser públicos, expresados en voz alta, y sin cláusulas secretas. Cualquier jugador tiene derecho a preguntar…"
     },
     {
       "file": "docs/teg.pdf",
-      "page": 4,
+      "page": 2,
       "section_path": [
-        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+        "2. ELEMENTOS DE JUEGO"
+      ],
+      "element_type": "heading",
+      "score": 0.016129032,
+      "excerpt": "2. ELEMENTOS DE JUEGO"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "FICHAS"
       ],
       "element_type": "paragraph",
-      "score": 0.028991597,
-      "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+      "score": 0.015873017,
+      "excerpt": "FICHAS\nCada ficha representa 1 ejército.\nCada uno de los seis colores dispone de 100 ejércitos."
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "6 DADOS"
+      ],
+      "element_type": "heading",
+      "score": 0.015625,
+      "excerpt": "6 DADOS"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES",
+        "COMUNICACIÓN DURANTE EL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015384615,
+      "excerpt": "COMUNICACIÓN DURANTE EL JUEGO\nHay dos formas de encarar el juego: (a) “Vale todo” y (b) “Fair Play”. En (a) un jugador puede dar indicaciones a otro sobre qué países atacar o no, dar…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "UN REGLAMENTO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015151516,
+      "excerpt": "UN REGLAMENTO\n3"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "15 TARJETAS DE OBJETIVOS SECRETOS"
+      ],
+      "element_type": "heading",
+      "score": 0.014925373,
+      "excerpt": "15 TARJETAS DE OBJETIVOS SECRETOS"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
+      ],
+      "element_type": "heading",
+      "score": 0.014705882,
+      "excerpt": "DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
     }
   ],
   "duration_ns": 0
 }
 
 ================================================================================
-2026/07/27 12:50:29.386917 ================================================================================
-2026/07/27 12:50:29.386985 RAG RETRIEVE START
-2026/07/27 12:50:29.386988 QUERY: ¿Cómo es el reparto de paises y objetivos?
-2026/07/27 12:50:29.386992 ================================================================================
-2026/07/27 12:50:29.584741 [EMBEDDING] model=mxbai-embed-large:latest duration=197.747325ms
-2026/07/27 12:50:29.587309 [DENSE] top=32 duration=2.536244ms
-2026/07/27 12:50:29.593432   [1] score=0.787526 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:50:29.593443   [2] score=0.744495 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593446   [3] score=0.742586 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593448   [4] score=0.739770 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:50:29.593451   [5] score=0.737316 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593453   [6] score=0.736648 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593455   [7] score=0.732074 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:50:29.593457   [8] score=0.722370 page=10 section="7. PACTOS"
-2026/07/27 12:50:29.593459   [9] score=0.706122 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:50:29.593461   [10] score=0.703883 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593463   [11] score=0.703867 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:50:29.593465   [12] score=0.680186 page=10 section="7. PACTOS"
-2026/07/27 12:50:29.593467   [13] score=0.650266 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593469   [14] score=0.648184 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:50:29.593471   [15] score=0.621421 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:50:29.593473   [16] score=0.617617 page=2 section=""
-2026/07/27 12:50:29.593475   [17] score=0.601802 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:50:29.593477   [18] score=0.565177 page=1 section="Sample Project > Troubleshooting > No results are returned"
-2026/07/27 12:50:29.593480   [19] score=0.547847 page=1 section="Sample Project > Troubleshooting"
-2026/07/27 12:50:29.593482   [20] score=0.545770 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:50:29.593484   [21] score=0.543354 page=1 section="Sample Project > Usage"
-2026/07/27 12:50:29.593486   [22] score=0.533972 page=1 section="Sample Project"
-2026/07/27 12:50:29.593488   [23] score=0.529297 page=1 section="Sample Project > Features"
-2026/07/27 12:50:29.593490   [24] score=0.519826 page=1 section="Sample Project > Overview"
-2026/07/27 12:50:29.593493   [25] score=0.519215 page=1 section="Sample Project > Contributing"
-2026/07/27 12:50:29.593495   [26] score=0.500256 page=1 section="Sample Project > Examples"
-2026/07/27 12:50:29.593497   [27] score=0.485733 page=1 section="Sample Project > Configuration"
-2026/07/27 12:50:29.593499   [28] score=0.455484 page=1 section="Sample Project > License"
-2026/07/27 12:50:29.593502   [29] score=0.436098 page=8 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:50:29.593504   [30] score=0.428284 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:50:29.593506   [31] score=0.408934 page=1 section="Sample Project > Requirements"
-2026/07/27 12:50:29.593509   [32] score=0.408878 page=1 section="Sample Project > Installation"
-2026/07/27 12:50:29.593529 [BM25] top=29 duration=18.316µs
-2026/07/27 12:50:29.593534   [1] score=12.199793 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593537   [2] score=9.873070 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593539   [3] score=9.751220 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593542   [4] score=9.367107 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593544   [5] score=4.294250 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:50:29.593547   [6] score=4.095215 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593549   [7] score=4.086881 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593561   [8] score=4.042855 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:50:29.593564   [9] score=3.876694 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:50:29.593567   [10] score=3.850853 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593570   [11] score=3.790553 page=10 section="7. PACTOS"
-2026/07/27 12:50:29.593572   [12] score=3.758566 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593574   [13] score=3.724541 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:50:29.593577   [14] score=3.514534 page=10 section="7. PACTOS"
-2026/07/27 12:50:29.593579   [15] score=3.513153 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:50:29.593581   [16] score=3.500439 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593584   [17] score=3.463791 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:50:29.593586   [18] score=3.455683 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:50:29.593589   [19] score=3.406366 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593591   [20] score=3.298466 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593594   [21] score=3.199965 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593596   [22] score=2.658724 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593599   [23] score=2.481840 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593601   [24] score=2.324969 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:50:29.593604   [25] score=2.306311 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:50:29.593606   [26] score=2.290003 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593609   [27] score=2.274193 page=10 section="7. PACTOS"
-2026/07/27 12:50:29.593611   [28] score=2.227616 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593614   [29] score=2.219336 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:50:29.593656 [RRF] top=8 duration=40.125µs
-2026/07/27 12:50:29.593661   [1] score=0.032266 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593664   [2] score=0.031025 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:50:29.593667   [3] score=0.031778 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:50:29.593669   [4] score=0.030118 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:50:29.593672   [5] score=0.031281 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593674   [6] score=0.027730 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:50:29.593677   [7] score=0.028571 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593680   [8] score=0.027588 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:50:29.593682 TIMINGS total=206.764918ms embedding=see above dense=see above bm25=see above rrf=see above
-2026/07/27 12:50:29.593685 ================================================================================
-2026/07/27 12:50:29.593736 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=900
-2026/07/27 12:53:17.627463 [QUERY END] duration=2m48.240544842s query="¿Cómo es el reparto de paises y objetivos?"
-2026/07/27 12:53:17.627606 ================================================================================
+2026/07/28 17:17:34.206003 ================================================================================
+2026/07/28 17:17:34.206030 RAG RETRIEVE START
+2026/07/28 17:17:34.206033 QUERY: ¿Se pueden hacer alianzas ofensivas?
+2026/07/28 17:17:34.206036 ================================================================================
+2026/07/28 17:17:34.437727 [EMBEDDING] model=mxbai-embed-large:latest duration=231.687696ms
+2026/07/28 17:17:34.439650 [DENSE] top=0 duration=1.893266ms
+2026/07/28 17:17:34.439709 [BM25] top=24 duration=24.254µs
+2026/07/28 17:17:34.439718   [1] score=4.045261 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:17:34.439733   [2] score=3.718129 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:17:34.439738   [3] score=2.715449 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:17:34.439743   [4] score=2.392140 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/28 17:17:34.439748   [5] score=1.309099 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:17:34.439752   [6] score=1.203904 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:17:34.439756   [7] score=1.196229 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/28 17:17:34.439761   [8] score=1.168630 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:17:34.439767   [9] score=1.165378 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:17:34.439771   [10] score=1.081891 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/28 17:17:34.439776   [11] score=1.023375 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:17:34.439781   [12] score=1.021503 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:17:34.439785   [13] score=0.971469 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:17:34.439800   [14] score=0.894820 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/28 17:17:34.439804   [15] score=0.847205 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:17:34.439807   [16] score=0.812681 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:17:34.439811   [17] score=0.811585 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:17:34.439814   [18] score=0.802257 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/28 17:17:34.439818   [19] score=0.765867 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:17:34.439821   [20] score=0.680946 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:17:34.439825   [21] score=0.637417 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/28 17:17:34.439828   [22] score=0.534848 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:17:34.439831   [23] score=0.530781 page=8 section="6. CONTINUACIÓN DEL JUEGO > SOLICITAR TARJETA DE PAÍSES"
+2026/07/28 17:17:34.439835   [24] score=0.522829 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:17:34.440091 [RRF] top=8 duration=252.267µs
+2026/07/28 17:17:34.440130   [1] score=0.013889 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:17:34.440138   [2] score=0.013699 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:17:34.440142   [3] score=0.016393 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:17:34.440147   [4] score=0.016129 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:17:34.440150   [5] score=0.012658 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:17:34.440154   [6] score=0.015873 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:17:34.440158   [7] score=0.011905 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:17:34.440162   [8] score=0.015625 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/28 17:17:34.440170 TIMINGS total=234.167124ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:17:34.440174 ================================================================================
+2026/07/28 17:17:34.440678 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:19:46.283516 [QUERY END] duration=2m12.077513333s query="¿Se pueden hacer alianzas ofensivas?"
+2026/07/28 17:19:46.283694 ================================================================================
 HTTP REQUEST
 ================================================================================
-Timestamp : 2026-07-27 12:53:17.627
-Method    : POST
 Path      : /api/v1/query
 Status    : 200
-Duration  : 2m48.240706945s
-Client IP : 127.0.0.1:39294
+Duration  : 2m12.07772576s
+Client IP : 127.0.0.1:43438
+Timestamp : 2026-07-28 17:19:46.283
+Method    : POST
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Se pueden hacer alianzas ofensivas?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Se pueden hacer alianzas ofensivas?",
+  "answer": "No son válidas las alianzas o pactos agresivos-defensivos según el texto proporcionado. No está permitido por ejemplo un pacto por el cual \"Verde\" y \"Rojo\" se comprometen a atacar sólo a \"Negro\" y no a los demás jugadores.",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO",
+        "INCORPORACIÓN DE EJÉRCITOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "Mientras se tengan 5 o menos tarjetas, no hay obligación de efectuar un canje; pero es obligación hacerlo antes de recibir la 6º tarjeta.\nUna variante opcional es hacer el “Canje defensivo”…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS",
+        "PACTO ZONA INTERNACIONAL"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "No son válidas las alianzas o pactos agresivos-defensivos. No está permitido, por ejemplo, un pacto por el cual “Verde” y “Rojo” se comprometen a atacar sólo a “Negro” y no a los…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 5,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES",
+        "ATACAR PAÍSES AJENOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "EJEMPLO 1 Supongamos que “Verde” y “Rojo” juegan con tres dados cada uno, y que los resultados son:\nVERDE     ROJO 5 4 Gana el dado de “Verde” 3 3 Empate: gana el dado de “Rojo”…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 4,
+      "section_path": [
+        "4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS\nA. Cada jugador tira un dado; el que obtiene el número mayor es el primero en jugar, siguiendo la ronda en el sentido de las agujas del reloj.\nB. El jugador…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO",
+        "INCORPORACIÓN DE EJÉRCITOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.013888889,
+      "excerpt": "INCORPORACIÓN DE EJÉRCITOS\nAl comenzar su turno el jugador incorpora ejércitos por tres motivos:\nA. Por países ocupados. El jugador comienza su turno contando el número de países que ocupa en…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 6,
+      "section_path": [
+        "5. INICIACIÓN DE LAS HOSTILIDADES",
+        "ATACAR PAÍSES AJENOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.011904762,
+      "excerpt": "En cualquiera de los dos casos, “Verde” puede optar por dar por finalizada su etapa de ataques en este turno, o bien iniciar un nuevo ataque.\nPara su nuevo ataque, “Verde” no tiene más…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:44:59.596324 ================================================================================
+2026/07/28 17:44:59.596372 RAG RETRIEVE START
+2026/07/28 17:44:59.596378 QUERY: ¿Cómo es el reparto de paises y objetivos?
+2026/07/28 17:44:59.596382 ================================================================================
+2026/07/28 17:45:00.080287 [EMBEDDING] model=mxbai-embed-large:latest duration=483.891261ms
+2026/07/28 17:45:00.081915 [DENSE] top=0 duration=1.594868ms
+2026/07/28 17:45:00.081974 [BM25] top=43 duration=32.548µs
+2026/07/28 17:45:00.081982   [1] score=8.621185 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:45:00.081991   [2] score=6.408717 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVO COMÚN"
+2026/07/28 17:45:00.082006   [3] score=6.185335 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082010   [4] score=5.960279 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082015   [5] score=5.656463 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:45:00.082019   [6] score=3.029203 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082023   [7] score=2.275252 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082027   [8] score=2.257299 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082031   [9] score=2.140989 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082035   [10] score=2.097866 page=12 section="9. LISTA DE OBJETIVOS SECRETOS > OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/28 17:45:00.082040   [11] score=2.032105 page=11 section="8. CONSIDERACIONES GENERALES > PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/28 17:45:00.082055   [12] score=2.024930 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:45:00.082060   [13] score=1.877567 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:45:00.082063   [14] score=1.795087 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:45:00.082066   [15] score=1.674491 page=11 section="8. CONSIDERACIONES GENERALES > DESTRUCCIÓN FORTUITA DE UN COLOR"
+2026/07/28 17:45:00.082072   [16] score=1.626718 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:45:00.082075   [17] score=1.553743 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/28 17:45:00.082078   [18] score=1.519867 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/28 17:45:00.082081   [19] score=1.517202 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:45:00.082084   [20] score=1.496217 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:45:00.082087   [21] score=1.485873 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:45:00.082090   [22] score=1.341355 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082094   [23] score=1.244936 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/28 17:45:00.082097   [24] score=1.145307 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:45:00.082100   [25] score=0.820007 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082104   [26] score=0.791660 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:45:00.082110   [27] score=0.758154 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082113   [28] score=0.756986 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/28 17:45:00.082117   [29] score=0.713305 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:45:00.082120   [30] score=0.708703 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:45:00.082123   [31] score=0.687079 page=8 section="6. CONTINUACIÓN DEL JUEGO > SOLICITAR TARJETA DE PAÍSES"
+2026/07/28 17:45:00.082127   [32] score=0.621008 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/28 17:45:00.082131   [33] score=0.587720 page=10 section="7. PACTOS > PACTO ENTRE PAÍSES"
+2026/07/28 17:45:00.082134   [34] score=0.581542 page=10 section="7. PACTOS"
+2026/07/28 17:45:00.082137   [35] score=0.571239 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/28 17:45:00.082141   [36] score=0.476115 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082144   [37] score=0.151851 page=2 section="2. ELEMENTOS DE JUEGO > TARJETAS DE PAÍSES"
+2026/07/28 17:45:00.082148   [38] score=0.145615 page=2 section="2. ELEMENTOS DE JUEGO > FICHAS"
+2026/07/28 17:45:00.082151   [39] score=0.143942 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/28 17:45:00.082154   [40] score=0.125682 page=2 section="2. ELEMENTOS DE JUEGO > 6 DADOS"
+2026/07/28 17:45:00.082158   [41] score=0.123687 page=2 section="2. ELEMENTOS DE JUEGO > UN REGLAMENTO"
+2026/07/28 17:45:00.082161   [42] score=0.118065 page=3 section="2. ELEMENTOS DE JUEGO > DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
+2026/07/28 17:45:00.082166   [43] score=0.098018 page=2 section="2. ELEMENTOS DE JUEGO > MAPA"
+2026/07/28 17:45:00.082258 [RRF] top=8 duration=88.882µs
+2026/07/28 17:45:00.082265   [1] score=0.016393 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:45:00.082270   [2] score=0.015385 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:45:00.082274   [3] score=0.016129 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVO COMÚN"
+2026/07/28 17:45:00.082278   [4] score=0.015873 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082289   [5] score=0.015625 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082293   [6] score=0.015152 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/28 17:45:00.082298   [7] score=0.014925 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082301   [8] score=0.011765 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:45:00.082305 TIMINGS total=485.980703ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:45:00.082309 ================================================================================
+2026/07/28 17:45:00.082453 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:47:11.839643 [QUERY END] duration=2m12.243318245s query="¿Cómo es el reparto de paises y objetivos?"
+2026/07/28 17:47:11.839830 ================================================================================
+HTTP REQUEST
+================================================================================
+Path      : /api/v1/query
+Status    : 200
+Duration  : 2m12.243542479s
+Client IP : 127.0.0.1:50900
+Timestamp : 2026-07-28 17:47:11.839
+Method    : POST
 
 -------------------------------- REQUEST ---------------------------------------
 
@@ -589,7 +394,7 @@ Client IP : 127.0.0.1:39294
 
 {
   "query": "¿Cómo es el reparto de paises y objetivos?",
-  "answer": "En el reparto de países, cada participante elige un color de ficha que usará durante todo el partido. Luego, se mezclan las 50 tarjetas de países y se reparten entre los jugadores. Si juegan 3, 4 o 6 personas, sobrarán dos tarjetas; en este caso, cada jugador arroja un dado, y las dos tarjetas sobrantes se entregan a quienes obtuvieron los dos números más altos.\n\nCada participante coloca un ejército de su color en cada uno de los países que obtuvo en el reparto de las tarjetas de países. Los 50 países del mapa quedan así ocupados, cada uno por un ejército.\n\nSe juntan las tarjetas de países, se mezcla nuevamente y se deja el mazo a un costado del mapa para su uso posterior.\n\nLas 15 tarjetas de objetivos secretos también son repartidas. Se mezclan boca abajo y cada jugador toma una de estas tarjetas al azar, guardándola sin mostrarla a los demás. Las tarjetas sobrantes se retiran",
+  "answer": "El reparto de países y objetivos se realiza de la siguiente manera:\n\n1. Cada participante elige un color de ficha para el resto del juego.\n2. Las 50 tarjetas de países son mezcladas y repartidas entre los jugadores. Si juegan 3, 4 o 6 personas, sobrarán dos tarjetas; en este caso, se reparten a quienes obtuvieron los dos números más altos.\n3. Cada jugador coloca un ejército de su color en cada uno de los países que obtuvo en el reparto de las tarjetas de países. Esto ocupa todos los 50 países del mapa con un ejército por país.\n4. Las 15 tarjetas de objetivos secretos son mezcladas y colocadas boca abajo. Cada jugador toma una de estas tarjetas al azar, la guarda sin mostrarla a los demás",
   "sources": [
     {
       "file": "docs/teg.pdf",
@@ -598,145 +403,141 @@ Client IP : 127.0.0.1:39294
         "3. REPARTO DE PAÍSES Y OBJETIVOS"
       ],
       "element_type": "paragraph",
-      "score": 0.03226646,
-      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\nCada participante elige un color de ficha, que usará durante todo el partido.\nSe mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si juegan…"
+      "score": 0.016393442,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\n1. Cada participante elige un color de ficha, que usará durante todo el partido.\n2. Se mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si…"
     },
     {
       "file": "docs/teg.pdf",
-      "page": 12,
+      "page": 4,
       "section_path": [
-        "9. LISTA DE OBJETIVOS SECRETOS"
+        "3. REPARTO DE PAÍSES Y OBJETIVOS",
+        "OBJETIVO COMÚN"
       ],
       "element_type": "paragraph",
-      "score": 0.031778056,
-      "excerpt": "9. LISTA DE OBJETIVOS SECRETOS\nOcupar África, 5 países de América del Norte y 4 países de Europa.\nOcupar América del Sur, 7 países de Europa y 3 países limítrofes entre sí en\ncualquier lugar…"
+      "score": 0.016129032,
+      "excerpt": "OBJETIVO COMÚN\nExiste un objetivo común a todos los participantes: ocupar 30 países. Este objetivo es independiente del objetivo secreto, y el jugador que llega a ocupar 30 países gana…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS",
+        "OBJETIVOS SECRETOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "OBJETIVOS SECRETOS\nExisten dos tipos de objetivos secretos:\nA. OBJETIVOS DE OCUPACIÓN: el jugador que tiene un objetivo de este tipo, lo cumple en el momento en que ocupa todos los países…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 4,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS",
+        "OBJETIVOS SECRETOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "15 TARJETAS DE OBJETIVOS SECRETOS"
+      ],
+      "element_type": "heading",
+      "score": 0.015151516,
+      "excerpt": "15 TARJETAS DE OBJETIVOS SECRETOS"
     },
     {
       "file": "docs/teg.pdf",
       "page": 5,
       "section_path": [
-        "5. INICIACIÓN DE LAS HOSTILIDADES"
+        "5. INICIACIÓN DE LAS HOSTILIDADES",
+        "ATACAR PAÍSES AJENOS"
       ],
       "element_type": "paragraph",
-      "score": 0.031280547,
-      "excerpt": "en el país.\nDos países son limítrofes si tiene una frontera en común, o si están unidos por\npuentes sobre el agua (como Chile - Australia).\nUn país puede atacar a otro (perteneciente a otro…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 11,
-      "section_path": [
-        "8. CONSIDERACIONES GENERALES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.028571429,
-      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
-    },
-    {
-      "file": "docs/teg.pdf",
-      "page": 6,
-      "section_path": [
-        "5. INICIACIÓN DE LAS HOSTILIDADES"
-      ],
-      "element_type": "paragraph",
-      "score": 0.027730294,
-      "excerpt": "“Verde” no está obligado a respetar ningún orden en los sucesivos ataques: puede atacar a “Rojo”, luego a “Azul”, luego volver a atacar a “Rojo”, etc.\nEn particular, se detallan…"
+      "score": 0.014925373,
+      "excerpt": "ATACAR PAÍSES AJENOS\nA. Ejércitos de ataque: El número de ejércitos de ataque de que dispone un país es el número total de ejércitos que hay en el país en el momento, menos uno. Si en un…"
     }
   ],
   "duration_ns": 0
 }
 
 ================================================================================
-2026/07/27 12:53:29.143136 ================================================================================
-2026/07/27 12:53:29.143168 RAG RETRIEVE START
-2026/07/27 12:53:29.143182 QUERY: Decime la lista de objetivos
-2026/07/27 12:53:29.143187 ================================================================================
-2026/07/27 12:53:29.328154 [EMBEDDING] model=mxbai-embed-large:latest duration=184.961919ms
-2026/07/27 12:53:29.330990 [DENSE] top=33 duration=2.783645ms
-2026/07/27 12:53:29.331010   [1] score=0.726198 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:53:29.331017   [2] score=0.695604 page=2 section=""
-2026/07/27 12:53:29.331019   [3] score=0.676541 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331021   [4] score=0.673684 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331023   [5] score=0.672056 page=1 section="Sample Project > Features"
-2026/07/27 12:53:29.331024   [6] score=0.663314 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:53:29.331033   [7] score=0.660251 page=1 section="Sample Project > Troubleshooting > No results are returned"
-2026/07/27 12:53:29.331035   [8] score=0.649133 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331036   [9] score=0.648354 page=1 section="Sample Project > Troubleshooting"
-2026/07/27 12:53:29.331037   [10] score=0.644781 page=1 section="Sample Project > Usage"
-2026/07/27 12:53:29.331039   [11] score=0.638656 page=1 section="Sample Project > Examples"
-2026/07/27 12:53:29.331040   [12] score=0.638311 page=1 section="Sample Project"
-2026/07/27 12:53:29.331041   [13] score=0.634108 page=1 section="Sample Project > Overview"
-2026/07/27 12:53:29.331042   [14] score=0.628772 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:53:29.331043   [15] score=0.620601 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331044   [16] score=0.615870 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331045   [17] score=0.614013 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:53:29.331047   [18] score=0.609947 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:53:29.331048   [19] score=0.604686 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331049   [20] score=0.600311 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:53:29.331061   [21] score=0.582105 page=10 section="7. PACTOS"
-2026/07/27 12:53:29.331062   [22] score=0.581667 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:53:29.331063   [23] score=0.581477 page=10 section="7. PACTOS"
-2026/07/27 12:53:29.331064   [24] score=0.579742 page=1 section="Sample Project > Contributing"
-2026/07/27 12:53:29.331066   [25] score=0.563427 page=1 section="Sample Project > Configuration"
-2026/07/27 12:53:29.331067   [26] score=0.557955 page=1 section="THE PROPERTY TRADING BOARD GAME"
-2026/07/27 12:53:29.331068   [27] score=0.544401 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:53:29.331069   [28] score=0.502693 page=1 section="Sample Project > License"
-2026/07/27 12:53:29.331071   [29] score=0.482912 page=1 section="Sample Project > Requirements"
-2026/07/27 12:53:29.331072   [30] score=0.439666 page=1 section="Sample Project > Troubleshooting > The command is not found"
-2026/07/27 12:53:29.331074   [31] score=0.435127 page=1 section="Sample Project > Installation"
-2026/07/27 12:53:29.331075   [32] score=0.393160 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:53:29.331076   [33] score=0.384806 page=3 section="THE PROPERTY TRADING BOARD GAME > RULES"
-2026/07/27 12:53:29.331089 [BM25] top=29 duration=11.582µs
-2026/07/27 12:53:29.331091   [1] score=8.497272 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:53:29.331093   [2] score=8.255356 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331094   [3] score=7.380969 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:53:29.331096   [4] score=4.865117 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331097   [5] score=4.720375 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:53:29.331098   [6] score=4.585292 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331100   [7] score=3.752882 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331101   [8] score=2.685042 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331103   [9] score=2.635921 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:53:29.331105   [10] score=2.537089 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331106   [11] score=2.503986 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331108   [12] score=2.478590 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331109   [13] score=2.460870 page=10 section="7. PACTOS"
-2026/07/27 12:53:29.331111   [14] score=2.441583 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:53:29.331112   [15] score=2.308621 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:53:29.331113   [16] score=2.294328 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331117   [17] score=2.285373 page=8 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:53:29.331119   [18] score=2.266082 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331120   [19] score=2.220908 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
-2026/07/27 12:53:29.331121   [20] score=2.156191 page=9 section="6. CONTINUACIÓN DEL JUEGO"
-2026/07/27 12:53:29.331123   [21] score=2.009746 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331124   [22] score=2.008770 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331125   [23] score=1.999038 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331127   [24] score=1.944670 page=2 section="1. IDEA GENERAL"
-2026/07/27 12:53:29.331128   [25] score=1.859767 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331129   [26] score=1.825975 page=10 section="7. PACTOS"
-2026/07/27 12:53:29.331131   [27] score=1.222196 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331132   [28] score=1.141186 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331133   [29] score=1.113976 page=10 section="7. PACTOS"
-2026/07/27 12:53:29.331168 [RRF] top=8 duration=32.968µs
-2026/07/27 12:53:29.331170   [1] score=0.032787 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:53:29.331175   [2] score=0.031025 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
-2026/07/27 12:53:29.331176   [3] score=0.030777 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331178   [4] score=0.032002 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
-2026/07/27 12:53:29.331179   [5] score=0.028898 page=2 section="2. ELEMENTOS DE JUEGO"
-2026/07/27 12:53:29.331180   [6] score=0.027619 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331182   [7] score=0.027047 page=11 section="8. CONSIDERACIONES GENERALES"
-2026/07/27 12:53:29.331183   [8] score=0.026754 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES"
-2026/07/27 12:53:29.331184 TIMINGS total=188.048474ms embedding=see above dense=see above bm25=see above rrf=see above
-2026/07/27 12:53:29.331186 ================================================================================
-2026/07/27 12:53:29.331247 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=900
-2026/07/27 12:56:05.205114 [QUERY END] duration=2m36.061977418s query="Decime la lista de objetivos"
-2026/07/27 12:56:05.205291 ================================================================================
+2026/07/28 17:47:44.836158 ================================================================================
+2026/07/28 17:47:44.836189 RAG RETRIEVE START
+2026/07/28 17:47:44.836194 QUERY: Decime la lista de objetivos
+2026/07/28 17:47:44.836198 ================================================================================
+2026/07/28 17:47:45.013686 [EMBEDDING] model=mxbai-embed-large:latest duration=177.484507ms
+2026/07/28 17:47:45.015771 [DENSE] top=0 duration=2.053699ms
+2026/07/28 17:47:45.015814 [BM25] top=43 duration=24.76µs
+2026/07/28 17:47:45.015823   [1] score=6.060699 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.015830   [2] score=5.416198 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.015835   [3] score=5.258872 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.015839   [4] score=4.996472 page=12 section="9. LISTA DE OBJETIVOS SECRETOS > OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/28 17:47:45.015843   [5] score=3.315398 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:47:45.015846   [6] score=3.029203 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.015850   [7] score=2.822778 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.015853   [8] score=2.098768 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:47:45.015856   [9] score=2.072968 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVO COMÚN"
+2026/07/28 17:47:45.015860   [10] score=1.126150 page=10 section="7. PACTOS"
+2026/07/28 17:47:45.015863   [11] score=1.119690 page=11 section="8. CONSIDERACIONES GENERALES > PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/28 17:47:45.015866   [12] score=1.114541 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:47:45.015869   [13] score=1.077109 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/28 17:47:45.015873   [14] score=1.072190 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:47:45.015876   [15] score=1.045360 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/28 17:47:45.015880   [16] score=1.019197 page=2 section="2. ELEMENTOS DE JUEGO > MAPA"
+2026/07/28 17:47:45.015883   [17] score=0.920125 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:47:45.015886   [18] score=0.877548 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:47:45.015890   [19] score=0.811558 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/28 17:47:45.015893   [20] score=0.808826 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/28 17:47:45.015896   [21] score=0.788192 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:47:45.015899   [22] score=0.785287 page=8 section="6. CONTINUACIÓN DEL JUEGO > SOLICITAR TARJETA DE PAÍSES"
+2026/07/28 17:47:45.015903   [23] score=0.699348 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:47:45.015906   [24] score=0.692692 page=11 section="8. CONSIDERACIONES GENERALES > DESTRUCCIÓN FORTUITA DE UN COLOR"
+2026/07/28 17:47:45.015910   [25] score=0.668938 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/28 17:47:45.015922   [26] score=0.613848 page=2 section="1. IDEA GENERAL"
+2026/07/28 17:47:45.015926   [27] score=0.589083 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:47:45.015928   [28] score=0.583349 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/28 17:47:45.015931   [29] score=0.577606 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:47:45.015934   [30] score=0.568639 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/28 17:47:45.015937   [31] score=0.568202 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:47:45.015940   [32] score=0.151851 page=2 section="2. ELEMENTOS DE JUEGO > TARJETAS DE PAÍSES"
+2026/07/28 17:47:45.015943   [33] score=0.145615 page=2 section="2. ELEMENTOS DE JUEGO > FICHAS"
+2026/07/28 17:47:45.015946   [34] score=0.144743 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:47:45.015948   [35] score=0.144261 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/28 17:47:45.015951   [36] score=0.143942 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/28 17:47:45.015954   [37] score=0.142868 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/28 17:47:45.015957   [38] score=0.134708 page=10 section="7. PACTOS > PACTO ENTRE PAÍSES"
+2026/07/28 17:47:45.015960   [39] score=0.132318 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/28 17:47:45.015962   [40] score=0.125682 page=2 section="2. ELEMENTOS DE JUEGO > 6 DADOS"
+2026/07/28 17:47:45.015965   [41] score=0.123687 page=2 section="2. ELEMENTOS DE JUEGO > UN REGLAMENTO"
+2026/07/28 17:47:45.015968   [42] score=0.118065 page=3 section="2. ELEMENTOS DE JUEGO > DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
+2026/07/28 17:47:45.015971   [43] score=0.105467 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/28 17:47:45.016028 [RRF] top=8 duration=54.319µs
+2026/07/28 17:47:45.016032   [1] score=0.016129 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.016036   [2] score=0.016393 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.016039   [3] score=0.014925 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.016041   [4] score=0.015873 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.016044   [5] score=0.015625 page=12 section="9. LISTA DE OBJETIVOS SECRETOS > OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/28 17:47:45.016047   [6] score=0.014706 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:47:45.016050   [7] score=0.015385 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/28 17:47:45.016053   [8] score=0.015152 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/28 17:47:45.016056 TIMINGS total=179.898458ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:47:45.016059 ================================================================================
+2026/07/28 17:47:45.016109 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:49:43.758836 [QUERY END] duration=1m58.922677201s query="Decime la lista de objetivos"
+2026/07/28 17:49:43.759019 ================================================================================
 HTTP REQUEST
 ================================================================================
-Client IP : 127.0.0.1:56846
-Timestamp : 2026-07-27 12:56:05.205
+Client IP : 127.0.0.1:47626
+Timestamp : 2026-07-28 17:49:43.759
 Method    : POST
 Path      : /api/v1/query
 Status    : 200
-Duration  : 2m36.062187221s
+Duration  : 1m58.922884547s
 
 -------------------------------- REQUEST ---------------------------------------
 
@@ -748,7 +549,7 @@ Duration  : 2m36.062187221s
 
 {
   "query": "Decime la lista de objetivos",
-  "answer": "La lista de objetivos secretos es la siguiente:\n\n1. Ocupar África, 5 países de América del Norte y 4 países de Europa.\n2. Ocupar América del Sur, 7 países de Europa y 3 países limítrofes entre sí en cualquier lugar del mapa.\n3. Ocupar Asia y 2 países de América del Sur.\n4. Ocupar Europa, 4 países de Asia y 2 países de América del Sur.\n5. Ocupar América del Norte, 2 países de Oceanía y 4 de Asia.\n6. Ocupar 2 países de Oceanía, 2 países de África, 2 países de América del Sur, 3 países de Europa, 4 de América del Norte y 3 de Asia.\n\nAdemás, se mencionan otros objetivos secretos como ocupar Oceanía, América del Norte y 2 países de Europa; América del Sur, África y 4 países de Asia; y Oceanía, África y 5 países de América del Norte. También hay objetivos de destrucción de un color determinado.",
+  "answer": "La lista de objetivos secretos es la siguiente:\n\n1. Ocupar África, 5 países de América del Norte y 4 países de Europa.\n2. Ocupar América del Sur, 7 países de Europa y 3 países limítrofes entre sí en cualquier lugar del mapa.\n3. Ocupar Asia y 2 países de América del Sur.\n4. Ocupar Europa, 4 países de Asia y 2 países de América del Norte.\n5. Ocupar 2 países de Oceanía, 2 países de África, 2 países de América del Sur, 3 países de Europa, 4 de América del Norte y 3 de Asia.\n6. Ocupar Oceanía, América del Norte y 2 países de Europa.\n\nEs importante mencionar que hay otros objetivos secretos como ocupar 30 países o destruir ciertos ejércitos.",
   "sources": [
     {
       "file": "docs/teg.pdf",
@@ -757,18 +558,30 @@ Duration  : 2m36.062187221s
         "9. LISTA DE OBJETIVOS SECRETOS"
       ],
       "element_type": "paragraph",
-      "score": 0.032786883,
-      "excerpt": "9. LISTA DE OBJETIVOS SECRETOS\nOcupar África, 5 países de América del Norte y 4 países de Europa.\nOcupar América del Sur, 7 países de Europa y 3 países limítrofes entre sí en\ncualquier lugar…"
+      "score": 0.016393442,
+      "excerpt": "13. Destruir al ejército amarillo, de ser imposible al jugador de la derecha.\n14. Destruir al ejército verde, de ser imposible al jugador de la derecha.\n15. Destruir al ejército magenta, de ser…"
     },
     {
       "file": "docs/teg.pdf",
       "page": 4,
       "section_path": [
-        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+        "3. REPARTO DE PAÍSES Y OBJETIVOS",
+        "OBJETIVOS SECRETOS"
       ],
       "element_type": "paragraph",
-      "score": 0.032002047,
+      "score": 0.015873017,
       "excerpt": "Un objetivo de destrucción de un color puede ser imposible de entrada, ya sea porque quien posee dicho objetivo es precisamente el jugador que tiene ese color, o porque nadie juega con ese color (lo…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 12,
+      "section_path": [
+        "9. LISTA DE OBJETIVOS SECRETOS",
+        "OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "OBJETIVO COMÚN OCUPAR 30 PAÍSES\n¡te invitamos a disfrutar nuevas formas de jugar!\n¡Ahora para los más chicos! Llegó TEG JUNIOR Misma mecánica, menos países, partidas más cortas.\nTEG Móvil…"
     },
     {
       "file": "docs/teg.pdf",
@@ -777,38 +590,1025 @@ Duration  : 2m36.062187221s
         "3. REPARTO DE PAÍSES Y OBJETIVOS"
       ],
       "element_type": "paragraph",
-      "score": 0.030776516,
-      "excerpt": "OBJETIVOS SECRETOS\nExisten dos tipos de objetivos secretos:\nOBJETIVOS DE OCUPACIÓN: el jugador que tiene un objetivo de este tipo, lo\ncumple en el momento en que ocupa todos los países requeridos…"
+      "score": 0.015384615,
+      "excerpt": "5. Se mezclan las 15 TARJETAS DE OBJETIVOS SECRETOS y se colocan boca abajo. Cada jugador toma una de estas tarjetas, al azar, y se la guarda sin mostrarla a los demás. Las tarjetas sobrantes se…"
     },
     {
       "file": "docs/teg.pdf",
       "page": 2,
       "section_path": [
-        "2. ELEMENTOS DE JUEGO"
+        "2. ELEMENTOS DE JUEGO",
+        "15 TARJETAS DE OBJETIVOS SECRETOS"
       ],
-      "element_type": "paragraph",
-      "score": 0.02889813,
-      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes:\nAmérica del Norte América del Sur, Europa, Asia, Africa y Oceanía.\nLas dimensiones y divisiones…"
+      "element_type": "heading",
+      "score": 0.015151516,
+      "excerpt": "15 TARJETAS DE OBJETIVOS SECRETOS"
     },
     {
       "file": "docs/teg.pdf",
-      "page": 11,
+      "page": 3,
       "section_path": [
-        "8. CONSIDERACIONES GENERALES"
+        "3. REPARTO DE PAÍSES Y OBJETIVOS",
+        "OBJETIVOS SECRETOS"
       ],
       "element_type": "paragraph",
-      "score": 0.027619049,
-      "excerpt": "En (b) lo único que se aceptan son comentarios imparciales o neutrales sobre el desarrollo del juego, que no se permiten “asesoramientos”. Los participantes resolverán, al iniciar el juego,…"
+      "score": 0.014925373,
+      "excerpt": "OBJETIVOS SECRETOS\nExisten dos tipos de objetivos secretos:\nA. OBJETIVOS DE OCUPACIÓN: el jugador que tiene un objetivo de este tipo, lo cumple en el momento en que ocupa todos los países…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:50:24.743148 ================================================================================
+2026/07/28 17:50:24.743179 RAG RETRIEVE START
+2026/07/28 17:50:24.743184 QUERY: How do you install the project?
+2026/07/28 17:50:24.743188 ================================================================================
+2026/07/28 17:50:24.881182 [EMBEDDING] model=mxbai-embed-large:latest duration=137.988959ms
+2026/07/28 17:50:24.883706 [DENSE] top=0 duration=2.481709ms
+2026/07/28 17:50:24.883761 [BM25] top=0 duration=11.51µs
+2026/07/28 17:50:24.883775 [RRF] top=0 duration=2.066µs
+2026/07/28 17:50:24.883781 TIMINGS total=140.632767ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:50:24.883788 ================================================================================
+2026/07/28 17:50:24.883812 [LLM BUILD] chunks=0 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:50:27.122704 [QUERY END] duration=2.379554699s query="How do you install the project?"
+2026/07/28 17:50:27.122766 ================================================================================
+HTTP REQUEST
+================================================================================
+Path      : /api/v1/query
+Status    : 200
+Duration  : 2.379650272s
+Client IP : 127.0.0.1:55890
+Timestamp : 2026-07-28 17:50:27.122
+Method    : POST
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "How do you install the project?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "How do you install the project?",
+  "answer": "No hay contexto disponible",
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:50:36.890816 ================================================================================
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:48958
+Timestamp : 2026-07-28 17:50:36.890
+Method    : POST
+Path      : /api/v1/index
+Status    : 200
+Duration  : 3.309111651s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/test.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "18cbdb3f-2a5c-5ce2-94ef-defc2a4dd90c",
+  "source": "docs/test.md",
+  "chunk_count": 13,
+  "cache_hits": 0,
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:50:40.375075 ================================================================================
+2026/07/28 17:50:40.375095 RAG RETRIEVE START
+2026/07/28 17:50:40.375097 QUERY: What is this project?
+2026/07/28 17:50:40.375099 ================================================================================
+2026/07/28 17:50:40.480788 [EMBEDDING] model=mxbai-embed-large:latest duration=105.68561ms
+2026/07/28 17:50:40.482276 [DENSE] top=10 duration=1.458041ms
+2026/07/28 17:50:40.482294   [1] score=0.763347 page=1 section="Sample Project"
+2026/07/28 17:50:40.482302   [2] score=0.751824 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:50:40.482306   [3] score=0.729073 page=1 section="Sample Project > Usage"
+2026/07/28 17:50:40.482309   [4] score=0.724737 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:50:40.482313   [5] score=0.709939 page=1 section="Sample Project > Overview"
+2026/07/28 17:50:40.482316   [6] score=0.670504 page=1 section="Sample Project > Features"
+2026/07/28 17:50:40.482319   [7] score=0.669414 page=1 section="Sample Project > Contributing"
+2026/07/28 17:50:40.482322   [8] score=0.659436 page=1 section="Sample Project > Examples"
+2026/07/28 17:50:40.482325   [9] score=0.621408 page=1 section="Sample Project > License"
+2026/07/28 17:50:40.482329   [10] score=0.619514 page=1 section="Sample Project > Configuration"
+2026/07/28 17:50:40.482349 [BM25] top=13 duration=16.708µs
+2026/07/28 17:50:40.482355   [1] score=11.292503 page=1 section="Sample Project > License"
+2026/07/28 17:50:40.482360   [2] score=9.560573 page=1 section="Sample Project > Overview"
+2026/07/28 17:50:40.482364   [3] score=6.174593 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:50:40.482368   [4] score=5.350321 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:50:40.482373   [5] score=2.816256 page=1 section="Sample Project"
+2026/07/28 17:50:40.482376   [6] score=2.795385 page=1 section="Sample Project > Installation"
+2026/07/28 17:50:40.482381   [7] score=2.714906 page=1 section="Sample Project > Usage"
+2026/07/28 17:50:40.482384   [8] score=2.705171 page=1 section="Sample Project > Examples"
+2026/07/28 17:50:40.482399   [9] score=2.426891 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:50:40.482403   [10] score=2.193979 page=1 section="Sample Project > Requirements"
+2026/07/28 17:50:40.482419   [11] score=2.175003 page=1 section="Sample Project > Features"
+2026/07/28 17:50:40.482423   [12] score=2.050836 page=1 section="Sample Project > Configuration"
+2026/07/28 17:50:40.482427   [13] score=2.034246 page=1 section="Sample Project > Contributing"
+2026/07/28 17:50:40.482460 [RRF] top=8 duration=30.509µs
+2026/07/28 17:50:40.482465   [1] score=0.031778 page=1 section="Sample Project"
+2026/07/28 17:50:40.482469   [2] score=0.031514 page=1 section="Sample Project > Overview"
+2026/07/28 17:50:40.482473   [3] score=0.031250 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:50:40.482476   [4] score=0.030886 page=1 section="Sample Project > License"
+2026/07/28 17:50:40.482479   [5] score=0.030798 page=1 section="Sample Project > Usage"
+2026/07/28 17:50:40.482482   [6] score=0.030622 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:50:40.482485   [7] score=0.029412 page=1 section="Sample Project > Examples"
+2026/07/28 17:50:40.482488   [8] score=0.029236 page=1 section="Sample Project > Features"
+2026/07/28 17:50:40.482491 TIMINGS total=107.416055ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:50:40.482494 ================================================================================
+2026/07/28 17:50:40.482522 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:51:17.297012 [QUERY END] duration=36.921936947s query="What is this project?"
+2026/07/28 17:51:17.297163 ================================================================================
+HTTP REQUEST
+================================================================================
+Path      : /api/v1/query
+Status    : 200
+Duration  : 36.922101953s
+Client IP : 127.0.0.1:48962
+Timestamp : 2026-07-28 17:51:17.297
+Method    : POST
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "What is this project?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "What is this project?",
+  "answer": "This project is a simple command-line tool designed for searching and filtering text quickly. It includes features such as fast text filtering, simple configuration, and terminal usage. The repository also provides examples of how to use the tool and troubleshooting tips.",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031778056,
+      "excerpt": "Sample Project\nA small example project used to test document retrieval in a RAG pipeline."
     },
     {
-      "file": "docs/teg.pdf",
-      "page": 5,
+      "file": "docs/test.md",
+      "page": 1,
       "section_path": [
-        "5. INICIACIÓN DE LAS HOSTILIDADES"
+        "Sample Project",
+        "Overview"
       ],
       "element_type": "paragraph",
-      "score": 0.026754074,
-      "excerpt": "Se compara el dado mayor de “Verde” con el dado mayor de “Rojo”, el medio de “Verde” con el medio de “Rojo”, el menor de “Verde” con el menor de “Rojo”.\nSi uno de los…"
+      "score": 0.031513646,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03125,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "License"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030886196,
+      "excerpt": "License\nThis project is provided for testing and demonstration purposes."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03079839,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting"
+      ],
+      "element_type": "heading",
+      "score": 0.030621786,
+      "excerpt": "Troubleshooting"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Examples"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029411765,
+      "excerpt": "Examples\nSearch for logs that contain the word `timeout`:\n./sample-project search \"timeout\"\nShow only the first 5 matches:\n./sample-project search \"timeout\" --limit 5"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029236022,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:51:22.358844 ================================================================================
+2026/07/28 17:51:22.358868 RAG RETRIEVE START
+2026/07/28 17:51:22.358872 QUERY: What programming language version is required?
+2026/07/28 17:51:22.358880 ================================================================================
+2026/07/28 17:51:22.469914 [EMBEDDING] model=mxbai-embed-large:latest duration=111.030705ms
+2026/07/28 17:51:22.471352 [DENSE] top=8 duration=1.414496ms
+2026/07/28 17:51:22.471368   [1] score=0.721473 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:51:22.471375   [2] score=0.685530 page=1 section="Sample Project > Features"
+2026/07/28 17:51:22.471378   [3] score=0.664001 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:51:22.471383   [4] score=0.653581 page=1 section="Sample Project > Overview"
+2026/07/28 17:51:22.471392   [5] score=0.645019 page=1 section="Sample Project > Usage"
+2026/07/28 17:51:22.471395   [6] score=0.635712 page=1 section="Sample Project > Requirements"
+2026/07/28 17:51:22.471402   [7] score=0.632348 page=1 section="Sample Project > Configuration"
+2026/07/28 17:51:22.471404   [8] score=0.617291 page=1 section="Sample Project"
+2026/07/28 17:51:22.471416 [BM25] top=4 duration=8.956µs
+2026/07/28 17:51:22.471420   [1] score=4.234512 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:51:22.471423   [2] score=4.001683 page=1 section="Sample Project > Overview"
+2026/07/28 17:51:22.471426   [3] score=3.877517 page=1 section="Sample Project > License"
+2026/07/28 17:51:22.471429   [4] score=3.395155 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:51:22.471451 [RRF] top=8 duration=19.626µs
+2026/07/28 17:51:22.471456   [1] score=0.032018 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:51:22.471459   [2] score=0.031754 page=1 section="Sample Project > Overview"
+2026/07/28 17:51:22.471462   [3] score=0.016393 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:51:22.471465   [4] score=0.016129 page=1 section="Sample Project > Features"
+2026/07/28 17:51:22.471468   [5] score=0.015873 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:51:22.471470   [6] score=0.015873 page=1 section="Sample Project > License"
+2026/07/28 17:51:22.471473   [7] score=0.015385 page=1 section="Sample Project > Usage"
+2026/07/28 17:51:22.471475   [8] score=0.015152 page=1 section="Sample Project > Requirements"
+2026/07/28 17:51:22.471478 TIMINGS total=112.633781ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:51:22.471480 ================================================================================
+2026/07/28 17:51:22.471506 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:51:56.272479 [QUERY END] duration=33.913634272s query="What programming language version is required?"
+2026/07/28 17:51:56.272628 ================================================================================
+HTTP REQUEST
+================================================================================
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 33.913812869s
+Client IP : 127.0.0.1:42940
+Timestamp : 2026-07-28 17:51:56.272
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "What programming language version is required?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "What programming language version is required?",
+  "answer": "Go 1.22 or newer",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03201844,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03175403,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "The command is not found"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "The command is not found\nMake sure the binary was built successfully and that you are running it from the correct directory."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting"
+      ],
+      "element_type": "heading",
+      "score": 0.015873017,
+      "excerpt": "Troubleshooting"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "License"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "License\nThis project is provided for testing and demonstration purposes."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015384615,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Requirements"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015151516,
+      "excerpt": "Requirements\nGo 1.22 or newer\nGit\nA terminal on Linux, macOS, or Windows"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:52:05.664246 ================================================================================
+2026/07/28 17:52:05.664285 RAG RETRIEVE START
+2026/07/28 17:52:05.664289 QUERY: How do you install the project?
+2026/07/28 17:52:05.664293 ================================================================================
+2026/07/28 17:52:05.856288 [EMBEDDING] model=mxbai-embed-large:latest duration=191.991557ms
+2026/07/28 17:52:05.858508 [DENSE] top=12 duration=2.19366ms
+2026/07/28 17:52:05.858629   [1] score=0.734007 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:52:05.858654   [2] score=0.728875 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:52:05.858659   [3] score=0.695974 page=1 section="Sample Project > Installation"
+2026/07/28 17:52:05.858664   [4] score=0.681266 page=1 section="Sample Project > Usage"
+2026/07/28 17:52:05.858667   [5] score=0.666934 page=1 section="Sample Project > Overview"
+2026/07/28 17:52:05.858671   [6] score=0.655957 page=1 section="Sample Project > Features"
+2026/07/28 17:52:05.858675   [7] score=0.650439 page=1 section="Sample Project > Requirements"
+2026/07/28 17:52:05.858679   [8] score=0.647467 page=1 section="Sample Project"
+2026/07/28 17:52:05.858682   [9] score=0.645373 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:52:05.858687   [10] score=0.627922 page=1 section="Sample Project > Configuration"
+2026/07/28 17:52:05.858691   [11] score=0.619767 page=1 section="Sample Project > License"
+2026/07/28 17:52:05.858694   [12] score=0.604507 page=1 section="Sample Project > Contributing"
+2026/07/28 17:52:05.858739 [BM25] top=13 duration=41.154µs
+2026/07/28 17:52:05.858746   [1] score=9.974011 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:52:05.858752   [2] score=6.499622 page=1 section="Sample Project > Usage"
+2026/07/28 17:52:05.858757   [3] score=6.171830 page=1 section="Sample Project > Examples"
+2026/07/28 17:52:05.858761   [4] score=5.866524 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:52:05.858766   [5] score=5.558890 page=1 section="Sample Project > Overview"
+2026/07/28 17:52:05.858770   [6] score=5.207066 page=1 section="Sample Project > Features"
+2026/07/28 17:52:05.858774   [7] score=4.909805 page=1 section="Sample Project > Configuration"
+2026/07/28 17:52:05.858778   [8] score=4.870087 page=1 section="Sample Project > Contributing"
+2026/07/28 17:52:05.858781   [9] score=2.816256 page=1 section="Sample Project"
+2026/07/28 17:52:05.858785   [10] score=2.795385 page=1 section="Sample Project > Installation"
+2026/07/28 17:52:05.858789   [11] score=2.657577 page=1 section="Sample Project > License"
+2026/07/28 17:52:05.858793   [12] score=2.426891 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:52:05.858798   [13] score=2.193979 page=1 section="Sample Project > Requirements"
+2026/07/28 17:52:05.858835 [RRF] top=8 duration=33.303µs
+2026/07/28 17:52:05.858841   [1] score=0.031754 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:52:05.858847   [2] score=0.031754 page=1 section="Sample Project > Usage"
+2026/07/28 17:52:05.858851   [3] score=0.030886 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:52:05.858855   [4] score=0.030769 page=1 section="Sample Project > Overview"
+2026/07/28 17:52:05.858859   [5] score=0.030303 page=1 section="Sample Project > Features"
+2026/07/28 17:52:05.858863   [6] score=0.030282 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:52:05.858867   [7] score=0.030159 page=1 section="Sample Project > Installation"
+2026/07/28 17:52:05.858870   [8] score=0.029211 page=1 section="Sample Project > Configuration"
+2026/07/28 17:52:05.858874 TIMINGS total=194.628334ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:52:05.858878 ================================================================================
+2026/07/28 17:52:05.858926 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:52:45.813446 [QUERY END] duration=40.149199998s query="How do you install the project?"
+2026/07/28 17:52:45.813608 ================================================================================
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:53394
+Timestamp : 2026-07-28 17:52:45.813
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 40.14936971s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "How do you install the project?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "How do you install the project?",
+  "answer": "To install the project, you need to follow these steps:\n\n1. Clone the repository using git:\n   ```\n   git clone https://example.com/sample-project.git\n\n2. Change into the directory where the repository was cloned:\n   cd sample-project\n   \n3. Build the binary:\n   go build ./...",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03175403,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03175403,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "The command is not found"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030886196,
+      "excerpt": "The command is not found\nMake sure the binary was built successfully and that you are running it from the correct directory."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03076923,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030303031,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting"
+      ],
+      "element_type": "heading",
+      "score": 0.03028233,
+      "excerpt": "Troubleshooting"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Installation"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030158732,
+      "excerpt": "Installation\ngit clone https://example.com/sample-project.git\ncd sample-project\ngo build ./..."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Configuration"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029211087,
+      "excerpt": "Configuration\nThe tool reads settings from a `config.yml` file.\nExample:\nserver:\n  port: 8080\n\nsearch:\n  max_results: 10\n  timeout_ms: 2000"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:52:49.403565 ================================================================================
+2026/07/28 17:52:49.403599 RAG RETRIEVE START
+2026/07/28 17:52:49.403608 QUERY: Summarize the installation, usage, and troubleshooting sections.
+2026/07/28 17:52:49.403611 ================================================================================
+2026/07/28 17:52:49.626368 [EMBEDDING] model=mxbai-embed-large:latest duration=222.754293ms
+2026/07/28 17:52:49.627844 [DENSE] top=5 duration=1.430509ms
+2026/07/28 17:52:49.627864   [1] score=0.737545 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:52:49.627883   [2] score=0.678626 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:52:49.627886   [3] score=0.653335 page=1 section="Sample Project > Usage"
+2026/07/28 17:52:49.627889   [4] score=0.653155 page=1 section="Sample Project > Features"
+2026/07/28 17:52:49.627892   [5] score=0.640659 page=1 section="Sample Project > Overview"
+2026/07/28 17:52:49.627908 [BM25] top=11 duration=13.448µs
+2026/07/28 17:52:49.627912   [1] score=10.768051 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:52:49.627915   [2] score=10.704271 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:52:49.627918   [3] score=9.965044 page=1 section="Sample Project > Usage"
+2026/07/28 17:52:49.627921   [4] score=8.489775 page=1 section="Sample Project > Overview"
+2026/07/28 17:52:49.627924   [5] score=7.200766 page=1 section="Sample Project > Contributing"
+2026/07/28 17:52:49.627926   [6] score=6.436180 page=1 section="Sample Project > Installation"
+2026/07/28 17:52:49.627929   [7] score=5.315433 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:52:49.627931   [8] score=3.577122 page=1 section="Sample Project > License"
+2026/07/28 17:52:49.627934   [9] score=3.466659 page=1 section="Sample Project > Examples"
+2026/07/28 17:52:49.627937   [10] score=3.032063 page=1 section="Sample Project > Features"
+2026/07/28 17:52:49.627939   [11] score=2.858969 page=1 section="Sample Project > Configuration"
+2026/07/28 17:52:49.627959 [RRF] top=8 duration=17.189µs
+2026/07/28 17:52:49.627962   [1] score=0.032522 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:52:49.627966   [2] score=0.031746 page=1 section="Sample Project > Usage"
+2026/07/28 17:52:49.627968   [3] score=0.031319 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:52:49.627971   [4] score=0.031010 page=1 section="Sample Project > Overview"
+2026/07/28 17:52:49.627974   [5] score=0.029911 page=1 section="Sample Project > Features"
+2026/07/28 17:52:49.627976   [6] score=0.016129 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:52:49.627979   [7] score=0.015385 page=1 section="Sample Project > Contributing"
+2026/07/28 17:52:49.627982   [8] score=0.015152 page=1 section="Sample Project > Installation"
+2026/07/28 17:52:49.627986 TIMINGS total=224.42065ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:52:49.627989 ================================================================================
+2026/07/28 17:52:49.628014 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:53:40.867653 [QUERY END] duration=51.464087347s query="Summarize the installation, usage, and troubleshooting sections."
+2026/07/28 17:53:40.867842 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-28 17:53:40.867
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 51.464293755s
+Client IP : 127.0.0.1:37356
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Summarize the installation, usage, and troubleshooting sections."
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Summarize the installation, usage, and troubleshooting sections.",
+  "answer": "The installation section provides instructions to set up the tool:\n1. Clone the repository using git.\n2. Change into the directory where the repository is located.\n3. Build the binary using go build command.\n\nFor usage, here are the steps:\n1. Run the search functionality by executing: ./sample-project search \"error\"\n2. To see available flags and options, use: ./sample-project --help\n\nIn terms of troubleshooting, if you encounter issues with the command not being found, ensure that the binary was built successfully and is running from the correct directory.\n\nFor other issues like no results are returned, make sure your query matches the text in the input source and that your configuration file is valid.",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032522473,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031746034,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting"
+      ],
+      "element_type": "heading",
+      "score": 0.031318814,
+      "excerpt": "Troubleshooting"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031009614,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029910713,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "The command is not found"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "The command is not found\nMake sure the binary was built successfully and that you are running it from the correct directory."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Contributing"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015384615,
+      "excerpt": "Contributing\nPull requests and issues are welcome. Keep changes small and focused so the document stays easy to read and test."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Installation"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015151516,
+      "excerpt": "Installation\ngit clone https://example.com/sample-project.git\ncd sample-project\ngo build ./..."
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:53:47.814852 ================================================================================
+2026/07/28 17:53:47.814883 RAG RETRIEVE START
+2026/07/28 17:53:47.814892 QUERY: Does the project support Docker?
+2026/07/28 17:53:47.814895 ================================================================================
+2026/07/28 17:53:47.945644 [EMBEDDING] model=mxbai-embed-large:latest duration=130.74526ms
+2026/07/28 17:53:47.946953 [DENSE] top=8 duration=1.28405ms
+2026/07/28 17:53:47.946975   [1] score=0.653881 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:53:47.946984   [2] score=0.639187 page=1 section="Sample Project > Requirements"
+2026/07/28 17:53:47.946989   [3] score=0.632917 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:53:47.946993   [4] score=0.620699 page=1 section="Sample Project > Features"
+2026/07/28 17:53:47.946997   [5] score=0.618764 page=1 section="Sample Project > Usage"
+2026/07/28 17:53:47.947017   [6] score=0.613339 page=1 section="Sample Project > Overview"
+2026/07/28 17:53:47.947020   [7] score=0.609375 page=1 section="Sample Project"
+2026/07/28 17:53:47.947023   [8] score=0.604144 page=1 section="Sample Project > Configuration"
+2026/07/28 17:53:47.947043 [BM25] top=13 duration=15.899µs
+2026/07/28 17:53:47.947047   [1] score=6.499622 page=1 section="Sample Project > Usage"
+2026/07/28 17:53:47.947051   [2] score=6.171830 page=1 section="Sample Project > Examples"
+2026/07/28 17:53:47.947055   [3] score=5.866524 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:53:47.947059   [4] score=5.840560 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:53:47.947062   [5] score=5.207066 page=1 section="Sample Project > Features"
+2026/07/28 17:53:47.947065   [6] score=4.909805 page=1 section="Sample Project > Configuration"
+2026/07/28 17:53:47.947068   [7] score=4.870087 page=1 section="Sample Project > Contributing"
+2026/07/28 17:53:47.947072   [8] score=2.816256 page=1 section="Sample Project"
+2026/07/28 17:53:47.947075   [9] score=2.795385 page=1 section="Sample Project > Installation"
+2026/07/28 17:53:47.947078   [10] score=2.657577 page=1 section="Sample Project > License"
+2026/07/28 17:53:47.947081   [11] score=2.426891 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:53:47.947085   [12] score=2.193979 page=1 section="Sample Project > Requirements"
+2026/07/28 17:53:47.947088   [13] score=1.775688 page=1 section="Sample Project > Overview"
+2026/07/28 17:53:47.947112 [RRF] top=8 duration=21.251µs
+2026/07/28 17:53:47.947117   [1] score=0.032266 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:53:47.947121   [2] score=0.031778 page=1 section="Sample Project > Usage"
+2026/07/28 17:53:47.947124   [3] score=0.031010 page=1 section="Sample Project > Features"
+2026/07/28 17:53:47.947127   [4] score=0.030018 page=1 section="Sample Project > Requirements"
+2026/07/28 17:53:47.947130   [5] score=0.029958 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:53:47.947134   [6] score=0.029857 page=1 section="Sample Project > Configuration"
+2026/07/28 17:53:47.947137   [7] score=0.029631 page=1 section="Sample Project"
+2026/07/28 17:53:47.947140   [8] score=0.028850 page=1 section="Sample Project > Overview"
+2026/07/28 17:53:47.947143 TIMINGS total=132.290377ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:53:47.947146 ================================================================================
+2026/07/28 17:53:47.947171 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:54:21.984920 [QUERY END] duration=34.170067307s query="Does the project support Docker?"
+2026/07/28 17:54:21.985081 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-28 17:54:21.985
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 34.170270211s
+Client IP : 127.0.0.1:53132
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Does the project support Docker?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Does the project support Docker?",
+  "answer": "The provided documentation does not contain any information regarding whether the project supports Docker or not.",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03226646,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031778056,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031009614,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Requirements"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03001792,
+      "excerpt": "Requirements\nGo 1.22 or newer\nGit\nA terminal on Linux, macOS, or Windows"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting"
+      ],
+      "element_type": "heading",
+      "score": 0.029957524,
+      "excerpt": "Troubleshooting"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Configuration"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029857397,
+      "excerpt": "Configuration\nThe tool reads settings from a `config.yml` file.\nExample:\nserver:\n  port: 8080\n\nsearch:\n  max_results: 10\n  timeout_ms: 2000"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029631255,
+      "excerpt": "Sample Project\nA small example project used to test document retrieval in a RAG pipeline."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028850146,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/28 17:54:24.785846 ================================================================================
+2026/07/28 17:54:24.785882 RAG RETRIEVE START
+2026/07/28 17:54:24.785886 QUERY: Describe the complete workflow from cloning the repository to performing a search.
+2026/07/28 17:54:24.785890 ================================================================================
+2026/07/28 17:54:24.995693 [EMBEDDING] model=mxbai-embed-large:latest duration=209.800138ms
+2026/07/28 17:54:24.997459 [DENSE] top=9 duration=1.742511ms
+2026/07/28 17:54:24.997480   [1] score=0.728119 page=1 section="Sample Project > Overview"
+2026/07/28 17:54:24.997489   [2] score=0.689870 page=1 section="Sample Project"
+2026/07/28 17:54:24.997492   [3] score=0.683970 page=1 section="Sample Project > Features"
+2026/07/28 17:54:24.997495   [4] score=0.671113 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:54:24.997498   [5] score=0.670115 page=1 section="Sample Project > Troubleshooting"
+2026/07/28 17:54:24.997501   [6] score=0.660747 page=1 section="Sample Project > Contributing"
+2026/07/28 17:54:24.997506   [7] score=0.636162 page=1 section="Sample Project > Usage"
+2026/07/28 17:54:24.997509   [8] score=0.613540 page=1 section="Sample Project > Installation"
+2026/07/28 17:54:24.997511   [9] score=0.604041 page=1 section="Sample Project > Configuration"
+2026/07/28 17:54:24.997528 [BM25] top=9 duration=14.425µs
+2026/07/28 17:54:24.997533   [1] score=14.306230 page=1 section="Sample Project > Usage"
+2026/07/28 17:54:24.997537   [2] score=13.691781 page=1 section="Sample Project > Features"
+2026/07/28 17:54:24.997540   [3] score=13.186041 page=1 section="Sample Project > Configuration"
+2026/07/28 17:54:24.997542   [4] score=11.630863 page=1 section="Sample Project > Examples"
+2026/07/28 17:54:24.997557   [5] score=11.496786 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/28 17:54:24.997561   [6] score=10.319400 page=1 section="Sample Project > Overview"
+2026/07/28 17:54:24.997564   [7] score=8.930498 page=1 section="Sample Project > Contributing"
+2026/07/28 17:54:24.997568   [8] score=7.822718 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:54:24.997571   [9] score=3.514704 page=1 section="Sample Project"
+2026/07/28 17:54:24.997597 [RRF] top=8 duration=23.534µs
+2026/07/28 17:54:24.997602   [1] score=0.032002 page=1 section="Sample Project > Features"
+2026/07/28 17:54:24.997605   [2] score=0.031545 page=1 section="Sample Project > Overview"
+2026/07/28 17:54:24.997609   [3] score=0.031319 page=1 section="Sample Project > Usage"
+2026/07/28 17:54:24.997612   [4] score=0.030622 page=1 section="Sample Project"
+2026/07/28 17:54:24.997617   [5] score=0.030366 page=1 section="Sample Project > Configuration"
+2026/07/28 17:54:24.997620   [6] score=0.030331 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/28 17:54:24.997624   [7] score=0.030077 page=1 section="Sample Project > Contributing"
+2026/07/28 17:54:24.997627   [8] score=0.015625 page=1 section="Sample Project > Examples"
+2026/07/28 17:54:24.997630 TIMINGS total=211.783981ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/28 17:54:24.997633 ================================================================================
+2026/07/28 17:54:24.997660 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/28 17:55:19.334838 [QUERY END] duration=54.548991584s query="Describe the complete workflow from cloning the repository to performing a search."
+2026/07/28 17:55:19.335022 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-28 17:55:19.335
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 54.549224043s
+Client IP : 127.0.0.1:59918
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Describe the complete workflow from cloning the repository to performing a search."
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Describe the complete workflow from cloning the repository to performing a search.",
+  "answer": "To perform a search using this sample project, you would first clone the repository:\n\n1. Clone the repository: `git clone \u003crepository-url\u003e`\n\nAfter cloning, follow these steps to run a search:\n2. Navigate into the directory where the repository was cloned.\n3. Run the command with your query: `./sample-project search \"error\"`\n   - If you want to see available flags for more options, use: `./sample-project --help`\n4. The tool will look for matches based on the configuration in a `config.yml` file and return results according to the specified settings.\n\nPlease note that if no results are returned, ensure your query matches the text in the input source and that the configuration file is valid.",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032002047,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031544957,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.031318814,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030621786,
+      "excerpt": "Sample Project\nA small example project used to test document retrieval in a RAG pipeline."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Configuration"
+      ],
+      "element_type": "paragraph",
+      "score": 0.03036577,
+      "excerpt": "Configuration\nThe tool reads settings from a `config.yml` file.\nExample:\nserver:\n  port: 8080\n\nsearch:\n  max_results: 10\n  timeout_ms: 2000"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030330881,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Contributing"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030076887,
+      "excerpt": "Contributing\nPull requests and issues are welcome. Keep changes small and focused so the document stays easy to read and test."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Examples"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "Examples\nSearch for logs that contain the word `timeout`:\n./sample-project search \"timeout\"\nShow only the first 5 matches:\n./sample-project search \"timeout\" --limit 5"
     }
   ],
   "duration_ns": 0
