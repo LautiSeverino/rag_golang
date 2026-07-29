@@ -1,4 +1,4 @@
-package bbolt
+package repositories
 
 import (
 	"encoding/json"

@@ -1,18 +1,15 @@
 package extractor
 
 import (
-	"path/filepath"
-	"rag_golang/internal/core/domain"
-	"strings"
+	"crypto/sha256"
+	"fmt"
+	"os"
+
+	"github.com/google/uuid"
 )
 
+// nonEmpty — devuelve un slice de strings sin elementos vacíos.
 func nonEmpty(ss []string) []string {
-	// CRÍTICO: usar make() en lugar de ss[:0]. Con ss[:0] el slice resultante
-	// comparte el mismo array subyacente que `stack` en attachSectionPath().
-	// Como `stack` se sobrescribe en cada heading nuevo, todos los SectionPath
-	// asignados previamente quedarían apuntando al mismo array y terminarían
-	// reflejando el ÚLTIMO estado de `stack`, no el estado en el momento de
-	// la asignación. Con make(), cada llamada produce un array independiente.
 	result := make([]string, 0, len(ss))
 	for _, s := range ss {
 		if s != "" {
@@ -24,13 +21,22 @@ func nonEmpty(ss []string) []string {
 	}
 	return result
 }
-func inferDocType(path string) domain.DocType {
-	switch strings.ToLower(filepath.Ext(path)) {
-	case ".pdf":
-		return domain.DocPDF
-	case ".docx":
-		return domain.DocDOCX
-	default:
-		return domain.DocPDF
+
+// generateID — genera un UUID determinístico basado en el path del archivo y su checksum.
+func generateID(path string) uuid.UUID {
+	// UUID determinístico basado en el path + checksum.
+	// Así el mismo archivo genera siempre el mismo ID.
+	seed := path + "|" + fileChecksum(path)
+	return uuid.NewSHA1(uuid.NameSpaceURL, []byte(seed))
+}
+
+// fileChecksum — calcula el checksum SHA256 del archivo en la ruta dada.
+func fileChecksum(path string) string {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		// Fallback: si no se puede leer, no cachear
+		return ""
 	}
+	sum := sha256.Sum256(data)
+	return fmt.Sprintf("%x", sum)
 }

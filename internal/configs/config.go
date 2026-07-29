@@ -8,26 +8,13 @@ import (
 
 // Config es la configuración raíz del sistema.
 type Config struct {
-	Server  ServerConfig      `yaml:"server"`
-	Extract ExtractConfig     `yaml:"extract"`
-	Chunk   chunk.ChunkConfig `yaml:"chunk"`
-	Embed   EmbedConfig       `yaml:"embed"`
-	Store   StoreConfig       `yaml:"store"`
-	LLM     LLMConfig         `yaml:"llm"`
-	Search  SearchConfig      `yaml:"search"`
-	Log     LogConfig         `yaml:"log"`
-}
-
-// ExtractConfig configura el comportamiento del Extractor.
-type ExtractConfig struct {
-	// ProcessedDir es donde el sistema busca JSON pre-procesados.
-	// Si data/processed/<name>.json existe, se usa en lugar de re-extraer.
-	// Esto permite insertar el output del script Python para PDFs con tablas.
-	ProcessedDir string `yaml:"processed_dir"`
-
-	// CacheDir es donde se guardan los Document{} serializados como JSON
-	// para evitar re-extraer documentos ya procesados por go-fitz.
-	CacheDir string `yaml:"cache_dir"`
+	Server ServerConfig      `yaml:"server"`
+	Chunk  chunk.ChunkConfig `yaml:"chunk"`
+	Embed  EmbedConfig       `yaml:"embed"`
+	Store  StoreConfig       `yaml:"store"`
+	LLM    LLMConfig         `yaml:"llm"`
+	Search SearchConfig      `yaml:"search"`
+	Log    LogConfig         `yaml:"log"`
 }
 
 // EmbedConfig configura el Embedder (Ollama).

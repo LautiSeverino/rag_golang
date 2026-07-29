@@ -7,12 +7,10 @@ import (
 	"net/http"
 	"os"
 	"rag_golang/internal/configs"
-	"rag_golang/internal/core/domain/llm"
 	"rag_golang/internal/core/service"
 	"rag_golang/internal/infra/driven/clients/ollama"
 	"rag_golang/internal/infra/driven/extractor"
-	bboltrepo "rag_golang/internal/infra/driven/repositories/bbolt"
-	bm25repo "rag_golang/internal/infra/driven/repositories/bm25"
+	"rag_golang/internal/infra/driven/repositories"
 	qdrantrepo "rag_golang/internal/infra/driven/repositories/qdrant"
 	"rag_golang/internal/infra/driver/http/handler"
 	"rag_golang/internal/infra/driver/http/middlewares"
@@ -50,13 +48,13 @@ func main() {
 		log.Fatalf("qdrant: %v", err)
 	}
 
-	cacheRepo, err := bboltrepo.NewCacheRepository(cfg.Store.BboltPath)
+	cacheRepo, err := repositories.NewCacheRepository(cfg.Store.BboltPath)
 	if err != nil {
 		log.Fatalf("bbolt: %v", err)
 	}
 	defer cacheRepo.Close()
 
-	bm25Repo := bm25repo.NewRepository(cfg.Search.BM25K1, cfg.Search.BM25B)
+	bm25Repo := repositories.NewBM25Repository(cfg.Search.BM25K1, cfg.Search.BM25B)
 	if cfg.Store.BM25Path != "" {
 		if err := bm25Repo.LoadFromDisk(cfg.Store.BM25Path); err != nil {
 			log.Printf("warning: no se pudo cargar BM25 desde disco: %v", err)
@@ -65,7 +63,7 @@ func main() {
 		}
 	}
 
-	extractorDispatcher := extractor.NewExtractorDispatcher(cfg.Extract)
+	extractorDispatcher := extractor.NewExtractorDispatcher()
 
 	// EnsureCollection es idempotente: si ya existe, no hace nada.
 	if err := vectorRepo.EnsureCollection(ctx, cfg.Store.VectorDimension); err != nil {
@@ -157,68 +155,5 @@ func loadConfig(path string) (configs.Config, error) {
 	if err := yaml.Unmarshal(data, &cfg); err != nil {
 		return cfg, fmt.Errorf("parsear config: %w", err)
 	}
-	setDefaults(&cfg)
 	return cfg, nil
-}
-
-// cmd/server/main.go
-
-func setDefaults(cfg *configs.Config) {
-	if cfg.Server.Port == 0 {
-		cfg.Server.Port = 8080
-	}
-	if cfg.Search.RRFK == 0 {
-		cfg.Search.RRFK = 60
-	}
-	if cfg.Search.TopK == 0 {
-		cfg.Search.TopK = 8
-	}
-	// NUEVO: default para candidates_k
-	if cfg.Search.CandidatesK == 0 {
-		cfg.Search.CandidatesK = 40
-	}
-	// NUEVO: parámetros BM25
-	if cfg.Search.BM25K1 == 0 {
-		cfg.Search.BM25K1 = 1.2
-	}
-	if cfg.Search.BM25B == 0 {
-		cfg.Search.BM25B = 0.75
-	}
-	// NUEVO: límite de chunk en prompt
-	if cfg.LLM.MaxChunkLength == 0 {
-		cfg.LLM.MaxChunkLength = 1000
-	}
-	if cfg.Chunk.MaxSize == 0 {
-		cfg.Chunk.MaxSize = 1000
-	}
-	if cfg.Extract.ProcessedDir == "" {
-		cfg.Extract.ProcessedDir = "data/processed"
-	}
-	if cfg.Extract.CacheDir == "" {
-		cfg.Extract.CacheDir = "data/cache"
-	}
-	if cfg.LLM.Model == "" {
-		cfg.LLM.Model = llm.LLMDefaultModel
-	}
-	if cfg.LLM.Options.Temperature == 0 {
-		cfg.LLM.Options.Temperature = llm.Factual
-	}
-	if cfg.LLM.Options.NumPredict == 0 {
-		cfg.LLM.Options.NumPredict = llm.PredictMedium
-	}
-	if cfg.LLM.Options.NumCtx == 0 {
-		cfg.LLM.Options.NumCtx = llm.CtxSmall
-	}
-	if cfg.Embed.QueryPrefix == "" && cfg.Embed.Model == "nomic-embed-text" {
-		cfg.Embed.QueryPrefix = "search_query: "
-	}
-	if cfg.Embed.DocumentPrefix == "" && cfg.Embed.Model == "nomic-embed-text" {
-		cfg.Embed.DocumentPrefix = "search_document: "
-	}
-	if cfg.Search.MaxChunksPerSection == 0 {
-		cfg.Search.MaxChunksPerSection = 2
-	}
-	if cfg.Search.MaxDensePerSection == 0 {
-		cfg.Search.MaxDensePerSection = 5
-	}
 }

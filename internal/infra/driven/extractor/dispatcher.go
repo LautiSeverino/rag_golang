@@ -3,7 +3,6 @@ package extractor
 import (
 	"fmt"
 	"path/filepath"
-	"rag_golang/internal/configs"
 	"rag_golang/internal/core/domain"
 	"rag_golang/internal/core/ports/out"
 )
@@ -17,21 +16,18 @@ type ExtractorDispatcher struct {
 	}
 }
 
-func NewExtractorDispatcher(cfg configs.ExtractConfig) *ExtractorDispatcher {
+func NewExtractorDispatcher() *ExtractorDispatcher {
 	return &ExtractorDispatcher{
 		extractors: []interface {
 			CanHandle(string) bool
 			Extract(string) (*domain.Document, error)
 		}{
-			NewFitzExtractor(cfg),
 			NewMarkdownExtractor(),
 			NewHTMLExtractor(),
 		},
 	}
 }
 
-// Extract delega al extractor que CanHandle el archivo.
-// Implementa out.IExtractorPort.
 func (d *ExtractorDispatcher) Extract(path string) (*domain.Document, error) {
 	for _, ex := range d.extractors {
 		if ex.CanHandle(path) {

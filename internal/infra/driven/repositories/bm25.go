@@ -1,4 +1,4 @@
-package bm25
+package repositories
 
 import (
 	"context"
@@ -37,7 +37,7 @@ type BM25Repository struct {
 	b         float64
 }
 
-func NewRepository(k1, b float64) *BM25Repository {
+func NewBM25Repository(k1, b float64) *BM25Repository {
 	if k1 == 0 {
 		k1 = 1.2
 	}
