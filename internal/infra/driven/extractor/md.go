@@ -48,7 +48,35 @@ var (
 	mdBulletRe  = regexp.MustCompile(`^[-*+]\s+`)
 	mdNumRe     = regexp.MustCompile(`^\d+\.\s+`)
 	mdCodeRe    = regexp.MustCompile("^```")
+
+	mdReferenceRe = regexp.MustCompile(`^\[[^\]]+\]:\s+\S+.*$`)
+
+	mdCommentRe = regexp.MustCompile(`^<!--.*-->$`)
+
+	mdSeparatorRe = regexp.MustCompile(`^[-*_]{3,}$`)
 )
+
+func shouldSkipMarkdownLine(line string) bool {
+	line = strings.TrimSpace(line)
+
+	if line == "" {
+		return false
+	}
+
+	switch {
+	case mdReferenceRe.MatchString(line):
+		return true
+
+	case mdCommentRe.MatchString(line):
+		return true
+
+	case mdSeparatorRe.MatchString(line):
+		return true
+
+	default:
+		return false
+	}
+}
 
 func parseMarkdown(content string) []domain.Element {
 	lines := strings.Split(content, "\n")
@@ -90,8 +118,11 @@ func parseMarkdown(content string) []domain.Element {
 		})
 		listBuffer = nil
 	}
-
 	for _, line := range lines {
+
+		if shouldSkipMarkdownLine(line) {
+			continue
+		}
 		if mdCodeRe.MatchString(line) {
 			inCode = !inCode
 			if !inCode {

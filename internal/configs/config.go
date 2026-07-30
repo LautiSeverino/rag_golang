@@ -2,7 +2,6 @@ package configs
 
 import (
 	"rag_golang/internal/core/domain/chunk"
-	"rag_golang/internal/core/domain/embed"
 	"rag_golang/internal/core/domain/llm"
 )
 
@@ -19,11 +18,11 @@ type Config struct {
 
 // EmbedConfig configura el Embedder (Ollama).
 type EmbedConfig struct {
-	Model          embed.EmbedModel `yaml:"model"`
-	OllamaURL      string           `yaml:"ollama_url"`
-	BatchSize      int              `yaml:"batch_size"` // chunks por request a Ollama
-	QueryPrefix    string           `yaml:"query_prefix"`
-	DocumentPrefix string           `yaml:"document_prefix"`
+	Model          string `yaml:"model"`
+	OllamaURL      string `yaml:"ollama_url"`
+	BatchSize      int    `yaml:"batch_size"` // chunks por request a Ollama
+	QueryPrefix    string `yaml:"query_prefix"`
+	DocumentPrefix string `yaml:"document_prefix"`
 }
 
 // StoreConfig configura el VectorStore (Qdrant) y el EmbedCache (bbolt).
@@ -38,7 +37,7 @@ type StoreConfig struct {
 
 // LLMConfig configura el LLM (Ollama).
 type LLMConfig struct {
-	Model          llm.LLMModel   `yaml:"model"`
+	Model          string         `yaml:"model"`
 	OllamaURL      string         `yaml:"ollama_url"`
 	Options        llm.LLMOptions `yaml:"options"`
 	MaxChunkLength int            `yaml:"max_chunk_length"`

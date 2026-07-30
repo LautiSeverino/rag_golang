@@ -1615,3 +1615,1247 @@ Client IP : 127.0.0.1:59918
 }
 
 ================================================================================
+2026/07/29 17:41:06.440579 ================================================================================
+2026/07/29 17:41:06.440620 RAG RETRIEVE START
+2026/07/29 17:41:06.440626 QUERY: If a developer wants to use a descriptive prefix for clarity, which sections of the guide would they be violating, and what alternatives does it offer instead?
+2026/07/29 17:41:06.440634 ================================================================================
+2026/07/29 17:41:07.003935 [EMBEDDING] model=mxbai-embed-large:latest duration=563.297312ms
+2026/07/29 17:41:07.009302 [DENSE] top=10 duration=5.343956ms
+2026/07/29 17:41:07.009391   [1] score=0.662975 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 17:41:07.009411   [2] score=0.659162 page=1 section="SQL style guide > Naming conventions > Stored procedures"
+2026/07/29 17:41:07.009418   [3] score=0.636986 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 17:41:07.009424   [4] score=0.623516 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 17:41:07.009432   [5] score=0.618685 page=1 section="SQL style guide > Overview"
+2026/07/29 17:41:07.009437   [6] score=0.618239 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 17:41:07.009443   [7] score=0.616909 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 17:41:07.009448   [8] score=0.605760 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 17:41:07.009453   [9] score=0.602537 page=1 section="SQL style guide > Naming conventions > Uniform suffixes"
+2026/07/29 17:41:07.009458   [10] score=0.601986 page=1 section="SQL style guide > Naming conventions > Tables"
+2026/07/29 17:41:07.009500 [BM25] top=10 duration=36.849µs
+2026/07/29 17:41:07.009517   [1] score=16.244136 page=1 section="Sample Project > Overview"
+2026/07/29 17:41:07.009556   [2] score=12.007725 page=1 section="Sample Project > Usage"
+2026/07/29 17:41:07.009563   [3] score=11.141895 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/29 17:41:07.009568   [4] score=10.459582 page=1 section="Sample Project > Contributing"
+2026/07/29 17:41:07.009573   [5] score=8.334530 page=1 section="Sample Project > License"
+2026/07/29 17:41:07.009579   [6] score=7.731730 page=1 section="Sample Project > Examples"
+2026/07/29 17:41:07.009585   [7] score=7.043488 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 17:41:07.009591   [8] score=6.516367 page=1 section="Sample Project > Features"
+2026/07/29 17:41:07.009596   [9] score=3.514704 page=1 section="Sample Project"
+2026/07/29 17:41:07.009601   [10] score=2.858969 page=1 section="Sample Project > Configuration"
+2026/07/29 17:41:07.009694 [RRF] top=8 duration=87.382µs
+2026/07/29 17:41:07.009707   [1] score=0.016393 page=1 section="Sample Project > Overview"
+2026/07/29 17:41:07.009713   [2] score=0.016393 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 17:41:07.009718   [3] score=0.016129 page=1 section="Sample Project > Usage"
+2026/07/29 17:41:07.009722   [4] score=0.016129 page=1 section="SQL style guide > Naming conventions > Stored procedures"
+2026/07/29 17:41:07.009727   [5] score=0.015873 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/29 17:41:07.009732   [6] score=0.015873 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 17:41:07.009737   [7] score=0.015625 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 17:41:07.009742   [8] score=0.015625 page=1 section="Sample Project > Contributing"
+2026/07/29 17:41:07.009746 TIMINGS total=569.167044ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/29 17:41:07.009752 ================================================================================
+2026/07/29 17:41:07.009818 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/29 17:42:03.829728 [QUERY END] duration=57.389148049s query="If a developer wants to use a descriptive prefix for clarity, which sections of the guide would they be violating, and what alternatives does it offer instead?"
+2026/07/29 17:42:03.830025 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 17:42:03.830
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 57.389477415s
+Client IP : 127.0.0.1:57430
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "If a developer wants to use a descriptive prefix for clarity, which sections of the guide would they be violating, and what alternatives does it offer instead?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "If a developer wants to use a descriptive prefix for clarity, which sections of the guide would they be violating, and what alternatives does it offer instead?",
+  "answer": "A developer wanting to use a descriptive prefix for clarity would be violating the guidelines provided in the \"SQL style guide\" section titled \"Avoid\". Specifically, this includes using prefixes such as `sp_` or Hungarian notation.\n\nInstead of these alternatives, the guide suggests avoiding descriptive prefixes or Hungarian notation altogether. It recommends sticking with SQL-92 double quotes if quoted identifiers are necessary for portability purposes.",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions"
+      ],
+      "element_type": "heading",
+      "score": 0.016393442,
+      "excerpt": "Naming conventions"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions",
+        "Stored procedures"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "Stored procedures\nThe name must contain a verb.\nDo not prefix with `sp_` or any other such descriptive prefix or Hungarian\nnotation."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "The command is not found"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "The command is not found\nMake sure the binary was built successfully and that you are running it from the correct directory."
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "General",
+        "Avoid"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "Avoid\ncamelCase—it is difficult to scan quickly.\nDescriptive prefixes or Hungarian notation such as `sp_` or `tbl`.\nPlurals—use the more natural collective term where possible instead. For…"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Contributing"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "Contributing\nPull requests and issues are welcome. Keep changes small and focused so the document stays easy to read and test."
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Create syntax",
+        "Constraints and keys",
+        "Defining constraints",
+        "General"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "General\nTables must have at least one key to be complete and useful.\nConstraints should be given a custom name excepting `UNIQUE`, `PRIMARY KEY`\nand `FOREIGN KEY` where the database vendor will…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/29 17:51:48.598323 ================================================================================
+2026/07/29 17:51:48.598375 RAG RETRIEVE START
+2026/07/29 17:51:48.598382 QUERY: Design a short SELECT query following every major rule in the guide (naming, aliases, keyword casing, whitespace/river alignment, indentation of joins, and preferred formalisms like IN/BETWEEN).
+2026/07/29 17:51:48.598388 ================================================================================
+2026/07/29 17:51:49.273254 [EMBEDDING] model=mxbai-embed-large:latest duration=674.858561ms
+2026/07/29 17:51:49.276478 [DENSE] top=33 duration=3.189012ms
+2026/07/29 17:51:49.276501   [1] score=0.809541 page=1 section="SQL style guide > Query syntax"
+2026/07/29 17:51:49.276514   [2] score=0.794910 page=1 section="SQL style guide"
+2026/07/29 17:51:49.276519   [3] score=0.777633 page=1 section="SQL style guide > General"
+2026/07/29 17:51:49.276522   [4] score=0.776777 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 17:51:49.276526   [5] score=0.721180 page=1 section="SQL style guide > Query syntax > Indentation"
+2026/07/29 17:51:49.276529   [6] score=0.717205 page=1 section="SQL style guide > Appendix"
+2026/07/29 17:51:49.276533   [7] score=0.711430 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 17:51:49.276545   [8] score=0.702742 page=1 section="SQL style guide > Overview"
+2026/07/29 17:51:49.276549   [9] score=0.683133 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 17:51:49.276552   [10] score=0.669371 page=1 section="SQL style guide > Query syntax > Preferred formalisms"
+2026/07/29 17:51:49.276555   [11] score=0.666779 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 17:51:49.276558   [12] score=0.666476 page=1 section="SQL style guide > Query syntax > Indentation > Subqueries"
+2026/07/29 17:51:49.276560   [13] score=0.665636 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 17:51:49.276563   [14] score=0.665508 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 17:51:49.276566   [15] score=0.662952 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 17:51:49.276569   [16] score=0.662250 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 17:51:49.276572   [17] score=0.662143 page=1 section="SQL style guide > Query syntax > Indentation > Joins"
+2026/07/29 17:51:49.276576   [18] score=0.659237 page=1 section="SQL style guide > Overview"
+2026/07/29 17:51:49.276578   [19] score=0.653734 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 17:51:49.276581   [20] score=0.648661 page=1 section="SQL style guide > Appendix > Column data types > Datetime types"
+2026/07/29 17:51:49.276584   [21] score=0.645200 page=1 section="SQL style guide > Query syntax > White space"
+2026/07/29 17:51:49.276587   [22] score=0.641153 page=1 section="SQL style guide > Create syntax"
+2026/07/29 17:51:49.276590   [23] score=0.638604 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Layout and order"
+2026/07/29 17:51:49.276593   [24] score=0.630466 page=1 section="SQL style guide > Appendix > Column data types"
+2026/07/29 17:51:49.276596   [25] score=0.629185 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 17:51:49.276599   [26] score=0.626051 page=1 section="SQL style guide > General > Do"
+2026/07/29 17:51:49.276602   [27] score=0.625759 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Validation"
+2026/07/29 17:51:49.276606   [28] score=0.621386 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints"
+2026/07/29 17:51:49.276610   [29] score=0.620906 page=1 section="SQL style guide > Create syntax > Constraints and keys"
+2026/07/29 17:51:49.276612   [30] score=0.617829 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 17:51:49.276615   [31] score=0.606979 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Example"
+2026/07/29 17:51:49.276618   [32] score=0.606420 page=1 section="SQL style guide > Appendix > Column data types > Additional types"
+2026/07/29 17:51:49.276621   [33] score=0.600259 page=1 section="SQL style guide > Naming conventions > Uniform suffixes"
+2026/07/29 17:51:49.276645 [BM25] top=10 duration=21.155µs
+2026/07/29 17:51:49.276650   [1] score=19.540253 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 17:51:49.276654   [2] score=9.348790 page=1 section="Sample Project"
+2026/07/29 17:51:49.276657   [3] score=8.489775 page=1 section="Sample Project > Overview"
+2026/07/29 17:51:49.276661   [4] score=8.084012 page=1 section="Sample Project > Usage"
+2026/07/29 17:51:49.276664   [5] score=7.200766 page=1 section="Sample Project > Contributing"
+2026/07/29 17:51:49.276667   [6] score=7.008444 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/29 17:51:49.276670   [7] score=3.577122 page=1 section="Sample Project > License"
+2026/07/29 17:51:49.276674   [8] score=3.466659 page=1 section="Sample Project > Examples"
+2026/07/29 17:51:49.276684   [9] score=3.032063 page=1 section="Sample Project > Features"
+2026/07/29 17:51:49.276687   [10] score=2.858969 page=1 section="Sample Project > Configuration"
+2026/07/29 17:51:49.276749 [RRF] top=8 duration=58.353µs
+2026/07/29 17:51:49.276753   [1] score=0.016393 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 17:51:49.276757   [2] score=0.016393 page=1 section="SQL style guide > Query syntax"
+2026/07/29 17:51:49.276759   [3] score=0.016129 page=1 section="SQL style guide"
+2026/07/29 17:51:49.276762   [4] score=0.016129 page=1 section="Sample Project"
+2026/07/29 17:51:49.276764   [5] score=0.015873 page=1 section="Sample Project > Overview"
+2026/07/29 17:51:49.276767   [6] score=0.015873 page=1 section="SQL style guide > General"
+2026/07/29 17:51:49.276770   [7] score=0.015625 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 17:51:49.276772   [8] score=0.015625 page=1 section="Sample Project > Usage"
+2026/07/29 17:51:49.276775 TIMINGS total=678.451945ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/29 17:51:49.276778 ================================================================================
+2026/07/29 17:51:49.276816 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/29 17:52:42.129064 [QUERY END] duration=53.530740382s query="Design a short SELECT query following every major rule in the guide (naming, aliases, keyword casing, whitespace/river alignment, indentation of joins, and preferred formalisms like IN/BETWEEN)."
+2026/07/29 17:52:42.129288 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 17:52:42.129
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 53.531006736s
+Client IP : 127.0.0.1:54880
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Design a short SELECT query following every major rule in the guide (naming, aliases, keyword casing, whitespace/river alignment, indentation of joins, and preferred formalisms like IN/BETWEEN)."
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Design a short SELECT query following every major rule in the guide (naming, aliases, keyword casing, whitespace/river alignment, indentation of joins, and preferred formalisms like IN/BETWEEN).",
+  "answer": "Designing a short SELECT query following every major rule in the SQL style guide:\n\n1. Naming conventions: \n```sql\nSELECT t.column_name FROM table_name AS t;\n```\n\n2. Aliases:\n```sql\nSELECT t.column_name AS t_alias FROM table_name AS t;\n```\n\n3. Keyword casing (SQL is case-insensitive, but for consistency):\n```sql\nSELECT column_name FROM table_name;\n```\n\n4. Whitespace/river alignment:\n```sql\nSELECT column_name,\n       another_column \nFROM table_name;\n```\n\n5. Indentation of joins:\n```sql\nSELECT t1.column_name AS t1_col, \n       t2.column_name AS t2_col\nFROM table1 AS t1 JOIN table2 AS t2 ON t1.id = t2.id;\n```\n\n6. Preferred formalisms like IN/BETWEEN (BETWEEN is preferred over the range operator):\n```sql\nSELECT column_name FROM table_name WHERE column BETWEEN",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax"
+      ],
+      "element_type": "heading",
+      "score": 0.016393442,
+      "excerpt": "Query syntax"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "Sample Project\nA small example project used to test document retrieval in a RAG pipeline."
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide"
+      ],
+      "element_type": "heading",
+      "score": 0.016129032,
+      "excerpt": "SQL style guide"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Overview"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "Overview\nThis repository contains a simple command-line tool that helps you search and filter text quickly. It is designed as a compact example with clear sections, short paragraphs, and a few code…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "General"
+      ],
+      "element_type": "heading",
+      "score": 0.015873017,
+      "excerpt": "General"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions"
+      ],
+      "element_type": "heading",
+      "score": 0.015625,
+      "excerpt": "Naming conventions"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/29 18:01:45.016456 ================================================================================
+2026/07/29 18:01:45.016527 RAG RETRIEVE START
+2026/07/29 18:01:45.016537 QUERY: ¿Cómo se deben nombrar las tablas según la guía?
+2026/07/29 18:01:45.016544 ================================================================================
+2026/07/29 18:01:45.504523 [EMBEDDING] model=mxbai-embed-large:latest duration=487.972905ms
+2026/07/29 18:01:45.516209 [DENSE] top=4 duration=11.655129ms
+2026/07/29 18:01:45.516258   [1] score=0.674666 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:01:45.516271   [2] score=0.652494 page=1 section="SQL style guide"
+2026/07/29 18:01:45.516277   [3] score=0.636820 page=1 section="SQL style guide > General"
+2026/07/29 18:01:45.516288   [4] score=0.617186 page=1 section="SQL style guide > Appendix"
+2026/07/29 18:01:45.516325 [BM25] top=32 duration=31.09µs
+2026/07/29 18:01:45.516336   [1] score=7.402755 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/29 18:01:45.516345   [2] score=5.538459 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/29 18:01:45.516351   [3] score=4.755813 page=10 section="7. PACTOS"
+2026/07/29 18:01:45.516359   [4] score=4.406239 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/29 18:01:45.516365   [5] score=4.154136 page=8 section="6. CONTINUACIÓN DEL JUEGO > SOLICITAR TARJETA DE PAÍSES"
+2026/07/29 18:01:45.516370   [6] score=4.147806 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/29 18:01:45.516376   [7] score=3.829457 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/29 18:01:45.516381   [8] score=3.736672 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/29 18:01:45.516387   [9] score=3.470045 page=2 section="1. IDEA GENERAL"
+2026/07/29 18:01:45.516392   [10] score=3.204055 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/29 18:01:45.516397   [11] score=3.050277 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/29 18:01:45.516402   [12] score=2.854573 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/29 18:01:45.516407   [13] score=2.790134 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/29 18:01:45.516424   [14] score=2.772116 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/29 18:01:45.516429   [15] score=2.678903 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/29 18:01:45.516433   [16] score=2.458481 page=2 section="2. ELEMENTOS DE JUEGO > MAPA"
+2026/07/29 18:01:45.516437   [17] score=2.448753 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/29 18:01:45.516441   [18] score=2.152167 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/29 18:01:45.516446   [19] score=2.093044 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/29 18:01:45.516450   [20] score=2.037672 page=11 section="8. CONSIDERACIONES GENERALES > PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/29 18:01:45.516454   [21] score=1.893437 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/29 18:01:45.516458   [22] score=1.802780 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/29 18:01:45.516463   [23] score=1.700605 page=2 section="1. IDEA GENERAL"
+2026/07/29 18:01:45.516467   [24] score=1.659853 page=11 section="8. CONSIDERACIONES GENERALES > DESTRUCCIÓN FORTUITA DE UN COLOR"
+2026/07/29 18:01:45.516471   [25] score=1.658080 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/29 18:01:45.516476   [26] score=1.403070 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/29 18:01:45.516480   [27] score=1.396870 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/29 18:01:45.516484   [28] score=1.295473 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/29 18:01:45.516488   [29] score=1.181207 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/29 18:01:45.516492   [30] score=1.041384 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/29 18:01:45.516496   [31] score=1.022011 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/29 18:01:45.516500   [32] score=0.654013 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/29 18:01:45.516597 [RRF] top=8 duration=92.783µs
+2026/07/29 18:01:45.516606   [1] score=0.016393 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:01:45.516610   [2] score=0.016393 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/29 18:01:45.516614   [3] score=0.015625 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/29 18:01:45.516618   [4] score=0.016129 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/29 18:01:45.516621   [5] score=0.012346 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/29 18:01:45.516625   [6] score=0.016129 page=1 section="SQL style guide"
+2026/07/29 18:01:45.516627   [7] score=0.015873 page=1 section="SQL style guide > General"
+2026/07/29 18:01:45.516630   [8] score=0.015873 page=10 section="7. PACTOS"
+2026/07/29 18:01:45.516632 TIMINGS total=500.17599ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/29 18:01:45.516635 ================================================================================
+2026/07/29 18:01:45.516688 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/29 18:02:58.462802 [QUERY END] duration=1m13.446345093s query="¿Cómo se deben nombrar las tablas según la guía?"
+2026/07/29 18:02:58.462953 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 18:02:58.462
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m13.446541139s
+Client IP : 127.0.0.1:38004
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "¿Cómo se deben nombrar las tablas según la guía?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "¿Cómo se deben nombrar las tablas según la guía?",
+  "answer": "I cannot find any information about how to name tables according to a style guide in the provided chunks.",
+  "sources": [
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax"
+      ],
+      "element_type": "heading",
+      "score": 0.016393442,
+      "excerpt": "Query syntax"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO",
+        "ATACAR Y REAGRUPAR"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "ATACAR Y REAGRUPAR\nATACAR Y REAGRUPAR\nSe efectúan según las mismas reglas explicadas para la iniciación de las hostilidades.\nComo antes, ninguna de las dos acciones es obligatoria. (Recuérdese…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide"
+      ],
+      "element_type": "heading",
+      "score": 0.016129032,
+      "excerpt": "SQL style guide"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO",
+        "INCORPORACIÓN DE EJÉRCITOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "(Recuérdese que recibe una en cada turno en el que conquistó países.)\n9\nCada tarjeta lleva impreso un símbolo: galeón, globo o cañón. Si el jugador posee tres con el mismo símbolo (por…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "General"
+      ],
+      "element_type": "heading",
+      "score": 0.015873017,
+      "excerpt": "General"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "7. PACTOS\nEl reglamento permite la propuesta de pactos entre jugadores, los cuales deben ser públicos, expresados en voz alta, y sin cláusulas secretas. Cualquier jugador tiene derecho a preguntar…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 9,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO",
+        "INCORPORACIÓN DE EJÉRCITOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.012345679,
+      "excerpt": "Mientras se tengan 5 o menos tarjetas, no hay obligación de efectuar un canje; pero es obligación hacerlo antes de recibir la 6º tarjeta.\nUna variante opcional es hacer el “Canje defensivo”…"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/29 18:03:19.129216 ================================================================================
+2026/07/29 18:03:19.129245 RAG RETRIEVE START
+2026/07/29 18:03:19.129248 QUERY: How should tables be named according to the guide?
+2026/07/29 18:03:19.129250 ================================================================================
+2026/07/29 18:03:19.270411 [EMBEDDING] model=mxbai-embed-large:latest duration=141.159236ms
+2026/07/29 18:03:19.282126 [DENSE] top=24 duration=11.683887ms
+2026/07/29 18:03:19.282173   [1] score=0.839079 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 18:03:19.282187   [2] score=0.760681 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:03:19.282193   [3] score=0.743562 page=1 section="SQL style guide"
+2026/07/29 18:03:19.282199   [4] score=0.722148 page=1 section="SQL style guide > General"
+2026/07/29 18:03:19.282205   [5] score=0.713342 page=1 section="SQL style guide > Naming conventions > Tables"
+2026/07/29 18:03:19.282211   [6] score=0.707816 page=1 section="SQL style guide > Appendix"
+2026/07/29 18:03:19.282217   [7] score=0.681379 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 18:03:19.282224   [8] score=0.662151 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 18:03:19.282232   [9] score=0.660100 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 18:03:19.282252   [10] score=0.651831 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:03:19.282258   [11] score=0.648207 page=1 section="SQL style guide > Naming conventions > Columns"
+2026/07/29 18:03:19.282263   [12] score=0.643969 page=1 section="SQL style guide > Query syntax > Indentation"
+2026/07/29 18:03:19.282268   [13] score=0.641095 page=1 section="SQL style guide > Naming conventions > Stored procedures"
+2026/07/29 18:03:19.282273   [14] score=0.633902 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Layout and order"
+2026/07/29 18:03:19.282279   [15] score=0.626786 page=1 section="SQL style guide > Overview"
+2026/07/29 18:03:19.282284   [16] score=0.614372 page=1 section="SQL style guide > Overview"
+2026/07/29 18:03:19.282288   [17] score=0.613497 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 18:03:19.282293   [18] score=0.611151 page=1 section="SQL style guide > Query syntax > Indentation > Joins"
+2026/07/29 18:03:19.282298   [19] score=0.610554 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:03:19.282303   [20] score=0.609531 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 18:03:19.282307   [21] score=0.607496 page=1 section="SQL style guide > Naming conventions > Aliasing or correlations"
+2026/07/29 18:03:19.282312   [22] score=0.606343 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:03:19.282317   [23] score=0.603185 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:03:19.282322   [24] score=0.600427 page=1 section="SQL style guide > Appendix > Column data types > Datetime types"
+2026/07/29 18:03:19.282353 [BM25] top=9 duration=21.898µs
+2026/07/29 18:03:19.282360   [1] score=7.017380 page=1 section="Sample Project > Usage"
+2026/07/29 18:03:19.282365   [2] score=6.516367 page=1 section="Sample Project > Features"
+2026/07/29 18:03:19.282370   [3] score=6.094656 page=1 section="Sample Project > Contributing"
+2026/07/29 18:03:19.282375   [4] score=3.911359 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 18:03:19.282379   [5] score=3.900479 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/29 18:03:19.282384   [6] score=3.514704 page=1 section="Sample Project"
+2026/07/29 18:03:19.282387   [7] score=3.466659 page=1 section="Sample Project > Examples"
+2026/07/29 18:03:19.282392   [8] score=2.858969 page=1 section="Sample Project > Configuration"
+2026/07/29 18:03:19.282396   [9] score=2.844611 page=1 section="Sample Project > Overview"
+2026/07/29 18:03:19.282457 [RRF] top=8 duration=57.253µs
+2026/07/29 18:03:19.282462   [1] score=0.016393 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 18:03:19.282465   [2] score=0.016393 page=1 section="Sample Project > Usage"
+2026/07/29 18:03:19.282468   [3] score=0.016129 page=1 section="Sample Project > Features"
+2026/07/29 18:03:19.282470   [4] score=0.016129 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:03:19.282473   [5] score=0.015873 page=1 section="SQL style guide"
+2026/07/29 18:03:19.282475   [6] score=0.015873 page=1 section="Sample Project > Contributing"
+2026/07/29 18:03:19.282478   [7] score=0.015625 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 18:03:19.282481   [8] score=0.015625 page=1 section="SQL style guide > General"
+2026/07/29 18:03:19.282483 TIMINGS total=153.267019ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/29 18:03:19.282486 ================================================================================
+2026/07/29 18:03:19.282511 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/29 18:03:44.352736 [QUERY END] duration=25.223519626s query="How should tables be named according to the guide?"
+2026/07/29 18:03:44.352913 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 18:03:44.352
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 25.223709486s
+Client IP : 127.0.0.1:42114
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "How should tables be named according to the guide?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "How should tables be named according to the guide?",
+  "answer": "According to the guide provided, there are no specific naming conventions mentioned for tables.",
+  "sources": [
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Usage"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "Usage\nRun the tool with a query:\n./sample-project search \"error\"\nUse the help command to see the available flags:\n./sample-project --help"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions"
+      ],
+      "element_type": "heading",
+      "score": 0.016393442,
+      "excerpt": "Naming conventions"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Features"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "Features\nFast text filtering\nSimple configuration\nWorks from the terminal\nEasy to extend"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax"
+      ],
+      "element_type": "heading",
+      "score": 0.016129032,
+      "excerpt": "Query syntax"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide"
+      ],
+      "element_type": "heading",
+      "score": 0.015873017,
+      "excerpt": "SQL style guide"
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Contributing"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "Contributing\nPull requests and issues are welcome. Keep changes small and focused so the document stays easy to read and test."
+    },
+    {
+      "file": "docs/test.md",
+      "page": 1,
+      "section_path": [
+        "Sample Project",
+        "Troubleshooting",
+        "No results are returned"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "No results are returned\nCheck that the query matches the text in the input source and that the configuration file is valid."
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "General"
+      ],
+      "element_type": "heading",
+      "score": 0.015625,
+      "excerpt": "General"
+    }
+  ],
+  "duration_ns": 0
+}
+
+================================================================================
+2026/07/29 18:04:13.526896 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 18:04:13.526
+Method    : POST
+Path      : /api/v1/index
+Status    : 200
+Duration  : 23.869423ms
+Client IP : 127.0.0.1:40886
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/test.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "18cbdb3f-2a5c-5ce2-94ef-defc2a4dd90c",
+  "source": "docs/test.md",
+  "chunk_count": 13,
+  "cache_hits": 13
+}
+
+================================================================================
+2026/07/29 18:05:04.211203 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 18:05:04.211
+Method    : POST
+Path      : /api/v1/index
+Status    : 500
+Duration  : 37.719694456s
+Client IP : 127.0.0.1:46882
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/sql.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "error": "embed batch [40:45]: ollama embedder: status 400"
+}
+
+================================================================================
+2026/07/29 18:09:14.159719 ================================================================================
+HTTP REQUEST
+================================================================================
+Duration  : 906.594167ms
+Client IP : 127.0.0.1:58320
+Timestamp : 2026-07-29 18:09:14.159
+Method    : POST
+Path      : /api/v1/index
+Status    : 500
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/sql.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "error": "embed batch [0:5]: ollama embedder: status 400: the input length exceeds the context length"
+}
+
+================================================================================
+2026/07/29 18:10:01.393083 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 18:10:01.393
+Method    : POST
+Path      : /api/v1/index
+Status    : 500
+Duration  : 1.008040479s
+Client IP : 127.0.0.1:54468
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/sql.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "error": "embed batch [0:5]: ollama embedder: status 400: the input length exceeds the context length"
+}
+
+================================================================================
+2026/07/29 18:11:28.444513 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 500
+Duration  : 981.594964ms
+Client IP : 127.0.0.1:48252
+Timestamp : 2026-07-29 18:11:28.444
+Method    : POST
+Path      : /api/v1/index
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/sql.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "error": "embed batch [0:5]: ollama embedder: status 400: the input length exceeds the context length"
+}
+
+================================================================================
+2026/07/29 18:15:10.208707 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-29 18:15:10.208
+Method    : POST
+Path      : /api/v1/index
+Status    : 200
+Duration  : 1.803510156s
+Client IP : 127.0.0.1:58952
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/sql.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "29a733fd-1b4d-5f69-9f4a-80889c37f7d7",
+  "source": "docs/sql.md",
+  "chunk_count": 44,
+  "cache_hits": 40
+}
+
+================================================================================
+2026/07/29 18:15:45.905320 ================================================================================
+2026/07/29 18:15:45.905378 RAG RETRIEVE START
+2026/07/29 18:15:45.905391 QUERY: How should tables be named according to the guide?
+2026/07/29 18:15:45.905398 ================================================================================
+2026/07/29 18:15:46.125309 [EMBEDDING] model=mxbai-embed-large:latest duration=219.905036ms
+2026/07/29 18:15:46.127146 [DENSE] top=24 duration=1.779354ms
+2026/07/29 18:15:46.127167   [1] score=0.839079 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 18:15:46.127184   [2] score=0.760681 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:15:46.127187   [3] score=0.743562 page=1 section="SQL style guide"
+2026/07/29 18:15:46.127189   [4] score=0.722148 page=1 section="SQL style guide > General"
+2026/07/29 18:15:46.127192   [5] score=0.713342 page=1 section="SQL style guide > Naming conventions > Tables"
+2026/07/29 18:15:46.127194   [6] score=0.707816 page=1 section="SQL style guide > Appendix"
+2026/07/29 18:15:46.127196   [7] score=0.681379 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 18:15:46.127199   [8] score=0.662151 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 18:15:46.127203   [9] score=0.660100 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 18:15:46.127206   [10] score=0.651831 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:15:46.127209   [11] score=0.648207 page=1 section="SQL style guide > Naming conventions > Columns"
+2026/07/29 18:15:46.127211   [12] score=0.643969 page=1 section="SQL style guide > Query syntax > Indentation"
+2026/07/29 18:15:46.127213   [13] score=0.641095 page=1 section="SQL style guide > Naming conventions > Stored procedures"
+2026/07/29 18:15:46.127216   [14] score=0.633902 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Layout and order"
+2026/07/29 18:15:46.127219   [15] score=0.626786 page=1 section="SQL style guide > Overview"
+2026/07/29 18:15:46.127221   [16] score=0.614372 page=1 section="SQL style guide > Overview"
+2026/07/29 18:15:46.127223   [17] score=0.613497 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 18:15:46.127226   [18] score=0.611151 page=1 section="SQL style guide > Query syntax > Indentation > Joins"
+2026/07/29 18:15:46.127228   [19] score=0.610554 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:15:46.127231   [20] score=0.609531 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 18:15:46.127233   [21] score=0.607496 page=1 section="SQL style guide > Naming conventions > Aliasing or correlations"
+2026/07/29 18:15:46.127236   [22] score=0.606343 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:15:46.127238   [23] score=0.603185 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:15:46.127241   [24] score=0.600427 page=1 section="SQL style guide > Appendix > Column data types > Datetime types"
+2026/07/29 18:15:46.127271 [BM25] top=50 duration=27.62µs
+2026/07/29 18:15:46.127276   [1] score=12.547873 page=1 section="SQL style guide > Create syntax > Designs to avoid"
+2026/07/29 18:15:46.127280   [2] score=12.511671 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 18:15:46.127283   [3] score=11.143154 page=1 section="SQL style guide > Query syntax > Preferred formalisms"
+2026/07/29 18:15:46.127285   [4] score=10.455041 page=1 section="SQL style guide > Create syntax > Constraints and keys > Choosing keys"
+2026/07/29 18:15:46.127288   [5] score=10.063519 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Validation"
+2026/07/29 18:15:46.127291   [6] score=9.427622 page=1 section="SQL style guide > Query syntax > Indentation > Joins"
+2026/07/29 18:15:46.127294   [7] score=8.157662 page=1 section="SQL style guide > Naming conventions > Aliasing or correlations"
+2026/07/29 18:15:46.127296   [8] score=8.011629 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Layout and order"
+2026/07/29 18:15:46.127299   [9] score=7.695121 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 18:15:46.127301   [10] score=7.693880 page=1 section="SQL style guide > Naming conventions > Tables"
+2026/07/29 18:15:46.127304   [11] score=7.514061 page=1 section="SQL style guide > Query syntax > Indentation > Subqueries"
+2026/07/29 18:15:46.127310   [12] score=6.928018 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:15:46.127313   [13] score=5.618970 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 18:15:46.127315   [14] score=5.604825 page=1 section="SQL style guide > Overview"
+2026/07/29 18:15:46.127318   [15] score=5.053887 page=1 section="SQL style guide > General > Do"
+2026/07/29 18:15:46.127320   [16] score=5.034272 page=1 section="SQL style guide > Create syntax > Specifying default values"
+2026/07/29 18:15:46.127322   [17] score=4.756699 page=1 section="SQL style guide > Query syntax > White space"
+2026/07/29 18:15:46.127325   [18] score=4.702188 page=1 section="SQL style guide > Naming conventions > Uniform suffixes"
+2026/07/29 18:15:46.127328   [19] score=4.661890 page=1 section="SQL style guide > Create syntax"
+2026/07/29 18:15:46.127330   [20] score=4.595218 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 18:15:46.127332   [21] score=4.468261 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:15:46.127335   [22] score=4.429254 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints"
+2026/07/29 18:15:46.127338   [23] score=4.247803 page=1 section="SQL style guide > Naming conventions > Columns"
+2026/07/29 18:15:46.127340   [24] score=3.938743 page=1 section="SQL style guide > Create syntax > Choosing data types"
+2026/07/29 18:15:46.127342   [25] score=3.626065 page=1 section="Sample Project > Usage"
+2026/07/29 18:15:46.127345   [26] score=3.358115 page=1 section="Sample Project > Features"
+2026/07/29 18:15:46.127347   [27] score=3.159751 page=1 section="Sample Project > Contributing"
+2026/07/29 18:15:46.127349   [28] score=2.988741 page=1 section="SQL style guide > Appendix > Column data types > Additional types"
+2026/07/29 18:15:46.127352   [29] score=2.887772 page=1 section="SQL style guide > Query syntax > Indentation"
+2026/07/29 18:15:46.127354   [30] score=2.824273 page=1 section="SQL style guide > Appendix > Column data types"
+2026/07/29 18:15:46.127356   [31] score=2.686439 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 18:15:46.127359   [32] score=2.601825 page=1 section="SQL style guide > Naming conventions > Stored procedures"
+2026/07/29 18:15:46.127364   [33] score=2.529266 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:15:46.127367   [34] score=2.432093 page=1 section="SQL style guide > Create syntax > Constraints and keys"
+2026/07/29 18:15:46.127369   [35] score=2.389301 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:15:46.127372   [36] score=2.039262 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 18:15:46.127375   [37] score=2.034146 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/29 18:15:46.127378   [38] score=1.816669 page=1 section="Sample Project > Examples"
+2026/07/29 18:15:46.127380   [39] score=1.781491 page=1 section="Sample Project"
+2026/07/29 18:15:46.127383   [40] score=1.576022 page=1 section="SQL style guide"
+2026/07/29 18:15:46.127385   [41] score=1.535006 page=1 section="SQL style guide > Overview"
+2026/07/29 18:15:46.127388   [42] score=1.507781 page=1 section="Sample Project > Configuration"
+2026/07/29 18:15:46.127391   [43] score=1.467996 page=1 section="Sample Project > Overview"
+2026/07/29 18:15:46.127393   [44] score=1.439178 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 18:15:46.127396   [45] score=1.374910 page=1 section="SQL style guide > Appendix"
+2026/07/29 18:15:46.127399   [46] score=1.374910 page=1 section="SQL style guide > General"
+2026/07/29 18:15:46.127401   [47] score=1.351692 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:15:46.127404   [48] score=1.351692 page=1 section="SQL style guide > Naming conventions"
+2026/07/29 18:15:46.127407   [49] score=1.276258 page=1 section="SQL style guide > Appendix > Column data types > Character types:"
+2026/07/29 18:15:46.127413   [50] score=1.276258 page=1 section="SQL style guide > Appendix > Column data types > Binary types:"
+2026/07/29 18:15:46.127470 [RRF] top=8 duration=53.987µs
+2026/07/29 18:15:46.127474   [1] score=0.030835 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 18:15:46.127478   [2] score=0.029670 page=1 section="SQL style guide > Naming conventions > Tables"
+2026/07/29 18:15:46.127482   [3] score=0.028624 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 18:15:46.127484   [4] score=0.028219 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Layout and order"
+2026/07/29 18:15:46.127491   [5] score=0.028175 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:15:46.127494   [6] score=0.023185 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:15:46.127496   [7] score=0.027972 page=1 section="SQL style guide > Query syntax > Indentation > Joins"
+2026/07/29 18:15:46.127499   [8] score=0.027271 page=1 section="SQL style guide > Naming conventions > Aliasing or correlations"
+2026/07/29 18:15:46.127501 TIMINGS total=222.181194ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/29 18:15:46.127504 ================================================================================
+2026/07/29 18:15:46.127594 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/29 18:17:28.378653 [QUERY END] duration=1m42.473332143s query="How should tables be named according to the guide?"
+2026/07/29 18:17:28.378865 ================================================================================
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:50060
+Timestamp : 2026-07-29 18:17:28.378
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m42.473712436s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "How should tables be named according to the guide?"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "How should tables be named according to the guide?",
+  "answer": "Tables should be named using a collective name or, less ideally, a plural form. For example (in order of preference) `staff` and `employees`. Do not prefix with `tbl` or any other such descriptive prefix or Hungarian notation. Never give a table the same name as one of its columns and vice versa. Avoid, where possible, concatenating two table names together to create the name of a relationship table. Rather than `cars_mechanics`, prefer `services`.",
+  "sources": [
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Create syntax",
+        "Constraints and keys",
+        "Defining constraints",
+        "General"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030834913,
+      "excerpt": "General\nTables must have at least one key to be complete and useful.\nConstraints should be given a custom name excepting `UNIQUE`, `PRIMARY KEY`\nand `FOREIGN KEY` where the database vendor will…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions",
+        "Tables"
+      ],
+      "element_type": "paragraph",
+      "score": 0.02967033,
+      "excerpt": "Tables\nUse a collective name or, less ideally, a plural form. For example (in order of\npreference) `staff` and `employees`.\nDo not prefix with `tbl` or any other such descriptive prefix or…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions",
+        "General"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028624002,
+      "excerpt": "General\nEnsure the name is unique and does not exist as a\n[reserved keyword][reserved-keywords].\nKeep the length to a maximum of 30 bytes—in practice this is 30 characters\nunless you are using a…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Create syntax",
+        "Constraints and keys",
+        "Defining constraints",
+        "Layout and order"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028219396,
+      "excerpt": "Layout and order\nSpecify the primary key first right after the `CREATE TABLE` statement.\nConstraints should be defined directly beneath the column they correspond to.\nIndent the constraint so that it…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax",
+        "White space",
+        "Spaces"
+      ],
+      "element_type": "paragraph",
+      "score": 0.028174603,
+      "excerpt": "Spaces\nSpaces should be used to line up the code so that the root keywords all end on\nthe same character boundary. This forms a river down the middle making it easy for\nthe readers eye to scan over…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax",
+        "Indentation",
+        "Joins"
+      ],
+      "element_type": "paragraph",
+      "score": 0.027972028,
+      "excerpt": "Joins\nJoins should be indented to the other side of the river and grouped with a new\nline where necessary.\nSELECT r.last_name\n  FROM riders AS r\n       INNER JOIN bikes AS b\n       ON r.bike_vin_num…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions",
+        "Aliasing or correlations"
+      ],
+      "element_type": "paragraph",
+      "score": 0.027271051,
+      "excerpt": "Aliasing or correlations\nShould relate in some way to the object or expression they are aliasing.\nAs a rule of thumb the correlation name should be the first letter of each word\nin the object's…"
+    }
+  ]
+}
+
+================================================================================
+2026/07/29 18:18:27.479117 ================================================================================
+2026/07/29 18:18:27.479147 RAG RETRIEVE START
+2026/07/29 18:18:27.479152 QUERY: Summarize the main recommendations from the “General → Avoid” section.
+2026/07/29 18:18:27.479156 ================================================================================
+2026/07/29 18:18:27.643704 [EMBEDDING] model=mxbai-embed-large:latest duration=164.544889ms
+2026/07/29 18:18:27.645394 [DENSE] top=4 duration=1.65776ms
+2026/07/29 18:18:27.645425   [1] score=0.653252 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:18:27.645435   [2] score=0.650194 page=1 section="SQL style guide > General"
+2026/07/29 18:18:27.645440   [3] score=0.645648 page=1 section="SQL style guide"
+2026/07/29 18:18:27.645444   [4] score=0.615418 page=1 section="SQL style guide > Appendix"
+2026/07/29 18:18:27.645485 [BM25] top=39 duration=36.732µs
+2026/07/29 18:18:27.645492   [1] score=11.243887 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 18:18:27.645499   [2] score=8.259086 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 18:18:27.645504   [3] score=7.913075 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 18:18:27.645522   [4] score=7.371715 page=1 section="SQL style guide > Create syntax > Designs to avoid"
+2026/07/29 18:18:27.645526   [5] score=7.267600 page=1 section="SQL style guide > Query syntax > Preferred formalisms"
+2026/07/29 18:18:27.645531   [6] score=6.834618 page=1 section="SQL style guide > Naming conventions > Columns"
+2026/07/29 18:18:27.645536   [7] score=6.606379 page=1 section="Sample Project > Troubleshooting > The command is not found"
+2026/07/29 18:18:27.645540   [8] score=6.400544 page=1 section="SQL style guide > Query syntax > Indentation > Subqueries"
+2026/07/29 18:18:27.645557   [9] score=6.395537 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > General"
+2026/07/29 18:18:27.645563   [10] score=6.387253 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:18:27.645567   [11] score=6.208649 page=1 section="SQL style guide > Query syntax > Indentation > Joins"
+2026/07/29 18:18:27.645570   [12] score=6.176107 page=1 section="SQL style guide > Naming conventions > Aliasing or correlations"
+2026/07/29 18:18:27.645574   [13] score=6.007796 page=1 section="SQL style guide > General > Do"
+2026/07/29 18:18:27.645577   [14] score=5.998136 page=1 section="Sample Project > Features"
+2026/07/29 18:18:27.645580   [15] score=5.700974 page=1 section="SQL style guide > Query syntax > White space > Spaces"
+2026/07/29 18:18:27.645584   [16] score=5.689813 page=1 section="SQL style guide > Naming conventions > Tables"
+2026/07/29 18:18:27.645587   [17] score=5.685808 page=1 section="Sample Project > Configuration"
+2026/07/29 18:18:27.645590   [18] score=5.395490 page=1 section="SQL style guide > Naming conventions > Uniform suffixes"
+2026/07/29 18:18:27.645594   [19] score=5.329040 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:18:27.645597   [20] score=4.672384 page=1 section="SQL style guide > General"
+2026/07/29 18:18:27.645601   [21] score=4.086852 page=1 section="SQL style guide > Create syntax > Constraints and keys > Choosing keys"
+2026/07/29 18:18:27.645604   [22] score=4.078524 page=1 section="Sample Project > Troubleshooting > No results are returned"
+2026/07/29 18:18:27.645610   [23] score=4.074975 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Layout and order"
+2026/07/29 18:18:27.645615   [24] score=4.036468 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints > Validation"
+2026/07/29 18:18:27.645618   [25] score=3.950302 page=1 section="Sample Project > Usage"
+2026/07/29 18:18:27.645621   [26] score=3.883185 page=1 section="SQL style guide > Create syntax > Specifying default values"
+2026/07/29 18:18:27.645624   [27] score=3.835803 page=1 section="SQL style guide > Query syntax > White space > Line spacing"
+2026/07/29 18:18:27.645626   [28] score=3.633339 page=1 section="Sample Project > Examples"
+2026/07/29 18:18:27.645629   [29] score=3.522831 page=1 section="SQL style guide > Create syntax > Constraints and keys > Defining constraints"
+2026/07/29 18:18:27.645632   [30] score=3.477502 page=1 section="SQL style guide > Query syntax > White space"
+2026/07/29 18:18:27.645635   [31] score=3.280516 page=1 section="SQL style guide > Create syntax"
+2026/07/29 18:18:27.645637   [32] score=2.993295 page=1 section="Sample Project > Contributing"
+2026/07/29 18:18:27.645640   [33] score=2.987576 page=2 section="1. IDEA GENERAL"
+2026/07/29 18:18:27.645643   [34] score=2.907424 page=1 section="SQL style guide > Naming conventions > Stored procedures"
+2026/07/29 18:18:27.645646   [35] score=2.894091 page=1 section="SQL style guide > Appendix > Column data types > Additional types"
+2026/07/29 18:18:27.645649   [36] score=2.872065 page=2 section="1. IDEA GENERAL"
+2026/07/29 18:18:27.645652   [37] score=2.376607 page=1 section="SQL style guide > Overview"
+2026/07/29 18:18:27.645655   [38] score=2.284753 page=1 section="SQL style guide > Create syntax > Choosing data types"
+2026/07/29 18:18:27.645658   [39] score=1.459236 page=1 section="SQL style guide > Appendix > Reserved keyword reference"
+2026/07/29 18:18:27.645726 [RRF] top=8 duration=65.408µs
+2026/07/29 18:18:27.645732   [1] score=0.028629 page=1 section="SQL style guide > General"
+2026/07/29 18:18:27.645736   [2] score=0.016393 page=1 section="SQL style guide > Query syntax"
+2026/07/29 18:18:27.645739   [3] score=0.016393 page=1 section="SQL style guide > Naming conventions > General"
+2026/07/29 18:18:27.645742   [4] score=0.016129 page=1 section="SQL style guide > Query syntax > Reserved words"
+2026/07/29 18:18:27.645746   [5] score=0.015873 page=1 section="SQL style guide > General > Avoid"
+2026/07/29 18:18:27.645753   [6] score=0.015873 page=1 section="SQL style guide"
+2026/07/29 18:18:27.645757   [7] score=0.015625 page=1 section="SQL style guide > Create syntax > Designs to avoid"
+2026/07/29 18:18:27.645760   [8] score=0.015625 page=1 section="SQL style guide > Appendix"
+2026/07/29 18:18:27.645763 TIMINGS total=166.646141ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/29 18:18:27.645766 ================================================================================
+2026/07/29 18:18:27.645814 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/29 18:19:28.661785 [QUERY END] duration=1m1.1826629s query="Summarize the main recommendations from the “General → Avoid” section."
+2026/07/29 18:19:28.661956 ================================================================================
+HTTP REQUEST
+================================================================================
+Status    : 200
+Duration  : 1m1.182871289s
+Client IP : 127.0.0.1:53880
+Timestamp : 2026-07-29 18:19:28.661
+Method    : POST
+Path      : /api/v1/query
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Summarize the main recommendations from the “General → Avoid” section."
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Summarize the main recommendations from the “General → Avoid” section.",
+  "answer": "The \"Avoid\" section recommends against using camelCase for identifiers, avoiding descriptive prefixes or Hungarian notation such as `sp_` or `tbl`, and not using plurals where possible. For quoted identifiers, it suggests sticking to SQL-92 double quotes for portability, unless your SQL server supports them natively. The text also advises against applying object-oriented design principles to SQL or database structures, avoiding placing values in one column with units in another, and not splitting data across many tables due to arbitrary concerns.",
+  "sources": [
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "General"
+      ],
+      "element_type": "heading",
+      "score": 0.028629031,
+      "excerpt": "General"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax"
+      ],
+      "element_type": "heading",
+      "score": 0.016393442,
+      "excerpt": "Query syntax"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Naming conventions",
+        "General"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "General\nEnsure the name is unique and does not exist as a\n[reserved keyword][reserved-keywords].\nKeep the length to a maximum of 30 bytes—in practice this is 30 characters\nunless you are using a…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax",
+        "Reserved words"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "Reserved words\nAlways use uppercase for the [reserved keywords][reserved-keywords]\nlike `SELECT` and `WHERE`.\nIt is best to avoid the abbreviated keywords and use the full length ones where\navailable…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "General",
+        "Avoid"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "Avoid\ncamelCase—it is difficult to scan quickly.\nDescriptive prefixes or Hungarian notation such as `sp_` or `tbl`.\nPlurals—use the more natural collective term where possible instead. For…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide"
+      ],
+      "element_type": "heading",
+      "score": 0.015873017,
+      "excerpt": "SQL style guide"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Create syntax",
+        "Designs to avoid"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "Designs to avoid\nObject-oriented design principles do not effectively translate to relational\ndatabase designs—avoid this pitfall.\nPlacing the value in one column and the units in another column.…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Appendix"
+      ],
+      "element_type": "heading",
+      "score": 0.015625,
+      "excerpt": "Appendix"
+    }
+  ]
+}
+
+================================================================================
+2026/07/29 18:30:38.077605 ================================================================================
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:54590
+Timestamp : 2026-07-29 18:30:38.077
+Method    : POST
+Path      : /api/v1/index
+Status    : 500
+Duration  : 58.442308978s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/teg.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "error": "embed batch [32:40]: ollama embedder: do request: Post \"http://localhost:11434/api/embed\": context canceled"
+}
+
+================================================================================
+2026/07/29 18:30:58.178139 ================================================================================
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:54522
+Timestamp : 2026-07-29 18:30:58.178
+Method    : POST
+Path      : /api/v1/index
+Status    : 500
+Duration  : 14.13734666s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/teg.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "error": "embed batch [0:8]: ollama embedder: do request: Post \"http://localhost:11434/api/embed\": context canceled"
+}
+
+================================================================================

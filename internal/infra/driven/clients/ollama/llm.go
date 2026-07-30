@@ -30,7 +30,7 @@ func NewLLM(baseURL string) *OllamaLLM {
 
 // ollamaChatReq es el cuerpo del request a /api/chat.
 type ollamaChatReq struct {
-	Model    llm.LLMModel    `json:"model"`
+	Model    string          `json:"model"`
 	Messages []ollamaMessage `json:"messages"`
 	Stream   bool            `json:"stream"`
 	Options  ollamaOptions   `json:"options"`
@@ -42,9 +42,9 @@ type ollamaMessage struct {
 }
 
 type ollamaOptions struct {
-	Temperature llm.LLMTemperature `json:"temperature"`
-	NumPredict  llm.LLMNumPredict  `json:"num_predict"`
-	NumCtx      llm.LLMNumCtx      `json:"num_ctx"`
+	Temperature float32 `json:"temperature"`
+	NumPredict  int     `json:"num_predict"`
+	NumCtx      int     `json:"num_ctx"`
 }
 
 // ollamaChatResp es cada línea NDJSON que devuelve Ollama en modo stream.

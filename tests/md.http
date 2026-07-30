@@ -3,7 +3,7 @@ POST http://localhost:8080/api/v1/index
 Content-Type: application/json
 
 {
-    "path": "docs/test.md"
+    "path": "docs/teg.md"
 }
 
 ### aaaa
@@ -68,6 +68,6 @@ POST http://localhost:8080/api/v1/query
 Content-Type: application/json
 
 {
-    "query": "Does the project support Docker?"
+    "query": "Cuales son los elemento de juego"
 }
 

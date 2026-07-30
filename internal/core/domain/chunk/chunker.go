@@ -22,16 +22,12 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 	if doc == nil {
 		return nil, fmt.Errorf("document is nil")
 	}
-	if cfg.MaxSize <= 0 {
-		// fallback razonable
-		cfg.MaxSize = ChunkMaxSizeMedium
-	}
 
 	var chunks []Chunk
 	idx := 0
 
 	switch cfg.Strategy {
-	case ChunkElement:
+	case "element":
 		for _, el := range doc.Elements {
 			text := el.Text
 			if cfg.ContextPrefix && len(el.SectionPath) > 0 {
@@ -43,7 +39,7 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 			idx++
 		}
 
-	case ChunkSection:
+	case "section":
 		groups := make(map[string][]domain.Element)
 		order := make([]string, 0)
 		for _, el := range doc.Elements {
@@ -128,7 +124,7 @@ func (c *Chunker) Chunk(doc *domain.Document, cfg ChunkConfig) ([]Chunk, error) 
 				flush() // vaciar lo que quedó en el buffer
 			}
 		}
-	case ChunkSliding:
+	case "sliding":
 		// Construir texto plano y mantener mapeo de offsets a elementos
 		texts := make([]string, 0, len(doc.Elements))
 		acc := 0

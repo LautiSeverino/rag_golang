@@ -17,7 +17,7 @@ import (
 func BuildRequest(
 	query string,
 	context []search.SearchResult,
-	model LLMModel,
+	model string,
 	opts LLMOptions,
 	maxChunkLength int,
 ) GenerateRequest {

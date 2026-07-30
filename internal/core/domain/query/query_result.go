@@ -7,15 +7,13 @@ import (
 	"rag_golang/internal/core/domain/search"
 	"sort"
 	"strings"
-	"time"
 )
 
 // QueryResult es el resultado completo de una consulta al sistema RAG.
 type QueryResult struct {
-	Query    string          `json:"query"`
-	Answer   string          `json:"answer"`
-	Sources  []domain.Source `json:"sources,omitempty"`
-	Duration time.Duration   `json:"duration_ns"`
+	Query   string          `json:"query"`
+	Answer  string          `json:"answer"`
+	Sources []domain.Source `json:"sources,omitempty"`
 }
 
 // BuildQueryResult construye el QueryResult final a partir de la respuesta del LLM
@@ -42,10 +40,9 @@ func BuildQueryResult(
 	sources := extractSources(fusedResults)
 
 	return &QueryResult{
-		Query:    query,
-		Answer:   answer.String(),
-		Sources:  sources,
-		Duration: 0, // La duración se calcularía en el nivel de transporte/handler
+		Query:   query,
+		Answer:  answer.String(),
+		Sources: sources,
 	}
 }
 

@@ -5,7 +5,9 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
+	"strings"
 	"time"
 
 	"rag_golang/internal/core/domain/embed"
@@ -14,12 +16,12 @@ import (
 // OllamaEmbedder implementa out.IEmbedderPort usando la API REST de Ollama.
 type OllamaEmbedder struct {
 	baseURL    string
-	model      embed.EmbedModel
+	model      string
 	dim        int
 	httpClient *http.Client
 }
 
-func NewEmbedder(baseURL string, model embed.EmbedModel, dim int) *OllamaEmbedder {
+func NewEmbedder(baseURL string, model string, dim int) *OllamaEmbedder {
 	return &OllamaEmbedder{
 		baseURL: baseURL,
 		model:   model,
@@ -30,32 +32,36 @@ func NewEmbedder(baseURL string, model embed.EmbedModel, dim int) *OllamaEmbedde
 	}
 }
 
-type embedReq struct {
-	Model string   `json:"model"`
-	Input []string `json:"input"`
-}
-
 type embedResp struct {
 	Embeddings [][]float32 `json:"embeddings"`
 }
 
-// Embed genera embeddings para un batch de textos.
-// Ollama procesa todos los textos en una sola llamada HTTP.
+type embedReq struct {
+	Model    string   `json:"model"`
+	Input    []string `json:"input"`
+	Truncate *bool    `json:"truncate,omitempty"`
+}
+
+type errorResp struct {
+	Error string `json:"error"`
+}
+
 func (e *OllamaEmbedder) Embed(ctx context.Context, texts []string) ([]embed.Vector, error) {
 	if len(texts) == 0 {
 		return nil, nil
 	}
 
+	truncate := true
 	body, err := json.Marshal(embedReq{
-		Model: string(e.model),
-		Input: texts,
+		Model:    string(e.model),
+		Input:    texts,
+		Truncate: &truncate,
 	})
 	if err != nil {
 		return nil, fmt.Errorf("ollama embedder: marshal request: %w", err)
 	}
 
-	req, err := http.NewRequestWithContext(ctx, http.MethodPost,
-		e.baseURL+"/api/embed", bytes.NewReader(body))
+	req, err := http.NewRequestWithContext(ctx, http.MethodPost, e.baseURL+"/api/embed", bytes.NewReader(body))
 	if err != nil {
 		return nil, fmt.Errorf("ollama embedder: create request: %w", err)
 	}
@@ -68,7 +74,12 @@ func (e *OllamaEmbedder) Embed(ctx context.Context, texts []string) ([]embed.Vec
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("ollama embedder: status %d", resp.StatusCode)
+		var er errorResp
+		raw, _ := io.ReadAll(resp.Body)
+		if json.Unmarshal(raw, &er) == nil && er.Error != "" {
+			return nil, fmt.Errorf("ollama embedder: status %d: %s", resp.StatusCode, er.Error)
+		}
+		return nil, fmt.Errorf("ollama embedder: status %d: %s", resp.StatusCode, strings.TrimSpace(string(raw)))
 	}
 
 	var result embedResp
@@ -77,8 +88,7 @@ func (e *OllamaEmbedder) Embed(ctx context.Context, texts []string) ([]embed.Vec
 	}
 
 	if len(result.Embeddings) != len(texts) {
-		return nil, fmt.Errorf("ollama embedder: got %d embeddings for %d texts",
-			len(result.Embeddings), len(texts))
+		return nil, fmt.Errorf("ollama embedder: got %d embeddings for %d texts", len(result.Embeddings), len(texts))
 	}
 
 	vectors := make([]embed.Vector, len(result.Embeddings))
@@ -88,5 +98,5 @@ func (e *OllamaEmbedder) Embed(ctx context.Context, texts []string) ([]embed.Vec
 	return vectors, nil
 }
 
-func (e *OllamaEmbedder) Dimension() int              { return e.dim }
-func (e *OllamaEmbedder) ModelName() embed.EmbedModel { return e.model }
+func (e *OllamaEmbedder) Dimension() int    { return e.dim }
+func (e *OllamaEmbedder) ModelName() string { return string(e.model) }

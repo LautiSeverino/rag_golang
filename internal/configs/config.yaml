@@ -1,10 +1,6 @@
 server:
   port: 8080
 
-extract:
-  processed_dir: "scripts/data/processed"   # JSON pre-procesados por Python (PDFs con tablas)
-  cache_dir: "data/cache"           # JSON cacheados por go-fitz
-
 chunk:
   strategy: "section"               # section | element | sliding
   max_size: 1000                    # máximo de caracteres por chunk

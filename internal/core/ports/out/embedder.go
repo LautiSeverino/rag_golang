@@ -13,5 +13,5 @@ import (
 type IEmbedderPort interface {
 	Embed(ctx context.Context, texts []string) ([]embed.Vector, error)
 	Dimension() int
-	ModelName() embed.EmbedModel
+	ModelName() string
 }

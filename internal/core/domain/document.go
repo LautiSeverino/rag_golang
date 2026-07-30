@@ -10,8 +10,6 @@ import (
 type DocType string
 
 const (
-	DocPDF      DocType = "pdf"
-	DocDOCX     DocType = "docx"
 	DocHTML     DocType = "html"
 	DocMarkdown DocType = "md"
 )
