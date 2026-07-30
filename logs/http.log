@@ -2859,3 +2859,419 @@ Duration  : 14.13734666s
 }
 
 ================================================================================
+2026/07/30 11:17:14.493981 ================================================================================
+2026/07/30 11:17:14.494023 RAG RETRIEVE START
+2026/07/30 11:17:14.494028 QUERY: Cuales son los elemento de juego
+2026/07/30 11:17:14.494032 ================================================================================
+2026/07/30 11:17:15.185395 [EMBEDDING] model=mxbai-embed-large:latest duration=691.359843ms
+2026/07/30 11:17:15.201585 [DENSE] top=1 duration=16.166994ms
+2026/07/30 11:17:15.201610   [1] score=0.605971 page=1 section="SQL style guide > Query syntax"
+2026/07/30 11:17:15.201639 [BM25] top=44 duration=22.541µs
+2026/07/30 11:17:15.201644   [1] score=11.162304 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/30 11:17:15.201649   [2] score=8.634159 page=10 section="7. PACTOS"
+2026/07/30 11:17:15.201654   [3] score=7.940759 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/30 11:17:15.201658   [4] score=6.934147 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/30 11:17:15.201662   [5] score=5.770060 page=2 section="2. ELEMENTOS DE JUEGO > FICHAS"
+2026/07/30 11:17:15.201666   [6] score=5.164718 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/30 11:17:15.201670   [7] score=4.874470 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:17:15.201673   [8] score=4.744238 page=2 section="1. IDEA GENERAL"
+2026/07/30 11:17:15.201677   [9] score=4.696317 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/30 11:17:15.201681   [10] score=4.678627 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/30 11:17:15.201684   [11] score=4.460353 page=2 section="2. ELEMENTOS DE JUEGO"
+2026/07/30 11:17:15.201688   [12] score=4.329722 page=11 section="8. CONSIDERACIONES GENERALES > PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/30 11:17:15.201702   [13] score=4.225117 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:17:15.201705   [14] score=4.160075 page=4 section="4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/30 11:17:15.201708   [15] score=4.095588 page=8 section="6. CONTINUACIÓN DEL JUEGO > SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:17:15.201712   [16] score=3.986713 page=2 section="2. ELEMENTOS DE JUEGO > 15 TARJETAS DE OBJETIVOS SECRETOS"
+2026/07/30 11:17:15.201715   [17] score=3.891181 page=2 section="2. ELEMENTOS DE JUEGO > 6 DADOS"
+2026/07/30 11:17:15.201718   [18] score=3.825469 page=2 section="2. ELEMENTOS DE JUEGO > UN REGLAMENTO"
+2026/07/30 11:17:15.201721   [19] score=3.797506 page=5 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/30 11:17:15.201724   [20] score=3.774481 page=2 section="2. ELEMENTOS DE JUEGO > TARJETAS DE PAÍSES"
+2026/07/30 11:17:15.201727   [21] score=3.672571 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:17:15.201729   [22] score=3.652400 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:17:15.201732   [23] score=3.641009 page=3 section="2. ELEMENTOS DE JUEGO > DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . .  4"
+2026/07/30 11:17:15.201737   [24] score=3.565127 page=2 section="1. IDEA GENERAL"
+2026/07/30 11:17:15.201739   [25] score=3.520097 page=2 section="2. ELEMENTOS DE JUEGO > MAPA"
+2026/07/30 11:17:15.201742   [26] score=3.463861 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/30 11:17:15.201745   [27] score=3.448953 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:17:15.201748   [28] score=3.151711 page=8 section="6. CONTINUACIÓN DEL JUEGO > ATACAR Y REAGRUPAR"
+2026/07/30 11:17:15.201751   [29] score=3.109986 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVOS SECRETOS"
+2026/07/30 11:17:15.201754   [30] score=3.107548 page=10 section="7. PACTOS > PACTO ENTRE PAÍSES"
+2026/07/30 11:17:15.201757   [31] score=3.069181 page=9 section="6. CONTINUACIÓN DEL JUEGO > INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:17:15.201760   [32] score=3.048011 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/30 11:17:15.201763   [33] score=2.977090 page=12 section="9. LISTA DE OBJETIVOS SECRETOS > OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/30 11:17:15.201766   [34] score=2.945374 page=4 section="3. REPARTO DE PAÍSES Y OBJETIVOS > OBJETIVO COMÚN"
+2026/07/30 11:17:15.201769   [35] score=2.832568 page=11 section="8. CONSIDERACIONES GENERALES > DESTRUCCIÓN FORTUITA DE UN COLOR"
+2026/07/30 11:17:15.201772   [36] score=2.771833 page=4 section="5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:17:15.201775   [37] score=2.667668 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/30 11:17:15.201778   [38] score=2.510780 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:17:15.201781   [39] score=2.437588 page=8 section="6. CONTINUACIÓN DEL JUEGO > INCORPORAR EJÉRCITOS"
+2026/07/30 11:17:15.201784   [40] score=1.776863 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/30 11:17:15.201787   [41] score=1.720547 page=12 section="9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/30 11:17:15.201789   [42] score=1.578887 page=6 section="5. INICIACIÓN DE LAS HOSTILIDADES > ATACAR PAÍSES AJENOS"
+2026/07/30 11:17:15.201792   [43] score=1.575148 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/30 11:17:15.201795   [44] score=1.521097 page=7 section="5. INICIACIÓN DE LAS HOSTILIDADES > REAGRUPAR SUS FUERZAS"
+2026/07/30 11:17:15.201857 [RRF] top=8 duration=59.008µs
+2026/07/30 11:17:15.201862   [1] score=0.016393 page=8 section="6. CONTINUACIÓN DEL JUEGO"
+2026/07/30 11:17:15.201865   [2] score=0.016393 page=1 section="SQL style guide > Query syntax"
+2026/07/30 11:17:15.201868   [3] score=0.016129 page=10 section="7. PACTOS"
+2026/07/30 11:17:15.201874   [4] score=0.015873 page=11 section="8. CONSIDERACIONES GENERALES > COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/30 11:17:15.201877   [5] score=0.015625 page=10 section="7. PACTOS > PACTOS DE NO AGRESIÓN MUNDIALES"
+2026/07/30 11:17:15.201880   [6] score=0.015385 page=2 section="2. ELEMENTOS DE JUEGO > FICHAS"
+2026/07/30 11:17:15.201883   [7] score=0.015152 page=10 section="7. PACTOS > PACTO ZONA INTERNACIONAL"
+2026/07/30 11:17:15.201885   [8] score=0.012346 page=3 section="3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:17:15.201888 TIMINGS total=707.906911ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/30 11:17:15.201891 ================================================================================
+2026/07/30 11:17:15.201931 [LLM BUILD] chunks=8 model=phi3:mini max_chunk_length=600
+2026/07/30 11:19:59.326865 [QUERY END] duration=2m44.832883596s query="Cuales son los elemento de juego"
+2026/07/30 11:19:59.327134 ================================================================================
+HTTP REQUEST
+================================================================================
+Client IP : 127.0.0.1:34796
+Timestamp : 2026-07-30 11:19:59.327
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 2m44.83318153s
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Cuales son los elemento de juego"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Cuales son los elemento de juego",
+  "answer": "Los elementos de juego mencionados en el texto proporcionado incluyen:\n\n1. FICHAS - Cada ficha representa a un ejército y cada uno de los seis colores dispone de 100 ejércitos (Chunk #6).\n2. PACTOS DE NO AGRESION MUNDIALES - Los pactos de no agresión en todo el mapa están permitidos, pero no son convenientes (Chunk #5).\n3. REPARTO DE PAÍSES Y OBJETIVOS - Cada participante elige un color para usar durante todo el partido y coloca ejércitos en los países obtenidos en la repartición de tarjetas de países, ocupando así todos los 50 países del mapa (Chunk #3).\n\nEstos son algunos elementos clave mencionados que conforman parte del juego según",
+  "sources": [
+    {
+      "file": "docs/teg.pdf",
+      "page": 8,
+      "section_path": [
+        "6. CONTINUACIÓN DEL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016393442,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO\nUna vez concluida la primera ronda de hostilidades, se agrega un nuevo elemento al turno de los jugadores: la incorporación de ejércitos. De aquí en adelante, el orden…"
+    },
+    {
+      "file": "docs/sql.md",
+      "page": 1,
+      "section_path": [
+        "SQL style guide",
+        "Query syntax"
+      ],
+      "element_type": "heading",
+      "score": 0.016393442,
+      "excerpt": "Query syntax"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.016129032,
+      "excerpt": "7. PACTOS\nEl reglamento permite la propuesta de pactos entre jugadores, los cuales deben ser públicos, expresados en voz alta, y sin cláusulas secretas. Cualquier jugador tiene derecho a preguntar…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 11,
+      "section_path": [
+        "8. CONSIDERACIONES GENERALES",
+        "COMUNICACIÓN DURANTE EL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015873017,
+      "excerpt": "COMUNICACIÓN DURANTE EL JUEGO\nHay dos formas de encarar el juego: (a) “Vale todo” y (b) “Fair Play”. En (a) un jugador puede dar indicaciones a otro sobre qué países atacar o no, dar…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS",
+        "PACTOS DE NO AGRESIÓN MUNDIALES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015625,
+      "excerpt": "PACTOS DE NO AGRESIÓN MUNDIALES\nLos pactos de no agresión en todo el mapa están permitidos, pero no son convenientes.\nDe efectuarse un pacto de este tipo entre dos colores, tendría como…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 2,
+      "section_path": [
+        "2. ELEMENTOS DE JUEGO",
+        "FICHAS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015384615,
+      "excerpt": "FICHAS\nCada ficha representa 1 ejército.\nCada uno de los seis colores dispone de 100 ejércitos."
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 10,
+      "section_path": [
+        "7. PACTOS",
+        "PACTO ZONA INTERNACIONAL"
+      ],
+      "element_type": "paragraph",
+      "score": 0.015151516,
+      "excerpt": "No son válidas las alianzas o pactos agresivos-defensivos. No está permitido, por ejemplo, un pacto por el cual “Verde” y “Rojo” se comprometen a atacar sólo a “Negro” y no a los…"
+    },
+    {
+      "file": "docs/teg.pdf",
+      "page": 3,
+      "section_path": [
+        "3. REPARTO DE PAÍSES Y OBJETIVOS"
+      ],
+      "element_type": "paragraph",
+      "score": 0.012345679,
+      "excerpt": "3. REPARTO DE PAÍSES Y OBJETIVOS\n1. Cada participante elige un color de ficha, que usará durante todo el partido.\n2. Se mezclan las 50 TARJETAS DE PAISES, y se reparten entre los jugadores. (Si…"
+    }
+  ]
+}
+
+================================================================================
+2026/07/30 11:39:58.522604 ================================================================================
+HTTP REQUEST
+================================================================================
+Path      : /api/v1/index
+Status    : 200
+Duration  : 1m13.8806032s
+Client IP : 127.0.0.1:54004
+Timestamp : 2026-07-30 11:39:58.522
+Method    : POST
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "path": "docs/teg.md"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "doc_id": "3f8b5f30-7f49-5543-ba20-22e09f1ab26e",
+  "source": "docs/teg.md",
+  "chunk_count": 52,
+  "cache_hits": 0
+}
+
+================================================================================
+2026/07/30 11:40:05.016688 ================================================================================
+2026/07/30 11:40:05.016729 RAG RETRIEVE START
+2026/07/30 11:40:05.016733 QUERY: Cuales son los elemento de juego
+2026/07/30 11:40:05.016737 ================================================================================
+2026/07/30 11:40:05.198020 [EMBEDDING] model=mxbai-embed-large:latest duration=181.279451ms
+2026/07/30 11:40:05.200320 [DENSE] top=41 duration=2.254167ms
+2026/07/30 11:40:05.200334   [1] score=0.768453 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 2. ELEMENTOS DE JUEGO . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+2026/07/30 11:40:05.200341   [2] score=0.767920 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/30 11:40:05.200344   [3] score=0.759755 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 6. CONTINUACIÓN DEL JUEGO . . . . . . . . . . . . . . . . . . . . . 8"
+2026/07/30 11:40:05.200346   [4] score=0.722870 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > El objetivo único y común es la conquista de los 50 países."
+2026/07/30 11:40:05.200348   [5] score=0.717920 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 2. ELEMENTOS DE JUEGO"
+2026/07/30 11:40:05.200350   [6] score=0.712597 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > En todo momento del juego, los 50 países del mapa deben estar ocupados."
+2026/07/30 11:40:05.200352   [7] score=0.701373 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > UN PACTO QUEDA ROTO CUANDO:"
+2026/07/30 11:40:05.200354   [8] score=0.697308 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200356   [9] score=0.689682 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/30 11:40:05.200358   [10] score=0.684742 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/30 11:40:05.200368   [11] score=0.679968 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > EJEMPLO 2"
+2026/07/30 11:40:05.200369   [12] score=0.678472 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200372   [13] score=0.670655 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200374   [14] score=0.667430 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200375   [15] score=0.661607 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* OBJETIVO COMÚN"
+2026/07/30 11:40:05.200377   [16] score=0.646762 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* INCORPORAR EJÉRCITOS * ATACAR Y REAGRUPAR * SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200379   [17] score=0.646091 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 1. IDEA GENERAL"
+2026/07/30 11:40:05.200381   [18] score=0.639811 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200382   [19] score=0.639412 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* REAGRUPAR SUS FUERZAS"
+2026/07/30 11:40:05.200384   [20] score=0.638155 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200386   [21] score=0.634405 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200387   [22] score=0.633924 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200389   [23] score=0.631166 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS . . . . . . . . 4"
+2026/07/30 11:40:05.200391   [24] score=0.627789 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/30 11:40:05.200392   [25] score=0.627536 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200394   [26] score=0.626887 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200395   [27] score=0.625630 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS . . . . . . . . . . . . . . . . . 3"
+2026/07/30 11:40:05.200397   [28] score=0.624522 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/30 11:40:05.200398   [29] score=0.623986 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200400   [30] score=0.623487 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200401   [31] score=0.618155 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200403   [32] score=0.617868 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200405   [33] score=0.616465 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES . . . . . . . . . . . . . . . 4"
+2026/07/30 11:40:05.200406   [34] score=0.616428 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200408   [35] score=0.614108 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200411   [36] score=0.611666 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > VERDE ROJO"
+2026/07/30 11:40:05.200413   [37] score=0.608489 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200414   [38] score=0.605783 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200422   [39] score=0.604355 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200424   [40] score=0.603802 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200426   [41] score=0.602174 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA"
+2026/07/30 11:40:05.200443 [BM25] top=50 duration=15.516µs
+2026/07/30 11:40:05.200448   [1] score=5.506604 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/30 11:40:05.200451   [2] score=5.379830 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200453   [3] score=5.311178 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200455   [4] score=3.543001 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200456   [5] score=3.446530 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200458   [6] score=3.365583 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > En todo momento del juego, los 50 países del mapa deben estar ocupados."
+2026/07/30 11:40:05.200460   [7] score=2.928486 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 2. ELEMENTOS DE JUEGO"
+2026/07/30 11:40:05.200462   [8] score=2.915269 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > El objetivo único y común es la conquista de los 50 países."
+2026/07/30 11:40:05.200464   [9] score=2.788421 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 2. ELEMENTOS DE JUEGO . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+2026/07/30 11:40:05.200465   [10] score=2.784780 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 6. CONTINUACIÓN DEL JUEGO . . . . . . . . . . . . . . . . . . . . . 8"
+2026/07/30 11:40:05.200467   [11] score=2.368581 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200469   [12] score=2.215522 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 1. IDEA GENERAL"
+2026/07/30 11:40:05.200470   [13] score=2.164412 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200472   [14] score=1.493503 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > UN PACTO QUEDA ROTO CUANDO:"
+2026/07/30 11:40:05.200474   [15] score=1.190083 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200476   [16] score=0.974347 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 1. IDEA GENERAL"
+2026/07/30 11:40:05.200477   [17] score=0.935037 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200479   [18] score=0.927105 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200480   [19] score=0.845883 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200482   [20] score=0.808603 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200484   [21] score=0.787550 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200486   [22] score=0.730820 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200488   [23] score=0.727922 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* OBJETIVO COMÚN"
+2026/07/30 11:40:05.200489   [24] score=0.692769 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200491   [25] score=0.684213 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* OBJETIVO COMÚN OCUPAR 30 PAÍSES"
+2026/07/30 11:40:05.200495   [26] score=0.668623 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > VERDE ROJO"
+2026/07/30 11:40:05.200497   [27] score=0.657335 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS"
+2026/07/30 11:40:05.200499   [28] score=0.548637 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > UN PACTO QUEDA ROTO CUANDO:"
+2026/07/30 11:40:05.200500   [29] score=0.545456 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200502   [30] score=0.543973 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 4. DOS VUELTAS PARA AGREGAR 8 EJÉRCITOS"
+2026/07/30 11:40:05.200504   [31] score=0.543161 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES"
+2026/07/30 11:40:05.200506   [32] score=0.526285 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* PARTIDAS DE 2 O 3 JUGADORES"
+2026/07/30 11:40:05.200507   [33] score=0.479727 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200509   [34] score=0.019465 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/30 11:40:05.200511   [35] score=0.019089 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 9. LISTA DE OBJETIVOS SECRETOS"
+2026/07/30 11:40:05.200512   [36] score=0.018143 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 5. INICIACIÓN DE LAS HOSTILIDADES . . . . . . . . . . . . . . . 4"
+2026/07/30 11:40:05.200514   [37] score=0.018143 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 3. REPARTO DE PAÍSES Y OBJETIVOS . . . . . . . . . . . . . . . . . 3"
+2026/07/30 11:40:05.200516   [38] score=0.018089 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > VERDE ROJO"
+2026/07/30 11:40:05.200518   [39] score=0.018025 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > Reagrupar es pasar ejércitos de un país a otro limítrofe, también propio."
+2026/07/30 11:40:05.200520   [40] score=0.017991 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > VERDE ROJO"
+2026/07/30 11:40:05.200522   [41] score=0.017929 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200524   [42] score=0.017709 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* INCORPORAR EJÉRCITOS * ATACAR Y REAGRUPAR * SOLICITAR TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200526   [43] score=0.017688 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200527   [44] score=0.017629 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > Reagrupar es pasar ejércitos de un país a otro limítrofe, también propio."
+2026/07/30 11:40:05.200529   [45] score=0.017509 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > • INCORPORACIÓN DE EJÉRCITOS"
+2026/07/30 11:40:05.200531   [46] score=0.017185 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA"
+2026/07/30 11:40:05.200532   [47] score=0.014834 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 1. idea general . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+2026/07/30 11:40:05.200534   [48] score=0.014834 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 7. PACTOS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10"
+2026/07/30 11:40:05.200536   [49] score=0.014614 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 8. CONSIDERACIONES GENERALES . . . . . . . . . . . . . . . . . . 11"
+2026/07/30 11:40:05.200538   [50] score=0.014193 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > EJEMPLO 2"
+2026/07/30 11:40:05.200575 [RRF] top=8 duration=35.717µs
+2026/07/30 11:40:05.200577   [1] score=0.032522 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* COMUNICACIÓN DURANTE EL JUEGO"
+2026/07/30 11:40:05.200580   [2] score=0.030886 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 2. ELEMENTOS DE JUEGO . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+2026/07/30 11:40:05.200583   [3] score=0.030331 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > El objetivo único y común es la conquista de los 50 países."
+2026/07/30 11:40:05.200589   [4] score=0.030310 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 2. ELEMENTOS DE JUEGO"
+2026/07/30 11:40:05.200591   [5] score=0.030303 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > En todo momento del juego, los 50 países del mapa deben estar ocupados."
+2026/07/30 11:40:05.200593   [6] score=0.030159 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > 6. CONTINUACIÓN DEL JUEGO . . . . . . . . . . . . . . . . . . . . . 8"
+2026/07/30 11:40:05.200597   [7] score=0.023026 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200598   [8] score=0.029572 page=1 section="PLAN TACTICO Y ESTRATEGICO DE LA GUERRA > \\* SOLICITAR UNA TARJETA DE PAÍSES"
+2026/07/30 11:40:05.200600 TIMINGS total=183.912139ms embedding=see above dense=see above bm25=see above rrf=see above
+2026/07/30 11:40:05.200602 ================================================================================
+2026/07/30 11:40:05.200634 [LLM BUILD] chunks=8 model=qwen2.5:3b max_chunk_length=600
+2026/07/30 11:42:01.837413 [QUERY END] duration=1m56.820724669s query="Cuales son los elemento de juego"
+2026/07/30 11:42:01.837728 ================================================================================
+HTTP REQUEST
+================================================================================
+Timestamp : 2026-07-30 11:42:01.837
+Method    : POST
+Path      : /api/v1/query
+Status    : 200
+Duration  : 1m56.821060393s
+Client IP : 127.0.0.1:33016
+
+-------------------------------- REQUEST ---------------------------------------
+
+{
+  "query": "Cuales son los elemento de juego"
+}
+
+-------------------------------- RESPONSE --------------------------------------
+
+{
+  "query": "Cuales son los elemento de juego",
+  "answer": "Los elementos de juego incluyen:\n\n1. Un mapa dividido en 50 países agrupados en 6 continentes.\n2. Fichas que representan ejércitos.\n3. Seis colores con cada uno de ellos dispone de 100 ejércitos.\n4. Dados.\n5. Tarjetas de países, una para cada país.\n6. Tarjetas de objetivos secretos.\n7. Un reglamento.\n\nAdemás, hay otros elementos como la solicitud de tarjeta de países y la incorporación de ejércitos por canje.",
+  "sources": [
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "\\* COMUNICACIÓN DURANTE EL JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.032522473,
+      "excerpt": "\\* COMUNICACIÓN DURANTE EL JUEGO\nHay dos formas de encarar el juego: (a) “Vale todo” y (b) “Fair Play”. En (a) un jugador puede dar indicaciones a otro sobre qué países atacar o no, dar…"
+    },
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "2. ELEMENTOS DE JUEGO . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+      ],
+      "element_type": "heading",
+      "score": 0.030886196,
+      "excerpt": "2. ELEMENTOS DE JUEGO . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2"
+    },
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "El objetivo único y común es la conquista de los 50 países."
+      ],
+      "element_type": "paragraph",
+      "score": 0.030330881,
+      "excerpt": "El objetivo único y común es la conquista de los 50 países.\nEl resto de la mecánica del juego es igual a la explicada anteriormente."
+    },
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "2. ELEMENTOS DE JUEGO"
+      ],
+      "element_type": "paragraph",
+      "score": 0.030309988,
+      "excerpt": "2. ELEMENTOS DE JUEGO\nMAPA\nUn planisferio dividido en 50 países agrupados en 6 continentes: América del Norte América del Sur, Europa, Asia, Africa y Oceanía. Las dimensiones y divisiones…"
+    },
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "En todo momento del juego, los 50 países del mapa deben estar ocupados."
+      ],
+      "element_type": "paragraph",
+      "score": 0.030303031,
+      "excerpt": "En todo momento del juego, los 50 países del mapa deben estar ocupados.\nEn ningún momento pueden haber en un mismo país ejércitos de distinto color."
+    },
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "6. CONTINUACIÓN DEL JUEGO . . . . . . . . . . . . . . . . . . . . . 8"
+      ],
+      "element_type": "heading",
+      "score": 0.030158732,
+      "excerpt": "6. CONTINUACIÓN DEL JUEGO . . . . . . . . . . . . . . . . . . . . . 8"
+    },
+    {
+      "file": "docs/teg.md",
+      "page": 1,
+      "section_path": [
+        "PLAN TACTICO Y ESTRATEGICO DE LA GUERRA",
+        "\\* SOLICITAR UNA TARJETA DE PAÍSES"
+      ],
+      "element_type": "paragraph",
+      "score": 0.029571647,
+      "excerpt": "conservando la tarjeta; ésta sólo debe ser entregada cuando se efectúa un CANJE.\nB. Para el CANJE. Este procedimiento se puede realizar después de transcurridas varias vueltas, tal como se…"
+    }
+  ]
+}
+
+================================================================================

@@ -273,11 +273,5 @@ func matchesFilter(ch chunk.Chunk, f *search.SearchFilter) bool {
 	if f.Source != nil && ch.Source != *f.Source {
 		return false
 	}
-	if f.MinPage != nil && ch.Page < *f.MinPage {
-		return false
-	}
-	if f.MaxPage != nil && ch.Page > *f.MaxPage {
-		return false
-	}
 	return true
 }

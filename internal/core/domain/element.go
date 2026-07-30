@@ -9,8 +9,6 @@ const (
 	ElemParagraph ElementType = "paragraph" // párrafo de cuerpo
 	ElemTable     ElementType = "table"     // tabla con estructura de celdas
 	ElemListItem  ElementType = "list_item" // ítem de lista (bullet o numerada)
-	ElemCaption   ElementType = "caption"   // caption de figura o tabla
-	ElemCode      ElementType = "code"      // bloque de código
 )
 
 // Element es un bloque atómico de contenido dentro de un documento.

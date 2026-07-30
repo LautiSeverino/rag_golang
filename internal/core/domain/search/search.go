@@ -11,8 +11,6 @@ import (
 type SearchFilter struct {
 	ElementType *domain.ElementType `json:"element_type,omitempty"` // filtrar por tipo de elemento
 	Source      *string             `json:"source,omitempty"`       // filtrar por archivo de origen
-	MinPage     *int                `json:"min_page,omitempty"`     // página mínima inclusive
-	MaxPage     *int                `json:"max_page,omitempty"`     // página máxima inclusive
 }
 
 // SearchRequest parametriza una búsqueda densa en Qdrant.

@@ -4,9 +4,8 @@ package llm
 type Role string
 
 const (
-	RoleSystem    Role = "system"
-	RoleUser      Role = "user"
-	RoleAssistant Role = "assistant"
+	RoleSystem Role = "system"
+	RoleUser   Role = "user"
 )
 
 // Message es un turno de conversación.

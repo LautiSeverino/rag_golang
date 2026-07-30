@@ -22,8 +22,7 @@ type Chunk struct {
 
 // ChunkConfig parametriza el comportamiento del Chunker.
 type ChunkConfig struct {
-	Strategy      string `json:"strategy"       yaml:"strategy"`
-	MaxSize       int    `json:"max_size"       yaml:"max_size"`
-	Overlap       int    `json:"overlap"        yaml:"overlap"`        // solo para ChunkSliding
-	ContextPrefix bool   `json:"context_prefix" yaml:"context_prefix"` // prepend SectionPath al texto
+	MaxSize       int  `json:"max_size"       yaml:"max_size"`
+	Overlap       int  `json:"overlap"        yaml:"overlap"`        // solo para ChunkSliding
+	ContextPrefix bool `json:"context_prefix" yaml:"context_prefix"` // prepend SectionPath al texto
 }
