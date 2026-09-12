@@ -40,10 +40,3 @@ search:
   max_chunks_per_section: 3  # máximo 2 chunks por sección en el contexto final
   max_dense_per_section: 5  
   dense_score_threshold: 0.70
-
-
-log:
-  file_path: "logs/http.log"
-  log_requests: true
-  log_responses: true
-  max_body_bytes: 100000

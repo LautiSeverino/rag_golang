@@ -217,7 +217,7 @@ rag-go/
 │           │   ├── index.go  # POST /api/v1/index
 │           │   └── query.go  # POST /api/v1/query · GET /api/v1/query/stream
 │           └── middlewares/
-│               └── middlewares.go    # Logging + Recover (panic → 500)
+│               └── middlewares.go    # Recover (panic → 500)
 │
 ├── scripts/
 │   └── preprocess.py   # Preprocesamiento Python para PDFs con tablas complejas

@@ -4,7 +4,6 @@ import (
 	"context"
 	"crypto/sha256"
 	"fmt"
-	"log"
 	"rag_golang/internal/configs"
 	"rag_golang/internal/core/domain/chunk"
 	"rag_golang/internal/core/domain/index"
@@ -63,9 +62,7 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 	// Qdrant: Delete filtra por doc_id en el payload — es idempotente si no existe.
 	// BM25: DeleteByDocID reconstruye el índice invertido sin ese doc.
 	if err := s.vectorRepo.Delete(ctx, doc.ID.String()); err != nil {
-		// Loguear pero no fallar: si el doc no existía aún, el error es esperado
-		// y no queremos abortar la indexación por eso.
-		fmt.Printf("warning: vectorRepo.Delete doc_id=%s: %v\n", doc.ID, err)
+		// El documento puede no existir todavía; continuar con la indexación.
 	}
 	if err := s.bm25Repo.DeleteByDocID(ctx, doc.ID); err != nil {
 		return nil, fmt.Errorf("bm25: delete before reindex: %w", err)
@@ -133,7 +130,7 @@ func (s *IndexService) Index(ctx context.Context, sourcePath string) (*index.Ind
 
 	if s.bm25Path != "" {
 		if err := s.bm25Repo.SaveToDisk(s.bm25Path); err != nil {
-			log.Printf("warning: no se pudo persistir BM25: %v", err)
+			return nil, fmt.Errorf("bm25: save to disk: %w", err)
 		}
 	}
 

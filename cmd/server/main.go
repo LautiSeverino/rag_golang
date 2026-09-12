@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
 	"net/http"
 	"os"
 	"rag_golang/internal/configs"
@@ -24,7 +23,7 @@ func main() {
 	// ─── Config ───────────────────────────────────────────────────────────────
 	cfg, err := loadConfig("internal/configs/config.yaml")
 	if err != nil {
-		log.Fatalf("config: %v", err)
+		os.Exit(1)
 	}
 
 	ctx := context.Background()
@@ -45,49 +44,26 @@ func main() {
 		cfg.Store.CollectionName,
 	)
 	if err != nil {
-		log.Fatalf("qdrant: %v", err)
+		os.Exit(1)
 	}
 
 	cacheRepo, err := repositories.NewCacheRepository(cfg.Store.BboltPath)
 	if err != nil {
-		log.Fatalf("bbolt: %v", err)
+		os.Exit(1)
 	}
 	defer cacheRepo.Close()
 
 	bm25Repo := repositories.NewBM25Repository(cfg.Search.BM25K1, cfg.Search.BM25B)
 	if cfg.Store.BM25Path != "" {
-		if err := bm25Repo.LoadFromDisk(cfg.Store.BM25Path); err != nil {
-			log.Printf("warning: no se pudo cargar BM25 desde disco: %v", err)
-		} else {
-			log.Printf("BM25 cargado desde %s", cfg.Store.BM25Path)
-		}
+		_ = bm25Repo.LoadFromDisk(cfg.Store.BM25Path)
 	}
 
 	extractorDispatcher := extractor.NewExtractorDispatcher()
 
 	// EnsureCollection es idempotente: si ya existe, no hace nada.
 	if err := vectorRepo.EnsureCollection(ctx, cfg.Store.VectorDimension); err != nil {
-		log.Fatalf("qdrant ensure collection: %v", err)
+		os.Exit(1)
 	}
-
-	// ─── Infra: driver adapters ───────────────────────────────────────────────
-
-	if err := os.MkdirAll("logs", 0755); err != nil {
-		log.Fatalf("crear carpeta logs: %v", err)
-	}
-
-	logFile, err := os.OpenFile(
-		cfg.Log.FilePath,
-		os.O_CREATE|os.O_WRONLY|os.O_APPEND,
-		0644,
-	)
-	if err != nil {
-		log.Fatalf("abrir log file: %v", err)
-	}
-	defer logFile.Close()
-
-	httpLogger := log.New(logFile, "", log.LstdFlags|log.Lmicroseconds)
-	ragLogger := log.New(logFile, "", log.LstdFlags|log.Lmicroseconds)
 
 	// ─── Core: services ───────────────────────────────────────────────────────
 	indexSvc := service.NewIndexService(
@@ -108,19 +84,12 @@ func main() {
 		bm25Repo,
 		llmClient,
 		cfg,
-		ragLogger,
 	)
 
 	// ─── Driver: HTTP handlers ────────────────────────────────────────────────
 	router := mux.NewRouter()
 
-	router.Use(middlewares.Logging(
-		httpLogger,
-		cfg.Log.LogRequests,
-		cfg.Log.LogResponses,
-		cfg.Log.MaxBodyBytes,
-	))
-	router.Use(middlewares.Recover(httpLogger))
+	router.Use(middlewares.Recover())
 
 	handler.NewIndexHandler(indexSvc).RegisterPublicRoutes(router)
 	handler.NewQueryHandler(querySvc).RegisterPublicRoutes(router)
@@ -140,9 +109,8 @@ func main() {
 		IdleTimeout:  60 * time.Second,
 	}
 
-	log.Printf("servidor RAG escuchando en %s", addr)
 	if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-		log.Fatalf("servidor: %v", err)
+		os.Exit(1)
 	}
 }
 

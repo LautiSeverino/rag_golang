@@ -1,0 +1,63 @@
+### Indexar el documento de Guía de Estilo SQL
+POST http://localhost:8080/api/v1/index
+Content-Type: application/json
+
+{
+    "path": "docs/sql.md"
+}
+
+### aaaa - Extracción de la licencia del proyecto
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Under what specific Creative Commons license is this SQL style guide published?"
+}
+
+### aaaa - Reglas de formato (Fechas)
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What is the compliant ISO format required for storing time and date information?"
+}
+
+### aaaa - Convenciones de nombres de tablas
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What are the rules regarding naming tables? Mention collective names and prefixes like tbl."
+}
+
+### aaaa - Convenciones de alias (Aliasing)
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "What is the rule of thumb for creating correlation or alias names, and what keyword must always be included?"
+}
+
+### bbbb - Análisis de malas prácticas a evitar
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "List and explain at least four design patterns or naming strategies that the guide explicitly states we should avoid."
+}
+
+### bbbb - Resumen de sintaxis de consultas (Query Syntax)
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Summarize the guidelines regarding reserved words, white space alignment (rivers), and indentation for Joins."
+}
+
+### bbbb - Flujo completo de diseño de esquemas (Create Syntax)
+POST http://localhost:8080/api/v1/query
+Content-Type: application/json
+
+{
+    "query": "Describe the workflow and rules for defining a table schema, including data type constraints, default values, and key order layout."
+}
