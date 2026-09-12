@@ -39,7 +39,7 @@ search:
   bm25_b: 0.75
   max_chunks_per_section: 3  # máximo 2 chunks por sección en el contexto final
   max_dense_per_section: 5  
-  dense_score_threshold: 0.60
+  dense_score_threshold: 0.70
 
 
 log:

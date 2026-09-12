@@ -50,10 +50,15 @@ var (
 	mdCodeRe    = regexp.MustCompile("^```")
 
 	mdReferenceRe = regexp.MustCompile(`^\[[^\]]+\]:\s+\S+.*$`)
-
-	mdCommentRe = regexp.MustCompile(`^<!--.*-->$`)
-
+	mdCommentRe   = regexp.MustCompile(`^<!--.*-->$`)
 	mdSeparatorRe = regexp.MustCompile(`^[-*_]{3,}$`)
+
+	// Detecta entradas de índice tipo:
+	// 1. idea general . . . . . . . . . . . . . . 2
+	// 2. ELEMENTOS DE JUEGO . . . . . . . . . . . 2
+	//
+	// La idea es capturar encabezados que son claramente TOC y no contenido real.
+	tocEntryRe = regexp.MustCompile(`(?i)^\s*(?:\d+(?:\.\d+)*)\.?\s+.*(?:\s*\.\s*){3,}\s*\d+\s*$`)
 )
 
 func shouldSkipMarkdownLine(line string) bool {
@@ -66,16 +71,17 @@ func shouldSkipMarkdownLine(line string) bool {
 	switch {
 	case mdReferenceRe.MatchString(line):
 		return true
-
 	case mdCommentRe.MatchString(line):
 		return true
-
 	case mdSeparatorRe.MatchString(line):
 		return true
-
 	default:
 		return false
 	}
+}
+
+func isTOCEntry(el domain.Element) bool {
+	return el.Type == domain.ElemHeading && tocEntryRe.MatchString(strings.TrimSpace(el.Text))
 }
 
 func parseMarkdown(content string) []domain.Element {
@@ -96,6 +102,7 @@ func parseMarkdown(content string) []domain.Element {
 		}
 		paraBuffer = nil
 	}
+
 	flushTable := func() {
 		if len(tableBuffer) == 0 {
 			return
@@ -107,6 +114,7 @@ func parseMarkdown(content string) []domain.Element {
 		})
 		tableBuffer = nil
 	}
+
 	flushList := func() {
 		if len(listBuffer) == 0 {
 			return
@@ -118,11 +126,12 @@ func parseMarkdown(content string) []domain.Element {
 		})
 		listBuffer = nil
 	}
-	for _, line := range lines {
 
+	for _, line := range lines {
 		if shouldSkipMarkdownLine(line) {
 			continue
 		}
+
 		if mdCodeRe.MatchString(line) {
 			inCode = !inCode
 			if !inCode {
@@ -130,6 +139,7 @@ func parseMarkdown(content string) []domain.Element {
 			}
 			continue
 		}
+
 		if inCode {
 			paraBuffer = append(paraBuffer, line)
 			continue
@@ -139,12 +149,21 @@ func parseMarkdown(content string) []domain.Element {
 			flushPara()
 			flushTable()
 			flushList()
-			elements = append(elements, domain.Element{
+
+			headingText := strings.TrimSpace(m[2])
+			heading := domain.Element{
 				Type:  domain.ElemHeading,
 				Level: len(m[1]),
-				Text:  strings.TrimSpace(m[2]),
+				Text:  headingText,
 				Page:  1,
-			})
+			}
+
+			// Evita que el índice del documento entre como secciones reales.
+			if isTOCEntry(heading) {
+				continue
+			}
+
+			elements = append(elements, heading)
 			continue
 		}
 
@@ -165,6 +184,7 @@ func parseMarkdown(content string) []domain.Element {
 			listBuffer = append(listBuffer, strings.TrimSpace(text))
 			continue
 		}
+
 		if len(listBuffer) > 0 && strings.TrimSpace(line) == "" {
 			flushList()
 			continue
@@ -178,6 +198,7 @@ func parseMarkdown(content string) []domain.Element {
 			flushPara()
 			continue
 		}
+
 		paraBuffer = append(paraBuffer, line)
 	}
 
